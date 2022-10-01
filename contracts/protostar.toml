@@ -8,3 +8,9 @@ libs_path = "lib"
 main = [
     "src/main.cairo",
 ]
+
+["protostar.build"]
+cairo-path = ["./lib/cairo_contracts/src"]
+
+["protostar.test"]
+cairo-path = ["./lib/cairo_contracts/src"]
