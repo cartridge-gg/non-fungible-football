@@ -11,6 +11,10 @@ from openzeppelin.introspection.erc165.library import ERC165
 from openzeppelin.security.pausable.library import Pausable
 from openzeppelin.token.erc721.library import ERC721
 
+from openzeppelin.token.erc20.interfaces.IERC20 import IERC20
+
+from cairo_math_64x61 import Math64x61
+
 //
 // Constructor
 //

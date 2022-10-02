@@ -10,7 +10,7 @@ main = [
 ]
 
 ["protostar.build"]
-cairo-path = ["./lib/cairo_contracts/src"]
+cairo-path = ["./lib/cairo_contracts/src", "./lib/cairo_math_64x61/contracts"]
 
 ["protostar.test"]
-cairo-path = ["./lib/cairo_contracts/src"]
+cairo-path = ["./lib/cairo_contracts/src", "./lib/cairo_math_64x61/contracts"]
