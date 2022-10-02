@@ -4,3 +4,6 @@
 [submodule "cairo_math_64x61"]
 	url = https://github.com/influenceth/cairo-math-64x61
 	path = contracts/lib/cairo_math_64x61
+[submodule "cairo_gda"]
+	url = https://github.com/cartridge-gg/cairo-gda
+	path = contracts/lib/cairo_gda
