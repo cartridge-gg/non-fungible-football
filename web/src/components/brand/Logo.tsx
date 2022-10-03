@@ -18,3 +18,4 @@ const Logo = (props: StyleProps & IconProps) => {
 };
 
 export default Logo;
+

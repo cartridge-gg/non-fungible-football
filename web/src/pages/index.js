@@ -18,6 +18,7 @@ export default function Home() {
         align="center"
         justify="center"
         direction={["column", "row"]}
+        color="white"
       >
         <Logo width="200px" height="200px" />
         <Word width="200px" height="200px" />
