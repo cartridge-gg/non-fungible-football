@@ -1,4 +1,10 @@
-export default { 
+const colors = {
+  blue: {
+    200: "#5A6EC7",
+  },
+  yellow: {
+    500: "#FFCC00",
+  },
   whiteAlpha: {
     200: "rgba(255, 255, 255, 0.08)",
     400: "rgba(255, 255, 255, 0.24)",
@@ -11,4 +17,6 @@ export default {
   white: "#FFF",
   black: "#000",
   transparent: "transparent",
-}
+};
+
+export default colors;
