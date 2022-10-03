@@ -5,15 +5,25 @@
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.uint256 import Uint256
+from starkware.starknet.common.syscalls import get_block_timestamp
+from starkware.cairo.common.math import assert_not_zero, assert_lt
 
 from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.introspection.erc165.library import ERC165
 from openzeppelin.security.pausable.library import Pausable
 from openzeppelin.token.erc721.library import ERC721
+from openzeppelin.token.erc20.IERC20 import IERC20
 
-from openzeppelin.token.erc20.interfaces.IERC20 import IERC20
+from src.discrete import DiscreteGDA
+from cairo_math_64x61.math64x61 import Math64x61
 
-from cairo_math_64x61 import Math64x61
+@storage_var
+func Player_payment_token() -> (res : felt) {
+}
+
+@storage_var
+func Player_supply() -> (res : felt) {
+}
 
 //
 // Constructor
@@ -21,10 +31,20 @@ from cairo_math_64x61 import Math64x61
 
 @constructor
 func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    name: felt, symbol: felt, owner: felt
+    name: felt, symbol: felt, owner: felt,
 ) {
     ERC721.initializer(name, symbol);
     Ownable.initializer(owner);
+
+    let initial_price = 1000;
+    let initial_price_fp = Math64x61.fromFelt(initial_price);
+    let scale_factor_fp = Math64x61.div(Math64x61.fromFelt(11), Math64x61.fromFelt(10)); 
+    let decay_constant_fp = Math64x61.div(Math64x61.fromFelt(1), Math64x61.fromFelt(2));
+
+    let (auction_start_time) = get_block_timestamp();
+    let auction_start_time_fp = Math64x61.fromFelt(auction_start_time);
+
+    DiscreteGDA.initializer(initial_price_fp, scale_factor_fp, decay_constant_fp, auction_start_time_fp);
     return ();
 }
 
@@ -137,12 +157,28 @@ func safeTransferFrom{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_chec
 }
 
 @external
-func mint{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
-    to: felt, tokenId: Uint256
+func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
+    to: felt,
+    value: felt,
 ) {
+    alloc_locals;
     Pausable.assert_not_paused();
-    Ownable.assert_only_owner();
-    ERC721._mint(to, tokenId);
+
+    with_attr error_message("zero receiver") {
+        assert_not_zero(to);
+    }
+
+    let (supply) = Player_supply.read();
+    let price = DiscreteGDA.purchase_price(1, supply);
+
+    with_attr error_message("insufficient payment") {
+        assert_lt(price, value);
+    }
+
+    Player_supply.write(supply + 1);
+
+    // There can only ever be 832 NFTs.
+    ERC721._mint(to, Uint256(low=supply, high=0));
     return ();
 }
 

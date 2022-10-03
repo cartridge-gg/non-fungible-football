@@ -15,7 +15,7 @@ func test_mint{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
     %}
 
-    IPlayer.mint(contract_address, 123, Uint256(1, 0));
+    IPlayer.purchase(contract_address, 123, 1000000);
 
     let (balance) = IPlayer.balanceOf(contract_address, 123);
 

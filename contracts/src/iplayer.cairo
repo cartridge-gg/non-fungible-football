@@ -34,6 +34,6 @@ namespace IPlayer {
     func paused() -> (paused: felt) {
     }
 
-    func mint(to: felt, tokenId: Uint256) {
+    func purchase(to: felt, value: felt) {
     }
 }
