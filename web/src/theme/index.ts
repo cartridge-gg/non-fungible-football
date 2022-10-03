@@ -5,13 +5,12 @@ const theme = extendTheme({
   // config,
   colors,
   fonts: {
-    // heading: "LD_Mono",
-    // body: "IBM Plex Sans",
+    body: "Poppins",
   },
   styles: {
     global: {
       body: {
-        background: "gray.900",
+        background: "blue.200",
         WebkitTapHighlightColor: "transparent",
       },
     },
