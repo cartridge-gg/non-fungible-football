@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { ReactNode } from "react";
 import {
   Flex,
@@ -36,6 +37,9 @@ const Callout = ({
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Non-Fungible Football</title>
+      </Head>
       <Flex
         h="100vh"
         w="full"
