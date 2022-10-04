@@ -8,10 +8,22 @@ const theme = extendTheme({
   fonts: {
     body: "Poppins",
   },
+  textStyles: {
+    h1: {
+      fontSize: "13px",
+      fontWeight: "700",
+      lineHeight: "24px",
+      letterSpacing: "0.02em",
+      textTransform: "uppercase",
+    },
+  },
   styles: {
     global: {
       body: {
         background: "blue.200",
+        color: "white",
+        fontSize: "13px",
+        letterSpacing: "0.01em",
         WebkitTapHighlightColor: "transparent",
       },
     },
