@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Nav } from "../components/Nav";
 import { Callout } from "../components/details/Callout";
-import Grid from "../components/Grid";
+import { Grid, MotionGridItem } from "../components/Grid";
 import BellIcon from "../components/icons/Bell";
 import EthereumIcon from "../components/icons/Ethereum";
 import TicketIcon from "../components/icons/Ticket";
@@ -28,7 +28,7 @@ export default function Home() {
         <GridItem area={"nav"}>
           <Nav py="50px" w="full" h="full" />
         </GridItem>
-        <GridItem area={"main"}>
+        <MotionGridItem area={"main"}>
           <Flex
             h="full"
             gap={["50px", "50px", "100px"]}
@@ -62,8 +62,8 @@ export default function Home() {
               />
             </VStack>
           </Flex>
-        </GridItem>
-        <GridItem area={"footer"}>
+        </MotionGridItem>
+        <MotionGridItem area={"footer"}>
           <HStack
             h="full"
             align="center"
@@ -87,7 +87,7 @@ export default function Home() {
               Mint
             </Button>
           </HStack>
-        </GridItem>
+        </MotionGridItem>
       </Grid>
     </>
   );
