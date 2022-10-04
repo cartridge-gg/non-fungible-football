@@ -1,6 +1,15 @@
 import Head from "next/head";
-import { Flex, Box, Text, HStack, VStack, Spacer } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Text,
+  HStack,
+  VStack,
+  Spacer,
+  GridItem,
+} from "@chakra-ui/react";
 import { Nav } from "../components/Nav";
+import Grid from "../components/Grid";
 
 export default function Tourney() {
   return (
@@ -8,17 +17,13 @@ export default function Tourney() {
       <Head>
         <title>Non-Fungible Football</title>
       </Head>
-      <Flex
-        h="100vh"
-        w="full"
-        gap="10px"
-        position="fixed"
-        align="stretch"
-        direction={["column", "row"]}
-      >
-        <Nav active={1} py="50px" width="300px" />
-        <Flex w="full"></Flex>
-      </Flex>
+      <Grid>
+        <GridItem area={"nav"}>
+          <Nav py="50px" w="full" h="full" active={1}/>
+        </GridItem>
+        <GridItem area={"main"}></GridItem>
+        <GridItem area={"footer"}></GridItem>
+      </Grid>
     </>
   );
 }

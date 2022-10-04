@@ -2,6 +2,8 @@ import type { ComponentStyleConfig } from "@chakra-ui/react";
 
 export const Button: ComponentStyleConfig = {
   baseStyle: {
+    gap: "10px",
+    border: "2px solid",
     fontFamily: "IBM Plex Sans",
     borderRadius: "24px",
     letterSpacing: "0.01em",
@@ -9,9 +11,16 @@ export const Button: ComponentStyleConfig = {
   variants: {
     primary: {
       borderColor: "mint.500",
-      border: "2px solid",
       color: "mint.500",
       fontSize: "16px",
+      py: "22px",
+      px: "30px",
+    },
+    secondary: {
+      borderColor: "blue.100",
+      color: "blue.100",
+      py: "22px",
+      px: "30px",
     },
   },
   defaultProps: {

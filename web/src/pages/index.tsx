@@ -1,38 +1,22 @@
 import Head from "next/head";
-import { ReactNode } from "react";
 import {
-  Flex,
   Box,
+  Flex,
+  GridItem,
   HStack,
   VStack,
-  Text,
   Circle,
-  useBreakpointValue,
+  Button,
 } from "@chakra-ui/react";
 import { Nav } from "../components/Nav";
+import { Callout } from "../components/details/Callout";
+import Grid from "../components/Grid";
 import BellIcon from "../components/icons/Bell";
 import EthereumIcon from "../components/icons/Ethereum";
 import TicketIcon from "../components/icons/Ticket";
-
-const Callout = ({
-  icon,
-  title,
-  description,
-}: {
-  icon: ReactNode;
-  title: String;
-  description: string;
-}) => (
-  <HStack spacing="24px">
-    <Circle size="50px" bgColor="blue.300">
-      {icon}
-    </Circle>
-    <VStack align="flex-start" spacing="0">
-      <Text textStyle="h1">{title}</Text>
-      <Text color="whiteAlpha.400">{description}</Text>
-    </VStack>
-  </HStack>
-);
+import RunnerIcon from "../components/icons/Runner";
+import CartridgeIcon from "../components/icons/Cartridge";
+import LogoutIcon from "../components/icons/Logout";
 
 export default function Home() {
   return (
@@ -40,18 +24,16 @@ export default function Home() {
       <Head>
         <title>Non-Fungible Football</title>
       </Head>
-      <Flex
-        h="100vh"
-        w="full"
-        gap="10px"
-        position="fixed"
-        direction={["column", "row"]}
-      >
-        <Nav py="50px" width="300px" />
-        <Flex justify="center" align="center" w="full">
+      <Grid>
+        <GridItem area={"nav"}>
+          <Nav py="50px" w="full" h="full" />
+        </GridItem>
+        <GridItem area={"main"}>
           <Flex
-            gap="100px"
+            h="full"
+            gap={["50px", "50px", "100px"]}
             align="center"
+            justify="center"
             direction={["column", "column", "row"]}
           >
             <Box
@@ -80,8 +62,33 @@ export default function Home() {
               />
             </VStack>
           </Flex>
-        </Flex>
-      </Flex>
+        </GridItem>
+        <GridItem area={"footer"}>
+          <HStack
+            h="full"
+            align="center"
+            justify="flex-end"
+            px="50px"
+            spacing="12px"
+          >
+            <Circle
+              size="46px"
+              border="2px solid"
+              borderColor="blue.100"
+              as="button"
+            >
+              <LogoutIcon />
+            </Circle>
+            <Button variant="secondary">
+              <CartridgeIcon /> Mr. Fax
+            </Button>
+            <Button>
+              <RunnerIcon />
+              Mint
+            </Button>
+          </HStack>
+        </GridItem>
+      </Grid>
     </>
   );
 }
