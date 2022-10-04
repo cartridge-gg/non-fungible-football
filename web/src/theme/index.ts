@@ -1,22 +1,12 @@
 import { extendTheme } from "@chakra-ui/react";
+import { textStyles, fonts } from "./typography";
 import colors from "./colors";
 import * as Components from "./components";
 
 const theme = extendTheme({
-  // config,
   colors,
-  fonts: {
-    body: "Poppins",
-  },
-  textStyles: {
-    h1: {
-      fontSize: "13px",
-      fontWeight: "700",
-      lineHeight: "24px",
-      letterSpacing: "0.02em",
-      textTransform: "uppercase",
-    },
-  },
+  fonts,
+  textStyles,
   styles: {
     global: {
       body: {

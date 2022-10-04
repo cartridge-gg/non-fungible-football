@@ -26,8 +26,6 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
       direction="column"
       align="flex-end"
       justify="space-between"
-      py="50px"
-      width="300px"
       {...rest}
     >
       <Logo />

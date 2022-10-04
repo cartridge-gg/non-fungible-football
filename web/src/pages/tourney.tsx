@@ -16,7 +16,7 @@ export default function Tourney() {
         align="stretch"
         direction={["column", "row"]}
       >
-        <Nav active={1} />
+        <Nav active={1} py="50px" width="300px" />
         <Flex w="full"></Flex>
       </Flex>
     </>

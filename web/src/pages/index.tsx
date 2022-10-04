@@ -47,10 +47,10 @@ export default function Home() {
         position="fixed"
         direction={["column", "row"]}
       >
-        <Nav />
+        <Nav py="50px" width="300px" />
         <Flex justify="center" align="center" w="full">
           <Flex
-            gap="50px"
+            gap="100px"
             align="center"
             direction={["column", "column", "row"]}
           >
