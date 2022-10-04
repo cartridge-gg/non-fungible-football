@@ -1,14 +1,11 @@
-import { Icon, StyleProps, IconProps } from "@chakra-ui/react";
+import { Icon, useStyleConfig } from "@chakra-ui/react";
 
-const Cartridge = (props: StyleProps & IconProps) => {
+const Cartridge = (props: any) => {
+  const { variant, size, ...rest } = props;
+  const styles = useStyleConfig("Icon", { variant, size });
+
   return (
-    <Icon
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      {...props}
-    >
+    <Icon viewBox="0 0 24 24" fill="currentColor" __css={styles} {...rest}>
       <path
         d="M8.45902 10.6801H15.4672V8.90978H8.46078C8.46078 9.09066 8.45902 10.6968 8.45902 10.6801Z"
         fill="black"

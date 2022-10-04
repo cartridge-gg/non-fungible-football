@@ -5,6 +5,8 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <title>Non-Fungible Football</title>
+          <link rel="icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -29,6 +31,10 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />
