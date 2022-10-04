@@ -10,7 +10,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        background: "blue.200",
+        background: "blue.300",
         color: "white",
         fontSize: "13px",
         letterSpacing: "0.01em",

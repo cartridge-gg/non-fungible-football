@@ -11,7 +11,7 @@ export const Callout = ({
   description: string;
 } & StyleProps) => (
   <HStack spacing="24px">
-    <Circle size="50px" bgColor="blue.300">
+    <Circle size="50px" bgColor="blue.200">
       {icon}
     </Circle>
     <VStack align="flex-start" spacing="0">
