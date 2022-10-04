@@ -1,7 +1,8 @@
 import Head from "next/head";
-import { Flex } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 import Logo from "../components/brand/Logo";
 import Word from "../components/brand/Word";
+import Ethereum from "../components/icons/Ethereum";
 
 export default function Home() {
   return (
@@ -13,15 +14,14 @@ export default function Home() {
       </Head>
       <Flex
         h="100vh"
-        w="100vw"
+        w="full"
         position="fixed"
         align="center"
         justify="center"
         direction={["column", "row"]}
-        color="white"
       >
-        <Logo width="200px" height="200px" />
-        <Word width="200px" height="200px" />
+        <Logo />
+        <Word />
       </Flex>
     </>
   );

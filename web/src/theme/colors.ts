@@ -5,6 +5,9 @@ const colors = {
   yellow: {
     500: "#FFCC00",
   },
+  mint: {
+    500: "#58F1CD",
+  },
   whiteAlpha: {
     200: "rgba(255, 255, 255, 0.08)",
     400: "rgba(255, 255, 255, 0.24)",
