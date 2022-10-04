@@ -47,16 +47,16 @@ export default function Home() {
         position="fixed"
         direction={["column", "row"]}
       >
-        <Nav flex="1" />
-        <Flex flex="3" justify="center" align="center">
+        <Nav />
+        <Flex justify="center" align="center" w="full">
           <Flex
             gap="50px"
             align="center"
             direction={["column", "column", "row"]}
           >
             <Box
-              minWidth="300px"
-              minHeight="300px"
+              minWidth={["200px", "300px"]}
+              minHeight={["200px", "300px"]}
               borderRadius="12px"
               background="url(/trophy.png) center"
               backgroundSize="contain"

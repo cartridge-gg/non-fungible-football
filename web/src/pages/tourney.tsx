@@ -16,8 +16,8 @@ export default function Tourney() {
         align="stretch"
         direction={["column", "row"]}
       >
-        <Nav flex="1" active={1} />
-        <Flex flex="3"></Flex>
+        <Nav active={1} />
+        <Flex w="full"></Flex>
       </Flex>
     </>
   );

@@ -22,15 +22,16 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
   ];
 
   return (
-    <Flex
+    <VStack
       direction="column"
       align="flex-end"
       justify="space-between"
       py="50px"
+      width="300px"
       {...rest}
     >
-      <Logo height="63px" width="63px" />
-      <VStack spacing="12px" w="full">
+      <Logo />
+      <VStack spacing="18px" w="full">
         {items.map((item, i) => (
           <Link href={item.url} key={i}>
             <HStack
@@ -46,6 +47,6 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
         ))}
       </VStack>
       <Word fill="blue.100" />
-    </Flex>
+    </VStack>
   );
 };
