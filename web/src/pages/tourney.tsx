@@ -19,7 +19,7 @@ export default function Tourney() {
       </Head>
       <Grid>
         <GridItem area={"nav"}>
-          <Nav py="50px" w="full" h="full" active={1}/>
+          <Nav py="50px" w="full" h="full" active={1} />
         </GridItem>
         <GridItem area={"main"}></GridItem>
         <GridItem area={"footer"}></GridItem>

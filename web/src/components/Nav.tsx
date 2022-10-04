@@ -44,7 +44,7 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
           </Link>
         ))}
       </VStack>
-      <Word fill="blue.100" />
+      <Word fill="blue.100" width="100px" height="100px" />
     </VStack>
   );
 };
