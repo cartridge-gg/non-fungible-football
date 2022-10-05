@@ -6,7 +6,7 @@
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.uint256 import Uint256
 from starkware.starknet.common.syscalls import get_block_timestamp
-from starkware.cairo.common.math import assert_not_zero, assert_lt, unsigned_div_rem
+from starkware.cairo.common.math import assert_not_zero, assert_le, unsigned_div_rem
 
 from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.introspection.erc165.library import ERC165
@@ -53,6 +53,12 @@ namespace IPlayer {
 
     func purchase(to: felt, value: felt) {
     }
+
+    func price() -> (price: felt) {
+    }
+
+    func supply() -> (supply: felt) {
+    }
 }
 
 @storage_var
@@ -72,10 +78,8 @@ func Player_seed() -> (res : felt) {
 //
 
 @constructor
-func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    name: felt, symbol: felt, owner: felt,
-) {
-    ERC721.initializer(name, symbol);
+func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt) {
+    ERC721.initializer('Player', 'PLAYER');
     Ownable.initializer(owner);
 
     let initial_price = 1000;
@@ -221,7 +225,7 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
     let price = DiscreteGDA.purchase_price(1, supply);
 
     with_attr error_message("insufficient payment") {
-        assert_lt(price, value);
+        assert_le(price, value+1);
     }
 
     Player_supply.write(supply + 1);
@@ -237,6 +241,19 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
     }
 
     return ();
+}
+
+@external
+func price{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (price: felt) {
+    let (supply) = Player_supply.read();
+    let price = DiscreteGDA.purchase_price(1, supply);
+    return (price=price);
+}
+
+@external
+func supply{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (supply: felt) {
+    let (supply) = Player_supply.read();
+    return (supply=supply);
 }
 
 @external
