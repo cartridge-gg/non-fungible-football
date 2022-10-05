@@ -73,6 +73,7 @@ func test_matches{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     local contract_address: felt;
     %{
         ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+        stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
     %}
 
     let (team_a, team_b) = ITournament.match(contract_address, 1);
@@ -92,6 +93,71 @@ func test_matches{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     assert matches[3] = 16;
     assert matches[4] = 19;
     assert matches[5] = 20;
+
+    let (group_results: felt*) = alloc();
+    assert group_results[0] = 49;
+    assert group_results[1] = 2;
+    assert group_results[2] = 3;
+
+    assert group_results[3] = 50;
+    assert group_results[4] = 7;
+    assert group_results[5] = 5;
+
+    assert group_results[6] = 51;
+    assert group_results[7] = 11;
+    assert group_results[8] = 9;
+
+    assert group_results[9] = 52;
+    assert group_results[10] = 13;
+    assert group_results[11] = 5;
+
+    assert group_results[12] = 53;
+    assert group_results[13] = 17;
+    assert group_results[14] = 19;
+
+    assert group_results[15] = 54;
+    assert group_results[16] = 21;
+    assert group_results[17] = 23;
+
+    assert group_results[18] = 55;
+    assert group_results[19] = 25;
+    assert group_results[20] = 28;
+
+    assert group_results[21] = 56;
+    assert group_results[22] = 29;
+    assert group_results[23] = 31;
+
+    ITournament.finalize_group(contract_address, 24, group_results);
+
+    let (match_ids2: felt*) = alloc();
+    assert match_ids2[0] = 49;
+    assert match_ids2[1] = 50;
+    assert match_ids2[2] = 51;
+    assert match_ids2[3] = 52;
+    assert match_ids2[4] = 53;
+    assert match_ids2[5] = 54;
+    assert match_ids2[6] = 55;
+    assert match_ids2[7] = 56;
+    let (matches_len2, matches2) = ITournament.matches(contract_address, 8, match_ids2);
+    
+    assert matches2[0] = 2;
+    assert matches2[1] = 3;
+    assert matches2[2] = 7;
+    assert matches2[3] = 5;
+    assert matches2[4] = 11;
+    assert matches2[5] = 9;
+    assert matches2[6] = 13;
+    assert matches2[7] = 5;
+    assert matches2[8] = 17;
+    assert matches2[9] = 19;
+    assert matches2[10] = 21;
+    assert matches2[11] = 23;
+    assert matches2[12] = 25;
+    assert matches2[13] = 28;
+    assert matches2[14] = 29;
+    assert matches2[15] = 31;
+
+    %{ stop_prank_callable() %}
 
     return ();
 }

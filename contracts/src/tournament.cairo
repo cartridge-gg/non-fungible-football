@@ -52,6 +52,9 @@ namespace ITournament {
 
     func update(match_id: felt, team_a: felt, team_b: felt) {
     }
+
+    func finalize_group(results_len: felt, results: felt*) {
+    }
 }
 
 @storage_var
@@ -60,6 +63,10 @@ func Tournament_alive(team_id: felt) -> (alive: felt) {
 
 @storage_var
 func Tournament_result(match_id: felt) -> (result: Result) {
+}
+
+@storage_var
+func Tournament_round_sixteen(match_id: felt) -> (match: Match) {
 }
 
 @constructor
@@ -95,32 +102,33 @@ func teams_inner(ids_len: felt, ids: felt*, teams: felt*) {
 }
 
 @view
-func match{range_check_ptr}(id: felt) -> (team_a: felt, team_b: felt) {
+func match{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(id: felt) -> (team_a: felt, team_b: felt) {
     alloc_locals;
-    
-    let is_group = is_le(id, 49);
+
+    let is_group = is_le(id, 48);
     if (is_group == 1) {
         let match = lookup_match(id);
         return (team_a=match.team_a, team_b=match.team_b);
     }
 
-    if (id == 49) {
-        let matches = lookup_group_matches(1);
-
+    let is_sixteen = is_le(id, 56);
+    if (is_sixteen == 1) {
+        let (res) = Tournament_round_sixteen.read(id);
+        return (team_a=res.team_a, team_b=res.team_b);
     }
 
     return (team_a=0, team_b=0);
 }
 
 @view
-func matches{range_check_ptr}(ids_len: felt, ids: felt*) -> (matches_len: felt, matches: felt*) {
+func matches{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(ids_len: felt, ids: felt*) -> (matches_len: felt, matches: felt*) {
     alloc_locals;
     let (res) = alloc();
     matches_inner(ids_len, ids, res);
     return (2 * ids_len, res);
 }
 
-func matches_inner{range_check_ptr}(ids_len: felt, ids: felt*, matches: felt*) {
+func matches_inner{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(ids_len: felt, ids: felt*, matches: felt*) {
     alloc_locals;
 
     if (ids_len == 0) {
@@ -128,14 +136,9 @@ func matches_inner{range_check_ptr}(ids_len: felt, ids: felt*, matches: felt*) {
     }
 
     let id = ids[0];
-    let is_group = is_le(id, 49);
-    if (is_group == 1) {
-        let (team_a, team_b) = match(ids[0]);
-        assert matches[0] = team_a;
-        assert matches[1] = team_b;
-        return matches_inner(ids_len - 1, ids + 1, matches + 2);
-    }
-
+    let (team_a, team_b) = match(ids[0]);
+    assert matches[0] = team_a;
+    assert matches[1] = team_b;
     return matches_inner(ids_len - 1, ids + 1, matches + 2);
 }
 
@@ -205,21 +208,25 @@ func update{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     return ();
 }
 
-// // knock a team our of the tournament.
-// @external
-// func knockout{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-//     team: felt
-// ) {
-//     Ownable.assert_only_owner();
-//     return ();
-// }
+// finalize the tournament. accepts input array with shape [match_id, team_a, team_b].
+@external
+func finalize_group{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(results_len: felt, results: felt*) {
+    Ownable.assert_only_owner();
 
-// finalize the tournament
-// @external
-// func finalize{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() {
-//     Ownable.assert_only_owner();
-//     return ();
-// }
+    inner_finalize_group(results_len, results);
+
+    return ();
+}
+
+func inner_finalize_group{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(results_len: felt, results: felt*) {
+    if (results_len == 0) {
+        return ();
+    }
+
+    Tournament_round_sixteen.write(results[0], Match(results[1], results[2]));
+
+    return inner_finalize_group(results_len - 3, results + 3);
+}
 
 @external
 func transferOwnership{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
@@ -240,69 +247,69 @@ func lookup_team(index: felt) -> Team* {
     return cast(addr + ((index - 1) * 2), Team*);
 
     data_start:
-    dw 'Qatar';         // 0
+    dw 'Qatar';         // 1
     dw 'A';
-    dw 'Ecuador';       // 1
+    dw 'Ecuador';       // 2
     dw 'A';
-    dw 'Senegal';       // 2
+    dw 'Senegal';       // 3
     dw 'A';
-    dw 'Netherlands';   // 3
+    dw 'Netherlands';   // 4
     dw 'A';
-    dw 'England';       // 4
+    dw 'England';       // 5
     dw 'B';
-    dw 'Iran';          // 5
+    dw 'Iran';          // 6
     dw 'B';
-    dw 'United States'; // 6
+    dw 'United States'; // 7
     dw 'B';
-    dw 'Wales';         // 7
+    dw 'Wales';         // 8
     dw 'B';
-    dw 'Argentina';     // 8
+    dw 'Argentina';     // 9
     dw 'C';
-    dw 'Saudi Arabia';  // 9
+    dw 'Saudi Arabia';  // 10
     dw 'C';
-    dw 'Mexico';        // 10
+    dw 'Mexico';        // 11
     dw 'C';
-    dw 'Poland';        // 11
+    dw 'Poland';        // 12
     dw 'C';
-    dw 'France';        // 12
+    dw 'France';        // 13
     dw 'D';
-    dw 'Australia';     // 13
+    dw 'Australia';     // 14
     dw 'D';
-    dw 'Denmark';       // 14
+    dw 'Denmark';       // 15
     dw 'D';
-    dw 'Tunisia';       // 15
+    dw 'Tunisia';       // 16
     dw 'D';
-    dw 'Spain';         // 16
+    dw 'Spain';         // 17
     dw 'E';
-    dw 'Costa Rica';    // 17
+    dw 'Costa Rica';    // 18
     dw 'E';
-    dw 'Germany';       // 18
+    dw 'Germany';       // 19
     dw 'E';
-    dw 'Japan';         // 19
+    dw 'Japan';         // 20
     dw 'E';
-    dw 'Belgium';       // 20
+    dw 'Belgium';       // 21
     dw 'F';
-    dw 'Canada';        // 21
+    dw 'Canada';        // 22
     dw 'F';
-    dw 'Morocco';       // 22
+    dw 'Morocco';       // 23
     dw 'F';
-    dw 'Croatia';       // 23
+    dw 'Croatia';       // 24
     dw 'F';
-    dw 'Brazil';        // 24
+    dw 'Brazil';        // 25
     dw 'G';
-    dw 'Serbia';        // 25
+    dw 'Serbia';        // 26
     dw 'G';
-    dw 'Switzerland';   // 26
+    dw 'Switzerland';   // 27
     dw 'G';
-    dw 'Cameroon';      // 27
+    dw 'Cameroon';      // 28
     dw 'G';
-    dw 'Portugal';      // 28
+    dw 'Portugal';      // 29
     dw 'H';
-    dw 'Ghana';         // 29
+    dw 'Ghana';         // 30
     dw 'H';
-    dw 'Uruguay';       // 30
+    dw 'Uruguay';       // 31
     dw 'H';
-    dw 'South Korea';   // 31
+    dw 'South Korea';   // 32
     dw 'H';
 }
 
