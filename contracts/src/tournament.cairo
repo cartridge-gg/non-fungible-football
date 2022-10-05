@@ -39,10 +39,13 @@ namespace ITournament {
     func matches(ids_len: felt, ids: felt*) -> (matches_len: felt, matches: felt*) {
     }
 
-    func result(match_id) -> (team_id: felt) {
+    func result(match_id: felt) -> (team_id: felt) {
     }
 
     func results(matches_len: felt, matches: felt*) -> (teams_len: felt, teams: felt*) {
+    }
+
+    func update(match_id: felt, winner: felt) {
     }
 }
 
@@ -124,6 +127,34 @@ func matches_inner{range_check_ptr}(ids_len: felt, ids: felt*, matches: felt*) {
     }
 
     return matches_inner(ids_len - 1, ids + 1, matches + 2);
+}
+
+@view
+func result{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(match_id: felt) -> (team_id: felt) {
+    let (team_id) = Tournament_result.read(match_id);
+    return (team_id=team_id);
+}
+
+@view
+func results{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(ids_len: felt, ids: felt*) -> (results_len: felt, results: felt*) {
+    alloc_locals;
+    let (res) = alloc();
+    results_inner(ids_len, ids, res);
+    return (ids_len, res);
+}
+
+func results_inner{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(ids_len: felt, ids: felt*, results: felt*) {
+    alloc_locals;
+
+    if (ids_len == 0) {
+        return ();
+    }
+
+    let id = ids[0];
+    let (team_id) = Tournament_result.read(id);
+    assert results[0] = team_id;
+
+    return results_inner(ids_len - 1, ids + 1, results + 2);
 }
 
 // returns if a team is currently active (aka hasn't been knocked out).

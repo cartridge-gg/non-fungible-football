@@ -37,7 +37,7 @@ func test_lookup_match{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBu
 }
 
 @external
-func test_getters{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+func test_teams{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
     alloc_locals;
 
     local contract_address: felt;
@@ -63,6 +63,18 @@ func test_getters{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     assert teams[4] = 'Mexico';
     assert teams[5] = 'C';
 
+    return ();
+}
+
+@external
+func test_matches{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+    alloc_locals;
+
+    local contract_address: felt;
+    %{
+        ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+    %}
+
     let (team_a, team_b) = ITournament.match(contract_address, 1);
     assert team_a = 1;
     assert team_b = 2;
@@ -80,6 +92,34 @@ func test_getters{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     assert matches[3] = 16;
     assert matches[4] = 19;
     assert matches[5] = 20;
+
+    return ();
+}
+
+@external
+func test_results{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+    alloc_locals;
+
+    local contract_address: felt;
+    %{ 
+        ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+        stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
+    %}
+
+    ITournament.update(contract_address, 1, 1);
+
+    let (match1) = ITournament.result(contract_address, 1);
+    assert match1 = 1;
+
+    ITournament.update(contract_address, 11, 19);
+
+    let (match11) = ITournament.result(contract_address, 11);
+    assert match11 = 19;
+
+    %{ expect_revert(error_message="invalid update") %}
+    ITournament.update(contract_address, 11, 3);
+
+    %{ stop_prank_callable() %}
 
     return ();
 }
