@@ -6,6 +6,8 @@ from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.uint256 import Uint256
 from starkware.cairo.common.registers import get_label_location
 from starkware.cairo.common.alloc import alloc
+from starkware.cairo.common.math_cmp import is_le
+from starkware.cairo.common.math import assert_not_zero
 
 from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.security.pausable.library import Pausable
@@ -41,6 +43,10 @@ namespace ITournament {
 
     func matches(ids_len: felt, ids: felt*) -> (matches_len: felt, matches: felt*) {
     }
+}
+
+@storage_var
+func Tournament_alive(team_id: felt) -> (alive: felt) {
 }
 
 @storage_var
@@ -80,42 +86,56 @@ func teams_inner(ids_len: felt, ids: felt*, teams: felt*) {
 }
 
 @view
-func match(id: felt) -> (team_a: felt, team_b: felt) {
-    if (id - 
-    let match = lookup_match(id);
-    return (team_a=match.team_a, team_b=match.team_b);
+func match{range_check_ptr}(id: felt) -> (team_a: felt, team_b: felt) {
+    alloc_locals;
+    
+    let is_group = is_le(id, 49);
+    if (is_group == 1) {
+        let match = lookup_match(id);
+        return (team_a=match.team_a, team_b=match.team_b);
+    }
+
+    return (team_a=0, team_b=0);
 }
 
 @view
-func matches(ids_len: felt, ids: felt*) -> (matches_len: felt, matches: felt*) {
+func matches{range_check_ptr}(ids_len: felt, ids: felt*) -> (matches_len: felt, matches: felt*) {
     alloc_locals;
     let (res) = alloc();
     matches_inner(ids_len, ids, res);
     return (2 * ids_len, res);
 }
 
-func matches_inner(ids_len: felt, ids: felt*, matches: felt*) {
+func matches_inner{range_check_ptr}(ids_len: felt, ids: felt*, matches: felt*) {
+    alloc_locals;
+
     if (ids_len == 0) {
         return ();
     }
-    let match = lookup_match(ids[0]);
-    assert matches[0] = match.team_a;
-    assert matches[1] = match.team_b;
+
+    let id = ids[0];
+    let is_group = is_le(id, 49);
+    if (is_group == 1) {
+        let match = lookup_match(ids[0]);
+        assert matches[0] = match.team_a;
+        assert matches[1] = match.team_b;
+        return matches_inner(ids_len - 1, ids + 1, matches + 2);
+    }
+
     return matches_inner(ids_len - 1, ids + 1, matches + 2);
-}
-
-
-// return the fixtures for a team. since we only store finalized outcomes
-// this returns the results of a teams fixtures.
-@view
-func fixtures(team: felt) -> () {
-    return ();
 }
 
 // returns if a team is currently active (aka hasn't been knocked out).
 @view
-func active(team: felt) -> (active: felt) {
-    return (active=0);
+func alive{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(team_id: felt) -> (alive: felt) {
+    let (is_alive) = Tournament_alive.read(team_id);
+
+    // We invert the boolean to initialize to all TRUE.
+    if (is_alive == 0) {
+        return (alive=1);
+    }
+
+    return (alive=0);
 }
 
 // returns champion team if the tournament has been finalized. otherwise returns
@@ -243,7 +263,7 @@ func lookup_team(index: felt) -> Team* {
 
 func lookup_match(index: felt) -> Match* {
     let (addr) = get_label_location(data_start);
-    return cast(addr + (index - 1 * 2), Match*);
+    return cast(addr + ((index - 1) * 2), Match*);
 
     data_start:
     // Match 1     Qatar        		 Ecuador

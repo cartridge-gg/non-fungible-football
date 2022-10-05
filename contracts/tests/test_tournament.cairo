@@ -24,11 +24,11 @@ func test_lookup_team{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBui
 }
 
 func test_lookup_match{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
-    let one = lookup_match(0);
+    let one = lookup_match(1);
     assert one.team_a = 0;
     assert one.team_b = 1;
 
-    let five = lookup_match(4);
+    let five = lookup_match(5);
     assert five.team_a = 12;
     assert five.team_b = 13;
 
@@ -62,14 +62,14 @@ func test_getters{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     assert teams[4] = 'Mexico';
     assert teams[5] = 'C';
 
-    let (team_a, team_b) = ITournament.match(contract_address, 0);
+    let (team_a, team_b) = ITournament.match(contract_address, 1);
     assert team_a = 0;
     assert team_b = 1;
 
     let (match_ids: felt*) = alloc();
-    assert match_ids[0] = 0;
-    assert match_ids[1] = 5;
-    assert match_ids[2] = 10;
+    assert match_ids[0] = 1;
+    assert match_ids[1] = 6;
+    assert match_ids[2] = 11;
 
     let (matches_len, matches) = ITournament.matches(contract_address, 3, match_ids);
     assert matches_len = 6;
