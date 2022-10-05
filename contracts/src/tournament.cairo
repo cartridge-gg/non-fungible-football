@@ -22,11 +22,6 @@ struct Match {
     team_b: felt,
 }
 
-struct Result {
-    team_a: felt,
-    team_b: felt,
-}
-
 @contract_interface
 namespace ITournament {
     func add(name: felt, group: felt) -> () {
@@ -42,6 +37,12 @@ namespace ITournament {
     }
 
     func matches(ids_len: felt, ids: felt*) -> (matches_len: felt, matches: felt*) {
+    }
+
+    func result(match_id) -> (team_id: felt) {
+    }
+
+    func results(matches_len: felt, matches: felt*) -> (teams_len: felt, teams: felt*) {
     }
 }
 
@@ -154,27 +155,46 @@ func owner{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() ->
 // the corresponding teams.
 @external
 func update{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    team_a: felt, team_b: felt, score_a: felt, score_b: felt
+    match_id: felt, winner: felt,
 ) {
+    alloc_locals;
+
     Ownable.assert_only_owner();
+
+    let (team_a, team_b) = match(match_id);
+
+    if (team_a == winner) {
+        Tournament_result.write(match_id, winner);
+        return ();
+    }
+
+    if (team_b == winner) {
+        Tournament_result.write(match_id, winner);
+        return ();
+    }
+
+    with_attr error_message("invalid update") {
+        assert 1 = 0;
+    }
+
     return ();
 }
 
-// knock a team our of the tournament.
-@external
-func knockout{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    team: felt
-) {
-    Ownable.assert_only_owner();
-    return ();
-}
+// // knock a team our of the tournament.
+// @external
+// func knockout{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
+//     team: felt
+// ) {
+//     Ownable.assert_only_owner();
+//     return ();
+// }
 
 // finalize the tournament
-@external
-func finalize{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() {
-    Ownable.assert_only_owner();
-    return ();
-}
+// @external
+// func finalize{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() {
+//     Ownable.assert_only_owner();
+//     return ();
+// }
 
 @external
 func transferOwnership{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
@@ -192,7 +212,7 @@ func renounceOwnership{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_che
 
 func lookup_team(index: felt) -> Team* {
     let (addr) = get_label_location(data_start);
-    return cast(addr + (index * 2), Team*);
+    return cast(addr + ((index - 1) * 2), Team*);
 
     data_start:
     dw 'Qatar';         // 0
@@ -267,147 +287,147 @@ func lookup_match(index: felt) -> Match* {
 
     data_start:
     // Match 1     Qatar        		 Ecuador
-    dw 0;
     dw 1;
+    dw 2;
     // Match 2     Senegal      		 Netherlands
-    dw 2;
     dw 3;
+    dw 4;
     // Match 3     England      		 Iran
-    dw 4;
     dw 5;
+    dw 6;
     // Match 4     United States 		 Wales
-    dw 6;
     dw 7;
+    dw 8;
     // Match 5     France       		 Australia
-    dw 12;
     dw 13;
+    dw 14;
     // Match 6     Denmark      		 Tunisia
-    dw 14;
     dw 15;
+    dw 16;
     // Match 7     Mexico       		 Poland
-    dw 10;
     dw 11;
+    dw 12;
     // Match 8     Argentina             Saudi Arabia
-    dw 8;
     dw 9;
+    dw 10;
     // Match 9     Belgium      		 Canada
-    dw 20;
     dw 21;
+    dw 22;
     // Match 10    Spain        		 Costa Rica
-    dw 16;
     dw 17;
+    dw 18;
     // Match 11    Germany      		 Japan
-    dw 18;
     dw 19;
+    dw 20;
     // Match 12    Morocco      		 Croatia
-    dw 22;
     dw 23;
+    dw 24;
     // Match 13    Switzerland           Cameroon
-    dw 26;
     dw 27;
+    dw 28;
     // Match 14    Uruguay      		 South Korea
-    dw 30;
     dw 31;
+    dw 32;
     // Match 15    Portugal              Ghana
-    dw 28;
     dw 29;
+    dw 30;
     // Match 16    Brazil       		 Serbia
-    dw 24;
     dw 25;
+    dw 26;
     // Match 17    Wales        		 Iran
-    dw 7;
-    dw 5;
+    dw 8;
+    dw 6;
     // Match 18    Qatar        		 Senegal
-    dw 0;
-    dw 2;
+    dw 1;
+    dw 3;
     // Match 19    Netherlands      	 Ecuador
-    dw 3;
-    dw 1;
-    // Match 20    England      		 United States
     dw 4;
-    dw 6;
-    // Match 21    Tunisia      		 Australia
-    dw 15;
-    dw 13;
-    // Match 22    Poland       		 Saudi Arabia
-    dw 11;
-    dw 9;
-    // Match 23    France       		 Denmark
-    dw 12;
-    dw 14;
-    // Match 24    Argentina        	 Mexico
-    dw 8;
-    dw 10;
-    // Match 25    Japan        		 Costa Rica
-    dw 19;
-    dw 17;
-    // Match 26    Belgium      		 Morocco
-    dw 20;
-    dw 22;
-    // Match 27    Croatia      		 Canada
-    dw 23;
-    dw 21;
-    // Match 28    Spain        		 Germany
-    dw 16;
-    dw 18;
-    // Match 29    Cameroon              Serbia
-    dw 27;
-    dw 25;
-    // Match 30    South Korea 		     Ghana
-    dw 31;
-    dw 29;
-    // Match 31    Brazil       		 Switzerland
-    dw 24;
-    dw 26;
-    // Match 32    Portugal              Uruguay
-    dw 28;
-    dw 30;
-    // Match 33    Wales        		 England
-    dw 7;
-    dw 4;
-    // Match 34    Iran         		 United States
-    dw 5;
-    dw 6;
-    // Match 35    Ecuador      		 Senegal
-    dw 1;
     dw 2;
-    // Match 36    Netherlands      	 Qatar
-    dw 3;
-    dw 0;
-    // Match 37    Australia             Denmark
-    dw 13;
-    dw 14;
-    // Match 38    Tunisia      		 France
-    dw 15;
-    dw 12;
-    // Match 39    Poland       		 Argentina
-    dw 11;
-    dw 8;
-    // Match 40    Saudi Arabia 		 Mexico
-    dw 9;
-    dw 10;
-    // Match 41    Croatia      		 Belgium
-    dw 23;
-    dw 20;
-    // Match 42    Canada       		 Morocco
-    dw 21;
-    dw 22;
-    // Match 43    Japan        		 Spain
-    dw 19;
+    // Match 20    England      		 United States
+    dw 5;
+    dw 7;
+    // Match 21    Tunisia      		 Australia
     dw 16;
-    // Match 44    Costa Rica 		     Germany
-    dw 17;
+    dw 14;
+    // Match 22    Poland       		 Saudi Arabia
+    dw 12;
+    dw 10;
+    // Match 23    France       		 Denmark
+    dw 13;
+    dw 15;
+    // Match 24    Argentina        	 Mexico
+    dw 9;
+    dw 11;
+    // Match 25    Japan        		 Costa Rica
+    dw 20;
     dw 18;
-    // Match 45    Ghana        		 Uruguay
-    dw 29;
-    dw 30;
-    // Match 46    South Korea 		     Portugal
-    dw 31;
-    dw 28;
-    // Match 47    Serbia       		 Switzerland
-    dw 25;
-    dw 26;
-    // Match 48    Cameroon         	 Brazil
-    dw 27;
+    // Match 26    Belgium      		 Morocco
+    dw 21;
+    dw 23;
+    // Match 27    Croatia      		 Canada
     dw 24;
+    dw 22;
+    // Match 28    Spain        		 Germany
+    dw 17;
+    dw 19;
+    // Match 29    Cameroon              Serbia
+    dw 28;
+    dw 26;
+    // Match 30    South Korea 		     Ghana
+    dw 32;
+    dw 30;
+    // Match 31    Brazil       		 Switzerland
+    dw 25;
+    dw 27;
+    // Match 32    Portugal              Uruguay
+    dw 29;
+    dw 31;
+    // Match 33    Wales        		 England
+    dw 8;
+    dw 5;
+    // Match 34    Iran         		 United States
+    dw 6;
+    dw 7;
+    // Match 35    Ecuador      		 Senegal
+    dw 2;
+    dw 3;
+    // Match 36    Netherlands      	 Qatar
+    dw 4;
+    dw 1;
+    // Match 37    Australia             Denmark
+    dw 14;
+    dw 15;
+    // Match 38    Tunisia      		 France
+    dw 16;
+    dw 13;
+    // Match 39    Poland       		 Argentina
+    dw 12;
+    dw 9;
+    // Match 40    Saudi Arabia 		 Mexico
+    dw 10;
+    dw 11;
+    // Match 41    Croatia      		 Belgium
+    dw 24;
+    dw 21;
+    // Match 42    Canada       		 Morocco
+    dw 22;
+    dw 23;
+    // Match 43    Japan        		 Spain
+    dw 20;
+    dw 17;
+    // Match 44    Costa Rica 		     Germany
+    dw 18;
+    dw 19;
+    // Match 45    Ghana        		 Uruguay
+    dw 30;
+    dw 31;
+    // Match 46    South Korea 		     Portugal
+    dw 32;
+    dw 29;
+    // Match 47    Serbia       		 Switzerland
+    dw 26;
+    dw 27;
+    // Match 48    Cameroon         	 Brazil
+    dw 28;
+    dw 25;
 }
