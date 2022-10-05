@@ -9,9 +9,16 @@ export const Button: ComponentStyleConfig = {
     letterSpacing: "0.01em",
   },
   variants: {
-    primary: {
+    mint: {
       borderColor: "mint.500",
       color: "mint.500",
+      fontSize: "16px",
+      py: "22px",
+      px: "30px",
+    },
+    primary: {
+      borderColor: "blue.100",
+      color: "white",
       fontSize: "16px",
       py: "22px",
       px: "30px",

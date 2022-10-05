@@ -13,6 +13,7 @@ import {
 import { Nav } from "../components/Nav";
 import { Grid, MotionGridItem } from "../components/Grid";
 import { Playoff, Group, Toggle } from "components/tourney";
+import { Connect } from "components/Connect";
 
 enum State {
   GROUP,
@@ -68,7 +69,9 @@ export default function Tourney() {
         <MotionGridItem area={"main"}>
           {state === State.GROUP ? <Group /> : <Playoff />}
         </MotionGridItem>
-        <MotionGridItem area={"footer"}></MotionGridItem>
+        <MotionGridItem area={"footer"}>
+          <Connect />
+        </MotionGridItem>
       </Grid>
     </>
   );

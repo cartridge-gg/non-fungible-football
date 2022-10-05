@@ -13,7 +13,7 @@ export const Table: ComponentMultiStyleConfig = {
           h: "72px",
           fontSize: "16px",
           textTransform: "capitalize",
-          ":first-child": {
+          ":first-of-type": {
             borderRadius: "4px 0 0 4px",
           },
         },

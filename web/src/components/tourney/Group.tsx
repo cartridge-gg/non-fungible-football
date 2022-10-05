@@ -39,17 +39,17 @@ const Row = ({
 }: Partial<TeamData>) => {
   return (
     <>
-      <Tr bg="blue.200">
+      <Tr bg="blue.200" key={name}>
         <Th>
           <VStack align="flex-start">
             <Text>{name}</Text>
             {status && <Text textStyle="bracket">{status}</Text>}
           </VStack>
         </Th>
-        <Th>{games || 0}</Th>
-        <Th>{wins || 0}</Th>
-        <Th>{draws || 0}</Th>
-        <Th>{losses || 0}</Th>
+        <Th>{games || "--"}</Th>
+        <Th>{wins || "--"}</Th>
+        <Th>{draws || "--"}</Th>
+        <Th>{losses || "--"}</Th>
         <Th>{pts || "--"}</Th>
       </Tr>
       <Spacer minHeight="10px" />
