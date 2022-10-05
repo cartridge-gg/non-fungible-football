@@ -15,7 +15,7 @@ export const Callout = ({
       {icon}
     </Circle>
     <VStack align="flex-start" spacing="0">
-      <Text textStyle="h1">{title}</Text>
+      <Text textStyle="boldUpper">{title}</Text>
       <Text color="whiteAlpha.400">{description}</Text>
     </VStack>
   </HStack>

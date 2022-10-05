@@ -9,40 +9,38 @@ import {
 import { Bracket } from "./Bracket";
 import Connector from "./Connector";
 
-const SPACING = 40;
-const PLAYER_HEIGHT = 34;
-const BRACKET_HEIGHT = PLAYER_HEIGHT * 2;
-const CONNECTOR_HEIGHT = BRACKET_HEIGHT + SPACING;
-
 export const Playoff = (props: StyleProps) => {
+  const spacing = "50px";
+  const height = "64px";
+  const width = "160px";
   return (
     <Flex {...props} gap="0" align="center">
-      <VStack spacing={`${SPACING}px`}>
+      <VStack spacing={spacing}>
         <HStack spacing="0">
-          <VStack spacing={`${SPACING}px`}>
-            <Bracket height={`${PLAYER_HEIGHT}px`} />
-            <Bracket height={`${PLAYER_HEIGHT}px`} />
+          <VStack spacing={spacing}>
+            <Bracket height={height} width={width} />
+            <Bracket height={height} width={width} />
           </VStack>
-          <Connector height={`${CONNECTOR_HEIGHT}px`} showIcon />
+          <Connector height={`calc(${height} + ${spacing})`} showIcon />
         </HStack>
         <HStack spacing="0">
-          <VStack spacing={`${SPACING}px`}>
-            <Bracket height={`${PLAYER_HEIGHT}px`} />
-            <Bracket height={`${PLAYER_HEIGHT}px`} />
+          <VStack spacing={spacing}>
+            <Bracket height={height} width={width} />
+            <Bracket height={height} width={width} />
           </VStack>
-          <Connector height={`${CONNECTOR_HEIGHT}px`} showIcon />
+          <Connector height={`calc(${height} + ${spacing})`} showIcon />
         </HStack>
       </VStack>
       <HStack spacing="0">
-        <VStack spacing={`${SPACING}px`}>
-          <Bracket height={`${PLAYER_HEIGHT}px`} />
-          <Spacer minHeight={`${BRACKET_HEIGHT}px`} />
-          <Bracket height={`${PLAYER_HEIGHT}px`} />
+        <VStack spacing={spacing}>
+          <Bracket height={height} width={width} />
+          <Spacer minHeight={height} />
+          <Bracket height={height} width={width} />
         </VStack>
-        <Connector height={`${CONNECTOR_HEIGHT * 2}px`} showIcon />
+        <Connector height={`calc((${height} + ${spacing}) * 2)`} showIcon />
       </HStack>
       <VStack>
-        <Bracket height={`${PLAYER_HEIGHT}px`} isChampionship />
+        <Bracket height={height} width={width} isChampionship />
       </VStack>
     </Flex>
   );
