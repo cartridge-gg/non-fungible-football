@@ -1,0 +1,252 @@
+[
+    {
+        "data": [
+            {
+                "name": "previousOwner",
+                "type": "felt"
+            },
+            {
+                "name": "newOwner",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "account",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "Paused",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "account",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "Unpaused",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "id",
+                "type": "felt"
+            }
+        ],
+        "name": "team",
+        "outputs": [
+            {
+                "name": "name",
+                "type": "felt"
+            },
+            {
+                "name": "group",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "ids_len",
+                "type": "felt"
+            },
+            {
+                "name": "ids",
+                "type": "felt*"
+            }
+        ],
+        "name": "teams",
+        "outputs": [
+            {
+                "name": "teams_len",
+                "type": "felt"
+            },
+            {
+                "name": "teams",
+                "type": "felt*"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "id",
+                "type": "felt"
+            }
+        ],
+        "name": "match",
+        "outputs": [
+            {
+                "name": "team_a",
+                "type": "felt"
+            },
+            {
+                "name": "team_b",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "ids_len",
+                "type": "felt"
+            },
+            {
+                "name": "ids",
+                "type": "felt*"
+            }
+        ],
+        "name": "matches",
+        "outputs": [
+            {
+                "name": "matches_len",
+                "type": "felt"
+            },
+            {
+                "name": "matches",
+                "type": "felt*"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "team",
+                "type": "felt"
+            }
+        ],
+        "name": "fixtures",
+        "outputs": [],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "team",
+                "type": "felt"
+            }
+        ],
+        "name": "active",
+        "outputs": [
+            {
+                "name": "active",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "champion",
+        "outputs": [
+            {
+                "name": "team_id",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "team_a",
+                "type": "felt"
+            },
+            {
+                "name": "team_b",
+                "type": "felt"
+            },
+            {
+                "name": "score_a",
+                "type": "felt"
+            },
+            {
+                "name": "score_b",
+                "type": "felt"
+            }
+        ],
+        "name": "update",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "team",
+                "type": "felt"
+            }
+        ],
+        "name": "knockout",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "finalize",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "newOwner",
+                "type": "felt"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "type": "function"
+    }
+]

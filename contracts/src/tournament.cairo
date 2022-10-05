@@ -43,6 +43,10 @@ namespace ITournament {
     }
 }
 
+@storage_var
+func Tournament_result(match_id: felt) -> (winner: felt) {
+}
+
 @constructor
 func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     owner: felt
@@ -77,6 +81,7 @@ func teams_inner(ids_len: felt, ids: felt*, teams: felt*) {
 
 @view
 func match(id: felt) -> (team_a: felt, team_b: felt) {
+    if (id - 
     let match = lookup_match(id);
     return (team_a=match.team_a, team_b=match.team_b);
 }
@@ -238,7 +243,7 @@ func lookup_team(index: felt) -> Team* {
 
 func lookup_match(index: felt) -> Match* {
     let (addr) = get_label_location(data_start);
-    return cast(addr + (index * 2), Match*);
+    return cast(addr + (index - 1 * 2), Match*);
 
     data_start:
     // Match 1     Qatar        		 Ecuador

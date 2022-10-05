@@ -5,9 +5,8 @@ protostar_version = "0.4.2"
 libs_path = "lib"
 
 ["protostar.contracts"]
-main = [
-    "src/main.cairo",
-]
+player = ["src/player.cairo"]
+tournament = ["src/tournament.cairo"]
 
 ["protostar.build"]
 cairo-path = ["./lib/cairo_contracts/src", "./lib/cairo_math_64x61/contracts"]
