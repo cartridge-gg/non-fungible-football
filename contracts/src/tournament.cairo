@@ -117,6 +117,59 @@ func match{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(id: 
         return (team_a=res.team_a, team_b=res.team_b);
     }
 
+    if (id == 57) {
+        return inner_match(49, 50);
+    }
+
+    if (id == 58) {
+        return inner_match(53, 54);
+    }
+
+    if (id == 59) {
+        return inner_match(51, 52);
+    }
+
+    if (id == 60) {
+        return inner_match(55, 56);
+    }
+
+    if (id == 61) {
+        return inner_match(57, 58);
+    }
+
+    if (id == 62) {
+        return inner_match(59, 60);
+    }
+
+    return inner_match(61, 62);
+}
+
+func inner_match{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(match_a: felt, match_b: felt) -> (team_a: felt, team_b: felt) {
+    alloc_locals;
+
+    let (team1_a, team1_b) = result(match_a);
+    let (team2_a, team2_b) = result(match_b);
+
+    // They can't be equal in knockout.
+    let first = is_le(team1_a, team1_b);
+    let second = is_le(team2_a, team2_b);
+
+    if (first == 1 and second == 1) {
+        return (team_a=team1_b, team_b=team2_b);
+    }
+
+    if (first == 1 and second == 0) {
+        return (team_a=team1_b, team_b=team2_a);
+    }
+
+    if (first == 0 and second == 1) {
+        return (team_a=team1_a, team_b=team2_b);
+    }
+
+    if (first == 0 and second == 0) {
+        return (team_a=team1_a, team_b=team2_a);
+    }
+
     return (team_a=0, team_b=0);
 }
 
