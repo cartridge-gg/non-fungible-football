@@ -32,20 +32,24 @@ export const Bracket = ({
   isChampionship = false,
   ...rest
 }: BracketProps & StyleProps) => {
+  const { width, height } = rest;
+
   return (
     <VStack align="flex-start" position="relative">
       <HStack spacing="0">
         <VStack
+          w={width}
+          h={height}
           spacing="1px"
           bg="blue.300"
           borderRadius="4px"
           overflow="hidden"
           filter="drop-shadow(0px 5px 3px rgba(0,0,0,0.3))"
         >
-          <PlayerBracket {...rest} />
-          <PlayerBracket {...rest} />
+          <PlayerBracket />
+          <PlayerBracket />
         </VStack>
-        {!isChampionship && <Connector {...rest} />}
+        {!isChampionship && <Connector height={`calc(${height}/2)`} />}
       </HStack>
       <HStack color="blue.100" spacing="5px" position="absolute" bottom="-25px">
         <CalendarIcon size="sm" />
@@ -55,9 +59,9 @@ export const Bracket = ({
   );
 };
 
-const PlayerBracket = ({ name, flag, score, ...rest }: Player & StyleProps) => {
+const PlayerBracket = ({ name, flag, score }: Player) => {
   return (
-    <HStack w="160px" bg="blue.200" pl="10px" textStyle="bracket" {...rest}>
+    <HStack w="inherit" h="full" bg="blue.200" pl="10px" textStyle="bracket">
       <Box
         width="24px"
         height="18px"

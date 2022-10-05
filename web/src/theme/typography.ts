@@ -1,5 +1,11 @@
 export const textStyles = {
   h1: {
+    fontSize: "17px",
+    fontWeight: "600",
+    lineHeight: "24px",
+    letterSpacing: "0.01em",
+  },
+  boldUpper: {
     fontSize: "13px",
     fontWeight: "700",
     lineHeight: "24px",

@@ -39,7 +39,7 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
               color={active === i ? "yellow.500" : "blue.100"}
             >
               <Spacer maxWidth="50%" />
-              <Text textStyle="h1">{item.name}</Text>
+              <Text textStyle="boldUpper">{item.name}</Text>
             </HStack>
           </Link>
         ))}

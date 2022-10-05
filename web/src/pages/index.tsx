@@ -1,6 +1,7 @@
 import Head from "next/head";
 import {
   Box,
+  Text,
   Flex,
   GridItem,
   HStack,
@@ -28,6 +29,8 @@ export default function Home() {
         <GridItem area={"nav"}>
           <Nav py="50px" w="full" h="full" />
         </GridItem>
+        <GridItem area={"spacer"} />
+        <MotionGridItem area={"header"}></MotionGridItem>
         <MotionGridItem area={"main"}>
           <Flex
             h="full"
