@@ -22,6 +22,11 @@ struct Match {
     team_b: felt,
 }
 
+struct Result {
+    team_a: felt,
+    team_b: felt,
+}
+
 @contract_interface
 namespace ITournament {
     func add(name: felt, group: felt) -> () {
@@ -39,13 +44,13 @@ namespace ITournament {
     func matches(ids_len: felt, ids: felt*) -> (matches_len: felt, matches: felt*) {
     }
 
-    func result(match_id: felt) -> (team_id: felt) {
+    func result(match_id: felt) -> (team_a: felt, team_b: felt) {
     }
 
     func results(matches_len: felt, matches: felt*) -> (teams_len: felt, teams: felt*) {
     }
 
-    func update(match_id: felt, winner: felt) {
+    func update(match_id: felt, team_a: felt, team_b: felt) {
     }
 }
 
@@ -54,7 +59,7 @@ func Tournament_alive(team_id: felt) -> (alive: felt) {
 }
 
 @storage_var
-func Tournament_result(match_id: felt) -> (winner: felt) {
+func Tournament_result(match_id: felt) -> (result: Result) {
 }
 
 @constructor
@@ -99,6 +104,11 @@ func match{range_check_ptr}(id: felt) -> (team_a: felt, team_b: felt) {
         return (team_a=match.team_a, team_b=match.team_b);
     }
 
+    if (id == 49) {
+        let matches = lookup_group_matches(1);
+
+    }
+
     return (team_a=0, team_b=0);
 }
 
@@ -120,9 +130,9 @@ func matches_inner{range_check_ptr}(ids_len: felt, ids: felt*, matches: felt*) {
     let id = ids[0];
     let is_group = is_le(id, 49);
     if (is_group == 1) {
-        let match = lookup_match(ids[0]);
-        assert matches[0] = match.team_a;
-        assert matches[1] = match.team_b;
+        let (team_a, team_b) = match(ids[0]);
+        assert matches[0] = team_a;
+        assert matches[1] = team_b;
         return matches_inner(ids_len - 1, ids + 1, matches + 2);
     }
 
@@ -130,9 +140,9 @@ func matches_inner{range_check_ptr}(ids_len: felt, ids: felt*, matches: felt*) {
 }
 
 @view
-func result{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(match_id: felt) -> (team_id: felt) {
-    let (team_id) = Tournament_result.read(match_id);
-    return (team_id=team_id);
+func result{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(match_id: felt) -> (team_a: felt, team_b: felt) {
+    let (res) = Tournament_result.read(match_id);
+    return (team_a=res.team_a, team_b=res.team_b);
 }
 
 @view
@@ -140,7 +150,7 @@ func results{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(id
     alloc_locals;
     let (res) = alloc();
     results_inner(ids_len, ids, res);
-    return (ids_len, res);
+    return (2 * ids_len, res);
 }
 
 func results_inner{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(ids_len: felt, ids: felt*, results: felt*) {
@@ -151,8 +161,9 @@ func results_inner{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_p
     }
 
     let id = ids[0];
-    let (team_id) = Tournament_result.read(id);
-    assert results[0] = team_id;
+    let res = result(id);
+    assert results[0] = res.team_a;
+    assert results[1] = res.team_b;
 
     return results_inner(ids_len - 1, ids + 1, results + 2);
 }
@@ -186,28 +197,11 @@ func owner{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() ->
 // the corresponding teams.
 @external
 func update{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    match_id: felt, winner: felt,
+    match_id: felt, team_a: felt, team_b: felt,
 ) {
     alloc_locals;
-
     Ownable.assert_only_owner();
-
-    let (team_a, team_b) = match(match_id);
-
-    if (team_a == winner) {
-        Tournament_result.write(match_id, winner);
-        return ();
-    }
-
-    if (team_b == winner) {
-        Tournament_result.write(match_id, winner);
-        return ();
-    }
-
-    with_attr error_message("invalid update") {
-        assert 1 = 0;
-    }
-
+    Tournament_result.write(match_id, Result(team_a, team_b));
     return ();
 }
 
@@ -461,4 +455,67 @@ func lookup_match(index: felt) -> Match* {
     // Match 48    Cameroon         	 Brazil
     dw 28;
     dw 25;
+}
+
+func lookup_group_matches(index: felt) -> felt* {
+    let (addr) = get_label_location(data_start);
+    return cast(addr + ((index - 1) * 6), felt*);
+
+    data_start:
+    // Group A
+    dw 1;
+    dw 2;
+    dw 18;
+    dw 19;
+    dw 35;
+    dw 36;
+    // Group B
+    dw 3;
+    dw 4;
+    dw 17;
+    dw 20;
+    dw 33;
+    dw 34;
+    // Group C
+    dw 8;
+    dw 7;
+    dw 22;
+    dw 24;
+    dw 39;
+    dw 40;
+    // Group D
+    dw 6;
+    dw 5;
+    dw 21;
+    dw 23;
+    dw 37;
+    dw 38;
+    // Group E
+    dw 11;
+    dw 10;
+    dw 25;
+    dw 28;
+    dw 43;
+    dw 44;
+    // Group F
+    dw 12;
+    dw 9;
+    dw 26;
+    dw 27;
+    dw 41;
+    dw 42;
+    // Group G
+    dw 13;
+    dw 16;
+    dw 29;
+    dw 31;
+    dw 47;
+    dw 48;
+    // Group H
+    dw 14;
+    dw 15;
+    dw 30;
+    dw 32;
+    dw 45;
+    dw 46;
 }

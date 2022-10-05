@@ -5,7 +5,7 @@ from starkware.cairo.common.uint256 import Uint256
 from starkware.starknet.common.syscalls import get_caller_address
 from starkware.cairo.common.alloc import alloc
 
-from src.tournament import ITournament, lookup_team, lookup_match
+from src.tournament import ITournament, Result, lookup_team, lookup_match
 
 @external
 func test_lookup_team{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
@@ -106,18 +106,28 @@ func test_results{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
     %}
 
-    ITournament.update(contract_address, 1, 1);
+    ITournament.update(contract_address, 1, 1, 2);
 
-    let (match1) = ITournament.result(contract_address, 1);
-    assert match1 = 1;
+    let (team1_a, team1_b) = ITournament.result(contract_address, 1);
+    assert team1_a = 1;
+    assert team1_b = 2;
 
-    ITournament.update(contract_address, 11, 19);
+    ITournament.update(contract_address, 11, 19, 0);
 
-    let (match11) = ITournament.result(contract_address, 11);
-    assert match11 = 19;
+    let (team2_a, team2_b) = ITournament.result(contract_address, 11);
+    assert team2_a = 19;
+    assert team2_b = 0;
 
-    %{ expect_revert(error_message="invalid update") %}
-    ITournament.update(contract_address, 11, 3);
+    let (match_ids: felt*) = alloc();
+    assert match_ids[0] = 1;
+    assert match_ids[1] = 11;
+
+    let (matches_len, matches) = ITournament.results(contract_address, 2, match_ids);
+    assert matches_len = 4;
+    assert matches[0] = 1;
+    assert matches[1] = 2;
+    assert matches[2] = 19;
+    assert matches[3] = 0;
 
     %{ stop_prank_callable() %}
 
