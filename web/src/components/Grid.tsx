@@ -14,7 +14,6 @@ export const Grid = ({ children }: { children: ReactNode }) => (
     gridTemplateRows={"minmax(100px, 130px) 1fr minmax(100px, 130px)"}
     gridTemplateColumns={"minmax(100px, 300px) 1fr"}
     position="fixed"
-    gap="40px"
     w="full"
     h="100vh"
   >
@@ -34,7 +33,7 @@ export const MotionGridItem = ({
     animate={{
       opacity: 1,
     }}
-    ml="100px"
+    ml="140px"
     {...rest}
   >
     {children}

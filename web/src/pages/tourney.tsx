@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Nav } from "../components/Nav";
 import { Grid, MotionGridItem } from "../components/Grid";
-import { Playoff, Toggle } from "components/tourney";
+import { Playoff, Group, Toggle } from "components/tourney";
 
 enum State {
   GROUP,
@@ -32,7 +32,7 @@ export default function Tourney() {
         </GridItem>
         <GridItem area={"spacer"} />
         <MotionGridItem area={"header"}>
-          <Flex h="full" align="center">
+          <Flex h="full" align="center" pr="48px">
             <VStack spacing="5px" align="flex-start">
               {state === State.GROUP ? (
                 <>
@@ -53,15 +53,20 @@ export default function Tourney() {
             <Spacer />
             <HStack>
               <Toggle
-                state={state === State.GROUP}
-                prev={() => setState(0)}
-                next={() => setState(1)}
+                next={() => {
+                  setState(1);
+                  return false;
+                }}
+                prev={() => {
+                  setState(0);
+                  return false;
+                }}
               />
             </HStack>
           </Flex>
         </MotionGridItem>
         <MotionGridItem area={"main"}>
-          {state === State.GROUP ? <>Placecholder</> : <Playoff />}
+          {state === State.GROUP ? <Group /> : <Playoff />}
         </MotionGridItem>
         <MotionGridItem area={"footer"}></MotionGridItem>
       </Grid>
