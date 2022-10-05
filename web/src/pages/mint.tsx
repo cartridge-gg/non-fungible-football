@@ -2,7 +2,6 @@ import NextLink from "next/link";
 import Head from "next/head";
 import {
   Flex,
-  Box,
   Text,
   Image,
   Link,
@@ -10,11 +9,10 @@ import {
   Circle,
   HStack,
   VStack,
-  Spacer,
-  GridItem,
 } from "@chakra-ui/react";
 import Runner from "components/icons/Runner";
 import Logo from "components/brand/Logo";
+import { motion } from "framer-motion";
 
 export default function Mint() {
   return (
@@ -22,7 +20,20 @@ export default function Mint() {
       <Head>
         <title>Non-Fungible Football</title>
       </Head>
-      <Flex h="full" w="full" position="fixed" justify="center" align="center">
+      <Flex
+        as={motion.div}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        h="full"
+        w="full"
+        position="fixed"
+        justify="center"
+        align="center"
+      >
         <VStack spacing="50px">
           <Image
             src="/mint_random.gif"

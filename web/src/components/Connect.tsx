@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import {
   Box,
   Text,
@@ -16,7 +17,6 @@ import { formatAddress } from "utils/contracts";
 export const Connect = () => {
   const { account } = useAccount();
   const { connect, disconnect, connectors } = useConnectors();
-  console.log(account);
   return (
     <HStack h="full" align="center" justify="flex-end" px="48px" spacing="12px">
       {account ? (
@@ -35,10 +35,13 @@ export const Connect = () => {
           <Button variant="secondary">
             <CartridgeIcon /> {formatAddress(account.address)}
           </Button>
-          <Button variant="mint" disabled>
-            <RunnerIcon />
-            Mint
-          </Button>
+
+          <NextLink href="/mint">
+            <Button variant="mint">
+              <RunnerIcon />
+              Mint
+            </Button>
+          </NextLink>
         </>
       ) : (
         <Button
