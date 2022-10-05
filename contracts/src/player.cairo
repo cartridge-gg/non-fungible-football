@@ -6,7 +6,7 @@
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.uint256 import Uint256
 from starkware.starknet.common.syscalls import get_block_timestamp
-from starkware.cairo.common.math import assert_not_zero, assert_lt
+from starkware.cairo.common.math import assert_not_zero, assert_lt, unsigned_div_rem
 
 from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.introspection.erc165.library import ERC165
@@ -17,12 +17,54 @@ from openzeppelin.token.erc20.IERC20 import IERC20
 from src.discrete import DiscreteGDA
 from cairo_math_64x61.math64x61 import Math64x61
 
+const MAX = 832;
+
+@contract_interface
+namespace IPlayer {
+    func balanceOf(owner: felt) -> (balance: Uint256) {
+    }
+
+    func ownerOf(tokenId: Uint256) -> (owner: felt) {
+    }
+
+    func safeTransferFrom(from_: felt, to: felt, tokenId: Uint256, data_len: felt, data: felt*) {
+    }
+
+    func transferFrom(from_: felt, to: felt, tokenId: Uint256) {
+    }
+
+    func approve(approved: felt, tokenId: Uint256) {
+    }
+
+    func setApprovalForAll(operator: felt, approved: felt) {
+    }
+
+    func getApproved(tokenId: Uint256) -> (approved: felt) {
+    }
+
+    func isApprovedForAll(owner: felt, operator: felt) -> (isApproved: felt) {
+    }
+
+    func owner() -> (owner: felt) {
+    }
+
+    func paused() -> (paused: felt) {
+    }
+
+    func purchase(to: felt, value: felt) {
+    }
+}
+
 @storage_var
 func Player_payment_token() -> (res : felt) {
 }
 
 @storage_var
 func Player_supply() -> (res : felt) {
+}
+
+@storage_var
+func Player_seed() -> (res : felt) {
 }
 
 //
@@ -102,7 +144,9 @@ func isApprovedForAll{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_chec
 func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     tokenId: Uint256
 ) -> (tokenURI: felt) {
-    let (tokenURI: felt) = ERC721.token_uri(tokenId);
+    let (seed) = Player_seed.read();
+    let (_, rem) = unsigned_div_rem(seed * tokenId.low, MAX);
+    let (tokenURI: felt) = ERC721.token_uri(Uint256(low=rem, high=0));
     return (tokenURI=tokenURI);
 }
 
@@ -169,6 +213,11 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
     }
 
     let (supply) = Player_supply.read();
+
+    with_attr error_message("sold out") {
+        assert_not_zero(MAX - supply);
+    }
+
     let price = DiscreteGDA.purchase_price(1, supply);
 
     with_attr error_message("insufficient payment") {
@@ -179,6 +228,14 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
 
     // There can only ever be 832 NFTs.
     ERC721._mint(to, Uint256(low=supply, high=0));
+
+    if (supply + 1 == MAX) {
+        // We trust starkware not to manipulate the timestamp *shrug*
+        let (time) = get_block_timestamp();
+        Player_seed.write(time);
+        return ();
+    }
+
     return ();
 }
 
