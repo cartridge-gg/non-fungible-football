@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { Toggle } from "./Toggle";
 import TournamentData from "tournament.json";
+import { motion } from "framer-motion";
 
 type TeamData = {
   flag: string;
@@ -87,7 +88,7 @@ export const Group = () => {
   }, [group]);
 
   return (
-    <TableContainer>
+    <TableContainer w="full">
       <Table variant="custom">
         <Thead>
           <Tr>

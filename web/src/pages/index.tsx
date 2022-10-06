@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import Head from "next/head";
 import { GridItem } from "@chakra-ui/react";
 import { Nav } from "../components/Nav";
-import { Grid, MotionGridItem } from "../components/Grid";
+import { Grid } from "../components/Grid";
+import { MotionGridItem } from "components/MotionWrappers";
 import { Details } from "components/details/Details";
 import { Connect } from "components/Connect";
 

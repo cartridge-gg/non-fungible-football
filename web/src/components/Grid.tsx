@@ -1,10 +1,5 @@
-import {
-  Grid as ChakraGrid,
-  GridItem as ChakraGridItem,
-  GridItemProps,
-} from "@chakra-ui/react";
+import { Grid as ChakraGrid } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
 
 export const Grid = ({ children }: { children: ReactNode }) => (
   <ChakraGrid
@@ -19,23 +14,4 @@ export const Grid = ({ children }: { children: ReactNode }) => (
   >
     {children}
   </ChakraGrid>
-);
-
-export const MotionGridItem = ({
-  children,
-  ...rest
-}: { children?: ReactNode } & GridItemProps) => (
-  <ChakraGridItem
-    as={motion.div}
-    initial={{
-      opacity: 0,
-    }}
-    animate={{
-      opacity: 1,
-    }}
-    ml="140px"
-    {...rest}
-  >
-    {children}
-  </ChakraGridItem>
 );

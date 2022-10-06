@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import {
   Flex,
   Box,
@@ -11,7 +11,8 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import { Nav } from "../components/Nav";
-import { Grid, MotionGridItem } from "../components/Grid";
+import { Grid } from "../components/Grid";
+import { MotionFlex, MotionGridItem } from "components/MotionWrappers";
 import { Playoff, Group, Toggle } from "components/tourney";
 import { Connect } from "components/Connect";
 
@@ -67,7 +68,16 @@ export default function Tourney() {
           </Flex>
         </MotionGridItem>
         <MotionGridItem area={"main"}>
-          {state === State.GROUP ? <Group /> : <Playoff />}
+          {state === State.GROUP && (
+            <MotionFlex h="full" alignItems="flex-start">
+              <Group />
+            </MotionFlex>
+          )}
+          {state === State.TOURNAMENT && (
+            <MotionFlex h="full" alignItems="flex-start">
+              <Playoff />
+            </MotionFlex>
+          )}
         </MotionGridItem>
         <MotionGridItem area={"footer"}>
           <Connect />

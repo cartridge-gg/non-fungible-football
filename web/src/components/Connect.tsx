@@ -19,9 +19,7 @@ import {
 } from "@starknet-react/core";
 import { formatAddress } from "utils/contracts";
 import { useEffect, useMemo, useCallback } from "react";
-import { CONTRACT_PLAYER } from "utils/constants";
-
-const PLAYER_PRICE = 1000000000000000;
+import { CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
 
 export const Connect = () => {
   const router = useRouter();
@@ -74,13 +72,19 @@ export const Connect = () => {
           </Button>
         </>
       ) : (
-        <Button
-          onClick={() => {
-            connect(connectors[0]);
-          }}
-        >
-          <CartridgeIcon /> Connect
-        </Button>
+        <>
+          {connectors.length !== 0 ? (
+            <Button
+              onClick={() => {
+                connect(connectors[0]);
+              }}
+            >
+              <CartridgeIcon /> Connect
+            </Button>
+          ) : (
+            <Text>No Wallets Detected</Text>
+          )}
+        </>
       )}
     </HStack>
   );
