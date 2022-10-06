@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { defaultProvider } from "starknet";
-import { CONTRACT_TOURNAMENT } from "utils/constants";
+import { CONTRACT_PLAYER } from "utils/constants";
 
-export const useTournament = () => {
+export const usePlayer = () => {
   const [player, setPlayer] = useState();
   const [error, setError] = useState<Error>();
   const [loading, setLoading] = useState<boolean>(false);

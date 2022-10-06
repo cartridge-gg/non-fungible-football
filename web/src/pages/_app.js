@@ -8,7 +8,7 @@ import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <StarknetProvider autoConnect connectors={getInstalledInjectedConnectors()}>
+    <StarknetProvider connectors={getInstalledInjectedConnectors()}>
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
