@@ -5,7 +5,7 @@
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.uint256 import Uint256
-from starkware.starknet.common.syscalls import get_block_timestamp
+from starkware.starknet.common.syscalls import get_block_timestamp, get_caller_address
 from starkware.cairo.common.math import assert_not_zero, assert_le, unsigned_div_rem
 
 from openzeppelin.access.ownable.library import Ownable
@@ -51,7 +51,7 @@ namespace IPlayer {
     func paused() -> (paused: felt) {
     }
 
-    func purchase(to: felt, value: felt) {
+    func purchase(value: felt) {
     }
 
     func price() -> (price: felt) {
@@ -82,7 +82,7 @@ func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr
     ERC721.initializer('Player', 'PLAYER');
     Ownable.initializer(owner);
 
-    let initial_price = 1000;
+    let initial_price = 100000000000000000;
     let initial_price_fp = Math64x61.fromFelt(initial_price);
     let scale_factor_fp = Math64x61.div(Math64x61.fromFelt(11), Math64x61.fromFelt(10)); 
     let decay_constant_fp = Math64x61.div(Math64x61.fromFelt(1), Math64x61.fromFelt(2));
@@ -164,6 +164,19 @@ func paused{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -
     return Pausable.is_paused();
 }
 
+@view
+func price{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (price: felt) {
+    let (supply) = Player_supply.read();
+    let price = DiscreteGDA.purchase_price(1, supply);
+    return (price=price);
+}
+
+@view
+func supply{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (supply: felt) {
+    let (supply) = Player_supply.read();
+    return (supply=supply);
+}
+
 //
 // Externals
 //
@@ -206,16 +219,12 @@ func safeTransferFrom{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_chec
 
 @external
 func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
-    to: felt,
     value: felt,
 ) {
     alloc_locals;
     Pausable.assert_not_paused();
 
-    with_attr error_message("zero receiver") {
-        assert_not_zero(to);
-    }
-
+    let (to) = get_caller_address();
     let (supply) = Player_supply.read();
 
     with_attr error_message("sold out") {
@@ -241,19 +250,6 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
     }
 
     return ();
-}
-
-@external
-func price{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (price: felt) {
-    let (supply) = Player_supply.read();
-    let price = DiscreteGDA.purchase_price(1, supply);
-    return (price=price);
-}
-
-@external
-func supply{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (supply: felt) {
-    let (supply) = Player_supply.read();
-    return (supply=supply);
 }
 
 @external

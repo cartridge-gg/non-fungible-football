@@ -113,14 +113,6 @@
     {
         "inputs": [
             {
-                "name": "name",
-                "type": "felt"
-            },
-            {
-                "name": "symbol",
-                "type": "felt"
-            },
-            {
                 "name": "owner",
                 "type": "felt"
             }
@@ -284,6 +276,30 @@
         "type": "function"
     },
     {
+        "inputs": [],
+        "name": "price",
+        "outputs": [
+            {
+                "name": "price",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "supply",
+        "outputs": [
+            {
+                "name": "supply",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "name": "to",
@@ -361,10 +377,6 @@
     },
     {
         "inputs": [
-            {
-                "name": "to",
-                "type": "felt"
-            },
             {
                 "name": "value",
                 "type": "felt"

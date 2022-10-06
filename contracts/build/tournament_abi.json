@@ -142,26 +142,60 @@
     {
         "inputs": [
             {
-                "name": "team",
+                "name": "match_id",
                 "type": "felt"
             }
         ],
-        "name": "fixtures",
-        "outputs": [],
+        "name": "result",
+        "outputs": [
+            {
+                "name": "team_a",
+                "type": "felt"
+            },
+            {
+                "name": "team_b",
+                "type": "felt"
+            }
+        ],
         "stateMutability": "view",
         "type": "function"
     },
     {
         "inputs": [
             {
-                "name": "team",
+                "name": "ids_len",
+                "type": "felt"
+            },
+            {
+                "name": "ids",
+                "type": "felt*"
+            }
+        ],
+        "name": "results",
+        "outputs": [
+            {
+                "name": "results_len",
+                "type": "felt"
+            },
+            {
+                "name": "results",
+                "type": "felt*"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "team_id",
                 "type": "felt"
             }
         ],
-        "name": "active",
+        "name": "alive",
         "outputs": [
             {
-                "name": "active",
+                "name": "alive",
                 "type": "felt"
             }
         ],
@@ -195,19 +229,15 @@
     {
         "inputs": [
             {
+                "name": "match_id",
+                "type": "felt"
+            },
+            {
                 "name": "team_a",
                 "type": "felt"
             },
             {
                 "name": "team_b",
-                "type": "felt"
-            },
-            {
-                "name": "score_a",
-                "type": "felt"
-            },
-            {
-                "name": "score_b",
                 "type": "felt"
             }
         ],
@@ -218,17 +248,15 @@
     {
         "inputs": [
             {
-                "name": "team",
+                "name": "results_len",
                 "type": "felt"
+            },
+            {
+                "name": "results",
+                "type": "felt*"
             }
         ],
-        "name": "knockout",
-        "outputs": [],
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "finalize",
+        "name": "finalize_group",
         "outputs": [],
         "type": "function"
     },
