@@ -2789,7 +2789,7 @@
                 "type": "alias"
             },
             "__main__.Match": {
-                "destination": "src.schedule.Match",
+                "destination": "src.data.Match",
                 "type": "alias"
             },
             "__main__.Ownable": {
@@ -2816,7 +2816,7 @@
                 "type": "struct"
             },
             "__main__.Team": {
-                "destination": "src.schedule.Team",
+                "destination": "src.data.Team",
                 "type": "alias"
             },
             "__main__.Tournament_alive": {
@@ -3947,7 +3947,7 @@
                 "type": "struct"
             },
             "__main__.Tournament_round_sixteen.read.Return": {
-                "cairo_type": "(match: src.schedule.Match)",
+                "cairo_type": "(match: src.data.Match)",
                 "type": "type_definition"
             },
             "__main__.Tournament_round_sixteen.read.SIZEOF_LOCALS": {
@@ -4152,7 +4152,7 @@
                         "offset": 0
                     },
                     "value": {
-                        "cairo_type": "src.schedule.Match",
+                        "cairo_type": "src.data.Match",
                         "offset": 1
                     }
                 },
@@ -4294,7 +4294,7 @@
                 "type": "reference"
             },
             "__main__.Tournament_round_sixteen.write.value": {
-                "cairo_type": "src.schedule.Match",
+                "cairo_type": "src.data.Match",
                 "full_name": "__main__.Tournament_round_sixteen.write.value",
                 "references": [
                     {
@@ -4303,7 +4303,7 @@
                             "offset": 0
                         },
                         "pc": 683,
-                        "value": "[cast(fp + (-4), src.schedule.Match*)]"
+                        "value": "[cast(fp + (-4), src.data.Match*)]"
                     }
                 ],
                 "type": "reference"
@@ -5443,15 +5443,15 @@
                 "type": "alias"
             },
             "__main__.lookup_group_matches": {
-                "destination": "src.schedule.lookup_group_matches",
+                "destination": "src.data.lookup_group_matches",
                 "type": "alias"
             },
             "__main__.lookup_match": {
-                "destination": "src.schedule.lookup_match",
+                "destination": "src.data.lookup_match",
                 "type": "alias"
             },
             "__main__.lookup_team": {
-                "destination": "src.schedule.lookup_team",
+                "destination": "src.data.lookup_team",
                 "type": "alias"
             },
             "__main__.match": {
@@ -5665,7 +5665,7 @@
                 "type": "reference"
             },
             "__main__.match.match": {
-                "cairo_type": "src.schedule.Match*",
+                "cairo_type": "src.data.Match*",
                 "full_name": "__main__.match.match",
                 "references": [
                     {
@@ -5674,7 +5674,7 @@
                             "offset": 46
                         },
                         "pc": 851,
-                        "value": "[cast(ap + (-1), src.schedule.Match**)]"
+                        "value": "[cast(ap + (-1), src.data.Match**)]"
                     }
                 ],
                 "type": "reference"
@@ -5854,7 +5854,7 @@
                 "type": "reference"
             },
             "__main__.match.res": {
-                "cairo_type": "src.schedule.Match",
+                "cairo_type": "src.data.Match",
                 "full_name": "__main__.match.res",
                 "references": [
                     {
@@ -5863,7 +5863,7 @@
                             "offset": 135
                         },
                         "pc": 873,
-                        "value": "[cast(ap + (-2), src.schedule.Match*)]"
+                        "value": "[cast(ap + (-2), src.data.Match*)]"
                     }
                 ],
                 "type": "reference"
@@ -7230,7 +7230,7 @@
                 "type": "reference"
             },
             "__main__.team.team": {
-                "cairo_type": "src.schedule.Team*",
+                "cairo_type": "src.data.Team*",
                 "full_name": "__main__.team.team",
                 "references": [
                     {
@@ -7239,7 +7239,7 @@
                             "offset": 13
                         },
                         "pc": 729,
-                        "value": "[cast(ap + (-1), src.schedule.Team**)]"
+                        "value": "[cast(ap + (-1), src.data.Team**)]"
                     }
                 ],
                 "type": "reference"
@@ -7447,7 +7447,7 @@
                 "type": "reference"
             },
             "__main__.teams_inner.team": {
-                "cairo_type": "src.schedule.Team*",
+                "cairo_type": "src.data.Team*",
                 "full_name": "__main__.teams_inner.team",
                 "references": [
                     {
@@ -7456,7 +7456,7 @@
                             "offset": 13
                         },
                         "pc": 823,
-                        "value": "[cast(ap + (-1), src.schedule.Team**)]"
+                        "value": "[cast(ap + (-1), src.data.Team**)]"
                     }
                 ],
                 "type": "reference"
@@ -14060,8 +14060,8 @@
                 "destination": "starkware.starknet.common.syscalls.get_caller_address",
                 "type": "alias"
             },
-            "src.schedule.Match": {
-                "full_name": "src.schedule.Match",
+            "src.data.Match": {
+                "full_name": "src.data.Match",
                 "members": {
                     "team_a": {
                         "cairo_type": "felt",
@@ -14075,8 +14075,8 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.schedule.Team": {
-                "full_name": "src.schedule.Team",
+            "src.data.Team": {
+                "full_name": "src.data.Team",
                 "members": {
                     "group": {
                         "cairo_type": "felt",
@@ -14090,21 +14090,21 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.schedule.alloc": {
+            "src.data.alloc": {
                 "destination": "starkware.cairo.common.alloc.alloc",
                 "type": "alias"
             },
-            "src.schedule.get_label_location": {
+            "src.data.get_label_location": {
                 "destination": "starkware.cairo.common.registers.get_label_location",
                 "type": "alias"
             },
-            "src.schedule.lookup_group_matches": {
+            "src.data.lookup_group_matches": {
                 "decorators": [],
                 "pc": 511,
                 "type": "function"
             },
-            "src.schedule.lookup_group_matches.Args": {
-                "full_name": "src.schedule.lookup_group_matches.Args",
+            "src.data.lookup_group_matches.Args": {
+                "full_name": "src.data.lookup_group_matches.Args",
                 "members": {
                     "index": {
                         "cairo_type": "felt",
@@ -14114,23 +14114,23 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.schedule.lookup_group_matches.ImplicitArgs": {
-                "full_name": "src.schedule.lookup_group_matches.ImplicitArgs",
+            "src.data.lookup_group_matches.ImplicitArgs": {
+                "full_name": "src.data.lookup_group_matches.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.schedule.lookup_group_matches.Return": {
+            "src.data.lookup_group_matches.Return": {
                 "cairo_type": "felt*",
                 "type": "type_definition"
             },
-            "src.schedule.lookup_group_matches.SIZEOF_LOCALS": {
+            "src.data.lookup_group_matches.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.schedule.lookup_group_matches.__temp38": {
+            "src.data.lookup_group_matches.__temp38": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_group_matches.__temp38",
+                "full_name": "src.data.lookup_group_matches.__temp38",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14143,9 +14143,9 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_group_matches.__temp39": {
+            "src.data.lookup_group_matches.__temp39": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_group_matches.__temp39",
+                "full_name": "src.data.lookup_group_matches.__temp39",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14158,9 +14158,9 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_group_matches.addr": {
+            "src.data.lookup_group_matches.addr": {
                 "cairo_type": "felt*",
-                "full_name": "src.schedule.lookup_group_matches.addr",
+                "full_name": "src.data.lookup_group_matches.addr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14173,13 +14173,13 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_group_matches.data_start": {
+            "src.data.lookup_group_matches.data_start": {
                 "pc": 521,
                 "type": "label"
             },
-            "src.schedule.lookup_group_matches.index": {
+            "src.data.lookup_group_matches.index": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_group_matches.index",
+                "full_name": "src.data.lookup_group_matches.index",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14192,13 +14192,13 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_match": {
+            "src.data.lookup_match": {
                 "decorators": [],
                 "pc": 405,
                 "type": "function"
             },
-            "src.schedule.lookup_match.Args": {
-                "full_name": "src.schedule.lookup_match.Args",
+            "src.data.lookup_match.Args": {
+                "full_name": "src.data.lookup_match.Args",
                 "members": {
                     "index": {
                         "cairo_type": "felt",
@@ -14208,23 +14208,23 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.schedule.lookup_match.ImplicitArgs": {
-                "full_name": "src.schedule.lookup_match.ImplicitArgs",
+            "src.data.lookup_match.ImplicitArgs": {
+                "full_name": "src.data.lookup_match.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.schedule.lookup_match.Return": {
-                "cairo_type": "src.schedule.Match*",
+            "src.data.lookup_match.Return": {
+                "cairo_type": "src.data.Match*",
                 "type": "type_definition"
             },
-            "src.schedule.lookup_match.SIZEOF_LOCALS": {
+            "src.data.lookup_match.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.schedule.lookup_match.__temp36": {
+            "src.data.lookup_match.__temp36": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_match.__temp36",
+                "full_name": "src.data.lookup_match.__temp36",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14237,9 +14237,9 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_match.__temp37": {
+            "src.data.lookup_match.__temp37": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_match.__temp37",
+                "full_name": "src.data.lookup_match.__temp37",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14252,9 +14252,9 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_match.addr": {
+            "src.data.lookup_match.addr": {
                 "cairo_type": "felt*",
-                "full_name": "src.schedule.lookup_match.addr",
+                "full_name": "src.data.lookup_match.addr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14267,13 +14267,13 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_match.data_start": {
+            "src.data.lookup_match.data_start": {
                 "pc": 415,
                 "type": "label"
             },
-            "src.schedule.lookup_match.index": {
+            "src.data.lookup_match.index": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_match.index",
+                "full_name": "src.data.lookup_match.index",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14286,13 +14286,13 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_team": {
+            "src.data.lookup_team": {
                 "decorators": [],
                 "pc": 331,
                 "type": "function"
             },
-            "src.schedule.lookup_team.Args": {
-                "full_name": "src.schedule.lookup_team.Args",
+            "src.data.lookup_team.Args": {
+                "full_name": "src.data.lookup_team.Args",
                 "members": {
                     "index": {
                         "cairo_type": "felt",
@@ -14302,23 +14302,23 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.schedule.lookup_team.ImplicitArgs": {
-                "full_name": "src.schedule.lookup_team.ImplicitArgs",
+            "src.data.lookup_team.ImplicitArgs": {
+                "full_name": "src.data.lookup_team.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.schedule.lookup_team.Return": {
-                "cairo_type": "src.schedule.Team*",
+            "src.data.lookup_team.Return": {
+                "cairo_type": "src.data.Team*",
                 "type": "type_definition"
             },
-            "src.schedule.lookup_team.SIZEOF_LOCALS": {
+            "src.data.lookup_team.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.schedule.lookup_team.__temp34": {
+            "src.data.lookup_team.__temp34": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_team.__temp34",
+                "full_name": "src.data.lookup_team.__temp34",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14331,9 +14331,9 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_team.__temp35": {
+            "src.data.lookup_team.__temp35": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_team.__temp35",
+                "full_name": "src.data.lookup_team.__temp35",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14346,9 +14346,9 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_team.addr": {
+            "src.data.lookup_team.addr": {
                 "cairo_type": "felt*",
-                "full_name": "src.schedule.lookup_team.addr",
+                "full_name": "src.data.lookup_team.addr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -14361,13 +14361,13 @@
                 ],
                 "type": "reference"
             },
-            "src.schedule.lookup_team.data_start": {
+            "src.data.lookup_team.data_start": {
                 "pc": 341,
                 "type": "label"
             },
-            "src.schedule.lookup_team.index": {
+            "src.data.lookup_team.index": {
                 "cairo_type": "felt",
-                "full_name": "src.schedule.lookup_team.index",
+                "full_name": "src.data.lookup_team.index",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -19570,7 +19570,7 @@
                         "offset": 0
                     },
                     "pc": 683,
-                    "value": "[cast(fp + (-4), src.schedule.Match*)]"
+                    "value": "[cast(fp + (-4), src.data.Match*)]"
                 },
                 {
                     "ap_tracking_data": {
@@ -19818,7 +19818,7 @@
                         "offset": 13
                     },
                     "pc": 729,
-                    "value": "[cast(ap + (-1), src.schedule.Team**)]"
+                    "value": "[cast(ap + (-1), src.data.Team**)]"
                 },
                 {
                     "ap_tracking_data": {
@@ -20266,7 +20266,7 @@
                         "offset": 13
                     },
                     "pc": 823,
-                    "value": "[cast(ap + (-1), src.schedule.Team**)]"
+                    "value": "[cast(ap + (-1), src.data.Team**)]"
                 },
                 {
                     "ap_tracking_data": {
@@ -20346,7 +20346,7 @@
                         "offset": 46
                     },
                     "pc": 851,
-                    "value": "[cast(ap + (-1), src.schedule.Match**)]"
+                    "value": "[cast(ap + (-1), src.data.Match**)]"
                 },
                 {
                     "ap_tracking_data": {
@@ -20402,7 +20402,7 @@
                         "offset": 135
                     },
                     "pc": 873,
-                    "value": "[cast(ap + (-2), src.schedule.Match*)]"
+                    "value": "[cast(ap + (-2), src.data.Match*)]"
                 },
                 {
                     "ap_tracking_data": {
