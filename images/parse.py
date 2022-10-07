@@ -44,11 +44,15 @@ func lookup_{part}(index: felt) -> (part_len: felt, part: felt*) {{
 
 output = HEADER
 
+def rgb_to_hex(rgb):
+    return '#%02x%02x%02x' % rgb
+
 if __name__ == "__main__":
     for part in ["body", "boots", "hair", "numbers", "teams"]:
 
         files = [os.path.join(part, f) for f in
                     os.listdir(part)]
+        files.sort()
 
         part_start = 0
 
@@ -75,16 +79,28 @@ if __name__ == "__main__":
                     rgb_tuple = rgb_values.pop(0)
 
                     if rgb_tuple[3] > 0:
-                        rects += svgdoc.rect(insert = ("{0}px".format(colcount * SCALE),
-                                                        "{0}px".format(rowcount * SCALE)),
-                                            size = ("5px", "5px"),
-                                            fill = svgwrite.rgb(rgb_tuple[0],
-                                                                rgb_tuple[1],
-                                                                rgb_tuple[2])).tostring()
+                        opacity = rgb_tuple[3] / float(255)
+                        if opacity != 1:
+                            rects += svgdoc.rect(insert = ("{0}px".format(colcount * SCALE),
+                                                            "{0}px".format(rowcount * SCALE)),
+                                                size = ("5px", "5px"),
+                                                fill = rgb_to_hex((rgb_tuple[0],
+                                                                    rgb_tuple[1],
+                                                                    rgb_tuple[2])),
+                                                opacity = rgb_tuple[3]/float(255)).tostring()
+                        else:
+                            rects += svgdoc.rect(insert = ("{0}px".format(colcount * SCALE),
+                                                            "{0}px".format(rowcount * SCALE)),
+                                                size = ("5px", "5px"),
+                                                fill = rgb_to_hex((rgb_tuple[0],
+                                                                    rgb_tuple[1],
+                                                                    rgb_tuple[2]))).tostring()
+
                     colcount = colcount + 1
                 rowcount = rowcount + 1
 
             n = 30
+            rects = rects.replace('"', '\\"')
             split = ["\n\tdw '" + rects[i:i+n] + "';" for i in range(0, len(rects), n)]
             num = len(split)
 

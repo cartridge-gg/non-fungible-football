@@ -19,6 +19,7 @@ from openzeppelin.token.erc20.IERC20 import IERC20
 from src.discrete import DiscreteGDA
 from cairo_math_64x61.math64x61 import Math64x61
 from src.components import lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
+from src.schedule import lookup_team
 
 const MAX = 832;
 
@@ -156,35 +157,53 @@ func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     // let (seed) = Player_seed.read();
     // let (_, rem) = unsigned_div_rem(seed * tokenId.low, MAX);
 
+    let (_, background_idx) = unsigned_div_rem(tokenId.low, 2);
+    let (_, body_idx) = unsigned_div_rem(tokenId.low, 4);
+    let (_, team_idx) = unsigned_div_rem(tokenId.low, 32);
+    let (_, number_idx) = unsigned_div_rem(tokenId.low, 26);
+    let (_, boot_idx) = unsigned_div_rem(tokenId.low, 4);
+    let (_, hair_idx) = unsigned_div_rem(tokenId.low, 37);
+
+    let (body_len, body) = lookup_body(body_idx);
+    let (teams_len, teams) = lookup_teams(team_idx);
+    let (number_len, number) = lookup_numbers(number_idx);
+    let (boots_len, boots) = lookup_boots(boot_idx);
+    let (hair_len, hair) = lookup_hair(hair_idx);
+
     let (arr) = alloc();
-    assert arr[0] = '<svg xmlns="http://www.w3.org/';
-    assert arr[1] = '2000/svg" shape-rendering="cri';
-    assert arr[2] = 'spEdges" width="320" height="3';
-    assert arr[3] = '20">';
+    assert arr[0] = 'data:application/json,{"name":';
+    assert arr[1] = '"Non Fungible Football","descr';
+    assert arr[2] = 'iption":"2022 World Cup Playe';
+    assert arr[3] = 'r","image":"data:image/svg+xml';
+    assert arr[4] = ',<?xml version=\"1.0\"  encodi';
+    assert arr[5] = 'ng=\"UTF-8\"?><svg xmlns=\"htt';
+    assert arr[6] = 'p://www.w3.org/2000/svg\" shap';
+    assert arr[7] = 'e-rendering=\"crispEdges\" wid';
+    assert arr[8] = 'th=\"320\" height=\"320\"><rec';
+    assert arr[9] = 't width=\"100%\" height=\"100%';
 
-    let (_, body) = unsigned_div_rem(tokenId.low, 4);
-    let (_, team) = unsigned_div_rem(tokenId.low, 32);
-    let (_, number) = unsigned_div_rem(tokenId.low, 26);
-    let (_, boot) = unsigned_div_rem(tokenId.low, 4);
-    let (_, hair) = unsigned_div_rem(tokenId.low, 37);
+    if (background_idx == 0) {
+        assert arr[10] = '\" fill=\"#ffcc02\" />';
+    } else {
+        assert arr[10] = '\" fill=\"#5a6ec7\" />';
+    }
 
-    let (body_len, body) = lookup_body(body);
-    let (teams_len, teams) = lookup_teams(team);
-    let (numbers_len, numbers) = lookup_numbers(number);
-    let (boots_len, boots) = lookup_boots(boot);
-    let (hairs_len, hairs) = lookup_hair(hair);
+    memcpy(arr + 11, body, body_len);
+    memcpy(arr + 11 + body_len, teams, teams_len);
+    memcpy(arr + 11 + body_len + teams_len, number, number_len);
+    memcpy(arr + 11 + body_len + teams_len + number_len, boots, boots_len);
+    memcpy(arr + 11 + body_len + teams_len + number_len + boots_len, hair, hair_len);
 
-    memcpy(arr + 4, body, body_len);
-    memcpy(arr + 4 + body_len, teams, teams_len);
-    memcpy(arr + 4 + body_len + teams_len, numbers, numbers_len);
-    memcpy(arr + 4 + body_len + teams_len + numbers_len, boots, boots_len);
-    memcpy(arr + 4 + body_len + teams_len + numbers_len + boots_len, hairs, hairs_len);
+    let len = 11 + hair_len + boots_len + number_len + teams_len + body_len;
 
-    let len = 4 + hairs_len + boots_len + numbers_len + teams_len + body_len;
+    // Teams are 1 indexed in the schedule;
+    let team = lookup_team(team_idx + 1);
+    assert arr[len] = '</svg>","attributes":[{"trait_';
+    assert arr[len + 1] = 'type":"Team","value":"';
+    assert arr[len + 2] = team.name;
+    assert arr[len + 3] = '"}]}';
 
-    assert arr[len] = '</svg>';
-
-    return (tokenURI_len=len + 1, tokenURI=arr);
+    return (tokenURI_len=len + 4, tokenURI=arr);
 }
 
 @view
@@ -199,9 +218,10 @@ func paused{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -
 
 @view
 func price{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (price: felt) {
-    let (supply) = Player_supply.read();
-    let price = DiscreteGDA.purchase_price(1, supply);
-    return (price=price);
+    return (price=100000000000000000);
+    // let (supply) = Player_supply.read();
+    // let price = DiscreteGDA.purchase_price(1, supply);
+    // return (price=price);
 }
 
 @view

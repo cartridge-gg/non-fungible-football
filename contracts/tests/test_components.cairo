@@ -12,9 +12,6 @@ func test_components{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuil
 
     let (body_len, body) = lookup_body(0);
 
-    assert body_len = 446;
-    assert body[0] = '<rect fill="rgb(112,71,47)" he';
-
     %{
         parts = memory.get_range(ids.body, ids.body_len)
         svg = ""

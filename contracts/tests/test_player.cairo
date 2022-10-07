@@ -59,7 +59,7 @@ func test_token_uri{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuilt
             except:
                 print(felt)
 
-        with open('tests/test_player.svg', 'w') as f:
+        with open('tests/test_player.json', 'w') as f:
             f.write(svg)
     %}
 
