@@ -33,48 +33,52 @@ export default function Tourney() {
           <Nav w="full" h="full" active={1} />
         </GridItem>
         <MotionGridItem area={"main"} ml={[0, 0, "140px"]}>
-          <Flex py="50px" align="center" pr={[0, 0, "48px"]}>
-            <VStack spacing="5px" align="flex-start">
-              {state === State.GROUP ? (
-                <>
-                  <Text textStyle="h1">Group Stage</Text>
-                  <Text color="whiteAlpha.400">
-                    December 3rd to December 18th
-                  </Text>
-                </>
-              ) : (
-                <>
-                  <Text textStyle="h1">Tournament Stage</Text>
-                  <Text color="whiteAlpha.400">
-                    December 3rd to December 18th
-                  </Text>
-                </>
-              )}
-            </VStack>
+          <Flex direction="column" h="full" justify="space-between">
+            <Flex height="100px" align="flex-end" pr={[0, 0, "48px"]}>
+              <VStack spacing="5px" align="flex-start">
+                {state === State.GROUP ? (
+                  <>
+                    <Text textStyle="h1">Group Stage</Text>
+                    <Text color="whiteAlpha.400">
+                      December 3rd to December 18th
+                    </Text>
+                  </>
+                ) : (
+                  <>
+                    <Text textStyle="h1">Tournament Stage</Text>
+                    <Text color="whiteAlpha.400">
+                      December 3rd to December 18th
+                    </Text>
+                  </>
+                )}
+              </VStack>
+              <Spacer />
+              <HStack>
+                <Toggle
+                  next={() => {
+                    setState(1);
+                    return false;
+                  }}
+                  prev={() => {
+                    setState(0);
+                    return false;
+                  }}
+                />
+              </HStack>
+            </Flex>
             <Spacer />
-            <HStack>
-              <Toggle
-                next={() => {
-                  setState(1);
-                  return false;
-                }}
-                prev={() => {
-                  setState(0);
-                  return false;
-                }}
-              />
-            </HStack>
+            {state === State.GROUP && (
+              <MotionFlex>
+                <Group />
+              </MotionFlex>
+            )}
+            {state === State.TOURNAMENT && (
+              <MotionFlex>
+                <Playoff />
+              </MotionFlex>
+            )}
+            <Spacer />
           </Flex>
-          {state === State.GROUP && (
-            <MotionFlex h="full" alignItems="flex-start">
-              <Group />
-            </MotionFlex>
-          )}
-          {state === State.TOURNAMENT && (
-            <MotionFlex h="full" alignItems="flex-start">
-              <Playoff />
-            </MotionFlex>
-          )}
         </MotionGridItem>
         <MotionGridItem area={"footer"}>
           <Connect />
