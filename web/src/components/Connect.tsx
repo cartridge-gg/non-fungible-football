@@ -19,7 +19,7 @@ import {
 } from "@starknet-react/core";
 import { formatAddress } from "utils/contracts";
 import { useEffect, useMemo, useCallback } from "react";
-import { CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
+import { CONTRACT_ETH, CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
 
 export const Connect = () => {
   const router = useRouter();
@@ -27,12 +27,17 @@ export const Connect = () => {
   const { connect, disconnect, connectors } = useConnectors();
 
   const calls = useMemo(() => {
-    const tx = {
+    const ethApprove = {
+      contractAddress: CONTRACT_ETH,
+      entrypoint: "approve",
+      calldata: [CONTRACT_PLAYER, PLAYER_PRICE, "0"],
+    };
+    const mint = {
       contractAddress: CONTRACT_PLAYER,
       entrypoint: "purchase",
       calldata: [PLAYER_PRICE],
     };
-    return [tx];
+    return [ethApprove, mint];
   }, [account]);
 
   const { data, loading, error, execute } = useStarknetExecute({ calls });

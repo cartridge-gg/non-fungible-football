@@ -1,27 +1,50 @@
-import { useEffect, useState } from "react";
-import { defaultProvider } from "starknet";
+import { useState, useCallback, useEffect } from "react";
+import { defaultProvider, InvokeTransactionReceiptResponse } from "starknet";
 import { CONTRACT_PLAYER } from "utils/constants";
+import dataUriToBuffer from "data-uri-to-buffer";
+import { bnToUint256 } from "starknet/utils/uint256";
+import { toFelt } from "starknet/utils/number";
+
+const INTERVAL = 2500;
 
 export const usePlayer = () => {
-  const [player, setPlayer] = useState();
-  const [error, setError] = useState<Error>();
-  const [loading, setLoading] = useState<boolean>(false);
+  const [svg, setSvg] = useState<string>();
+  const [loading, setLoading] = useState<boolean>();
 
-  useEffect(() => {
+  const waitForMint = useCallback(async (hash: string) => {
     setLoading(true);
-    fetchPlayer()
-      .then()
-      .catch((e) => setError(e))
-      .finally(() => setLoading(false));
+    await defaultProvider.waitForTransaction(hash, INTERVAL);
+    const receipt = (await defaultProvider.getTransactionReceipt(
+      hash,
+    )) as InvokeTransactionReceiptResponse;
+
+    //tokenId is 2nd event 3rd param
+    const tokenIdLow = receipt.events[1].data[2];
+    const tokenIdHigh = receipt.events[1].data[3];
+
+    const uri = await defaultProvider.callContract({
+      contractAddress: CONTRACT_PLAYER,
+      entrypoint: "tokenURI",
+      calldata: [toFelt(tokenIdLow), toFelt(tokenIdHigh)],
+    });
+
+    // discard length
+    uri.result.shift();
+
+    const data = uri.result.map((felt) =>
+      Buffer.from(felt.substring(2), "hex").toString(),
+    );
+
+    const decodedUri = dataUriToBuffer(data.join(""));
+    const json = JSON.parse(decodedUri.toString());
+
+    setSvg(json.image);
+    setLoading(false);
   }, []);
 
   return {
-    player: player,
-    error: error,
+    svg: svg,
     loading: loading,
+    waitForMint: waitForMint,
   };
-};
-
-const fetchPlayer = async (): Promise<void> => {
-  return null;
 };
