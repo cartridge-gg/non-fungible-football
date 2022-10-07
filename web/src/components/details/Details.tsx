@@ -19,7 +19,7 @@ export const Details = () => {
         borderRadius="12px"
         background="url(/trophy.png) center"
         backgroundSize="contain"
-        filter="drop-shadow(15px 15px 20px #555)"
+        boxShadow="15px 15px 20px rgba(0,0,0,0.2)"
       />
       <VStack spacing="24px" align="flex-start">
         <Callout
