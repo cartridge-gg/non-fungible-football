@@ -30,11 +30,11 @@ export default function Tourney() {
       </Head>
       <Grid>
         <GridItem area={"nav"}>
-          <Nav py="50px" w="full" h="full" active={1} />
+          <Nav w="full" h="full" active={1} />
         </GridItem>
         <GridItem area={"spacer"} />
-        <MotionGridItem area={"header"}>
-          <Flex h="full" align="center" pr="48px">
+        <MotionGridItem area={"header"} ml={[0, 0, "140px"]}>
+          <Flex h="full" align="center" pr={[0, 0, "48px"]}>
             <VStack spacing="5px" align="flex-start">
               {state === State.GROUP ? (
                 <>
@@ -67,7 +67,7 @@ export default function Tourney() {
             </HStack>
           </Flex>
         </MotionGridItem>
-        <MotionGridItem area={"main"}>
+        <MotionGridItem area={"main"} ml={[0, 0, "140px"]}>
           {state === State.GROUP && (
             <MotionFlex h="full" alignItems="flex-start">
               <Group />

@@ -44,7 +44,13 @@ export const Connect = () => {
   }, [data]);
 
   return (
-    <HStack h="full" align="center" justify="flex-end" px="48px" spacing="12px">
+    <HStack
+      h="full"
+      align="center"
+      justify="flex-end"
+      px={[0, 0, "48px"]}
+      spacing="12px"
+    >
       {account ? (
         <>
           <Circle
@@ -72,19 +78,13 @@ export const Connect = () => {
           </Button>
         </>
       ) : (
-        <>
-          {connectors.length !== 0 ? (
-            <Button
-              onClick={() => {
-                connect(connectors[0]);
-              }}
-            >
-              <CartridgeIcon /> Connect
-            </Button>
-          ) : (
-            <Text>No Wallets Detected</Text>
-          )}
-        </>
+        <Button
+          onClick={() => {
+            connect(connectors[0]);
+          }}
+        >
+          <CartridgeIcon /> Connect
+        </Button>
       )}
     </HStack>
   );

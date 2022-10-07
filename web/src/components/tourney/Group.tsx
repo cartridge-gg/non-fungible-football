@@ -12,6 +12,7 @@ import {
   Th,
   Thead,
   Tr,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Toggle } from "./Toggle";
 import TournamentData from "tournament.json";
@@ -26,47 +27,20 @@ type TeamData = {
   draws: string;
   losses: string;
   pts: string;
-};
-
-const Row = ({
-  flag,
-  name,
-  status,
-  games,
-  wins,
-  draws,
-  losses,
-  pts,
-}: Partial<TeamData>) => {
-  return (
-    <>
-      <Tr bg="blue.200" key={name}>
-        <Th>
-          <VStack align="flex-start">
-            <Text>{name}</Text>
-            {status && <Text textStyle="bracket">{status}</Text>}
-          </VStack>
-        </Th>
-        <Th>{games || "--"}</Th>
-        <Th>{wins || "--"}</Th>
-        <Th>{draws || "--"}</Th>
-        <Th>{losses || "--"}</Th>
-        <Th>{pts || "--"}</Th>
-      </Tr>
-      <Spacer minHeight="10px" />
-    </>
-  );
+  isMobile: boolean;
 };
 
 export const Group = () => {
   const [group, setGroup] = useState("A");
   const [teams, setTeams] = useState<Partial<TeamData>[]>([]);
+  const isMobile = useBreakpointValue([false, false, true]);
 
   useEffect(() => {
     const data = TournamentData.groups[group].map((team) => {
       return {
         name: team,
-      };
+        isMobile: isMobile,
+      } as TeamData;
     });
     setTeams(data);
   }, [group]);
@@ -93,19 +67,40 @@ export const Group = () => {
         <Thead>
           <Tr>
             <Th pl="0">
-              <HStack gap="10px" w="150px">
+              <HStack gap="10px" w="140px">
                 <Text flex="1">Group {group}</Text>
                 <Toggle flex="1" next={onNext} prev={onPrev} size="sm" />
               </HStack>
             </Th>
-            <Th>PG</Th>
+            {isMobile && <Th>PG</Th>}
             <Th>W</Th>
             <Th>D</Th>
             <Th>L</Th>
-            <Th>PTS</Th>
+            {isMobile && <Th>PTS</Th>}
           </Tr>
         </Thead>
-        <Tbody>{teams.map((team) => Row(team))}</Tbody>
+        <Tbody>
+          {teams.map(({ name, games, wins, draws, status, losses, pts }) => {
+            return (
+              <>
+                <Tr bg="blue.200" key={name}>
+                  <Th>
+                    <VStack align="flex-start">
+                      <Text>{name}</Text>
+                      {status && <Text textStyle="bracket">{status}</Text>}
+                    </VStack>
+                  </Th>
+                  {isMobile && <Th>{games || "--"}</Th>}
+                  <Th>{wins || "--"}</Th>
+                  <Th>{draws || "--"}</Th>
+                  <Th>{losses || "--"}</Th>
+                  {isMobile && <Th>{pts || "--"}</Th>}
+                </Tr>
+                <Spacer minHeight="10px" />
+              </>
+            );
+          })}
+        </Tbody>
       </Table>
     </TableContainer>
   );

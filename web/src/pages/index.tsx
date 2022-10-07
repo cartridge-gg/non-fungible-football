@@ -15,9 +15,8 @@ export default function Home() {
       </Head>
       <Grid>
         <GridItem area={"nav"}>
-          <Nav py="50px" w="full" h="full" />
+          <Nav w="full" h="full" />
         </GridItem>
-        <GridItem area={"spacer"} />
         <MotionGridItem area={"header"}></MotionGridItem>
         <MotionGridItem area={"main"}>
           <Details />

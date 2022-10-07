@@ -16,6 +16,9 @@ export const Table: ComponentMultiStyleConfig = {
           ":first-of-type": {
             borderRadius: "4px 0 0 4px",
           },
+          ":last-of-type": {
+            borderRadius: ["0 4px 4px 0", "0 4px 4px 0", 0],
+          },
         },
       },
     },

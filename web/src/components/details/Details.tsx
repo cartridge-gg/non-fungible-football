@@ -8,14 +8,14 @@ export const Details = () => {
   return (
     <Flex
       h="full"
-      gap={["50px", "50px", "100px"]}
+      gap={["25px", "25px", "100px"]}
       align="center"
       justify="center"
       direction={["column", "column", "row"]}
     >
       <Box
-        minWidth={["200px", "300px"]}
-        minHeight={["200px", "300px"]}
+        minWidth="300px"
+        minHeight="300px"
         borderRadius="12px"
         background="url(/trophy.png) center"
         backgroundSize="contain"

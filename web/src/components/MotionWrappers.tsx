@@ -14,7 +14,6 @@ export const MotionGridItem = ({
     animate={{
       opacity: 1,
     }}
-    ml="140px"
     {...rest}
   >
     {children}
@@ -33,6 +32,8 @@ export const MotionFlex = ({
     as={motion.div}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
+    // initial={{ x: "100%" }}
+    // animate={{ x: "0" }}
     layoutId={layoutId}
     {...rest}
   >
