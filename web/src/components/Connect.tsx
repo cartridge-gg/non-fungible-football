@@ -47,17 +47,18 @@ export const Connect = () => {
     <HStack
       h="full"
       align="center"
-      justify="flex-end"
+      justify={["space-around", "space-around", "flex-end"]}
       px={[0, 0, "48px"]}
       spacing="12px"
     >
       {account ? (
         <>
           <Circle
+            as="button"
             size="46px"
             border="2px solid"
             borderColor="blue.100"
-            as="button"
+            display={["none", "none", "block"]}
             onClick={() => {
               disconnect();
             }}

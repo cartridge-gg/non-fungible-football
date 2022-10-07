@@ -17,7 +17,6 @@ export default function Home() {
         <GridItem area={"nav"}>
           <Nav w="full" h="full" />
         </GridItem>
-        <MotionGridItem area={"header"}></MotionGridItem>
         <MotionGridItem area={"main"}>
           <Details />
         </MotionGridItem>
