@@ -1,10 +1,5 @@
 #!/usr/bin/python
 
-"""pixel2svg - Convert pixel art to SVG
-
-   Copyright 2011 Florian Berger <fberger@florian-berger.de>
-"""
-
 # This file is part of pixel2svg.
 #
 # pixel2svg is free software: you can redistribute it and/or modify
@@ -20,28 +15,26 @@
 # You should have received a copy of the GNU General Public License
 # along with pixel2svg.  If not, see <http://www.gnu.org/licenses/>.
 
-# Work started on Thu Jul 21 2011.
-
-import argparse
-
 import PIL.Image
 import svgwrite
 import os.path
 
-VERSION = "0.3.0"
+SCALE = 5
 
 HEADER = """
 %lang starknet
 
 from starkware.cairo.common.registers import get_label_location
+from starkware.cairo.common.alloc import alloc
 
 """
 
 LOOKUP_FUC = """
 func lookup_{part}(index: felt) -> (part_len: felt, part: felt*) {{
+    alloc_locals;
     let (addr) = get_label_location(data_start);
 
-    let mapping = alloc()
+    let (mapping: felt*) = alloc();
     {mapping}
 
     let value = cast(addr + index, felt*);
@@ -62,18 +55,9 @@ if __name__ == "__main__":
         mapping = ""
         table = ""
         for i, img in enumerate(files):
-            print("pixel2svg {0}".format(VERSION))
-            print("Reading image file '{0}'".format(img))
-
             image = PIL.Image.open(img)
-
-            print("Converting image to RGBA")
-
             image = image.convert("RGBA")
-
             (width, height) = image.size
-
-            print("Image is {0}x{1}".format(width, height))
 
             rgb_values = list(image.getdata())
 
@@ -90,11 +74,10 @@ if __name__ == "__main__":
                 while colcount < width:
                     rgb_tuple = rgb_values.pop(0)
 
-                    # Omit transparent pixels
-                    #
                     if rgb_tuple[3] > 0:
-                        rects += svgdoc.rect(insert = ("{0}px".format(colcount),
-                                                        "{0}px".format(rowcount)),
+                        rects += svgdoc.rect(insert = ("{0}px".format(colcount * SCALE),
+                                                        "{0}px".format(rowcount * SCALE)),
+                                            size = ("5px", "5px"),
                                             fill = svgwrite.rgb(rgb_tuple[0],
                                                                 rgb_tuple[1],
                                                                 rgb_tuple[2])).tostring()
@@ -103,9 +86,9 @@ if __name__ == "__main__":
 
             n = 30
             split = ["\n\tdw '" + rects[i:i+n] + "';" for i in range(0, len(rects), n)]
-            num = len(rects)
-            
-            mapping += """\n\tmapping[{}] = {}""".format(i, part_start)
+            num = len(split)
+
+            mapping += """\n\tassert mapping[{}] = {};""".format(i, part_start)
             table += "\n\t// " + img + " " + str(num) + " " + str(part_start)
             table += "\n\tdw " + str(num) + ";"
             table += "".join(split)
@@ -115,7 +98,7 @@ if __name__ == "__main__":
 
         output += LOOKUP_FUC.format(part=part, mapping=mapping)
         output += table
-        output += "}\n"
+        output += "\n}\n"
 
     with open('../contracts/src/components.cairo', 'w') as f:
         f.write(output)

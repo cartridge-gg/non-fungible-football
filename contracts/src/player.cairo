@@ -7,6 +7,8 @@ from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.uint256 import Uint256
 from starkware.starknet.common.syscalls import get_block_timestamp, get_caller_address, get_contract_address
 from starkware.cairo.common.math import assert_not_zero, assert_le, unsigned_div_rem
+from starkware.cairo.common.memcpy import memcpy
+from starkware.cairo.common.alloc import alloc
 
 from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.introspection.erc165.library import ERC165
@@ -16,6 +18,7 @@ from openzeppelin.token.erc20.IERC20 import IERC20
 
 from src.discrete import DiscreteGDA
 from cairo_math_64x61.math64x61 import Math64x61
+from src.components import lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
 
 const MAX = 832;
 
@@ -58,6 +61,9 @@ namespace IPlayer {
     }
 
     func supply() -> (supply: felt) {
+    }
+
+    func tokenURI(tokenId: Uint256) -> (tokenURI_len: felt, tokenURI: felt*) {
     }
 }
 
@@ -145,11 +151,40 @@ func isApprovedForAll{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_chec
 @view
 func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     tokenId: Uint256
-) -> (tokenURI: felt) {
-    let (seed) = Player_seed.read();
-    let (_, rem) = unsigned_div_rem(seed * tokenId.low, MAX);
-    let (tokenURI: felt) = ERC721.token_uri(Uint256(low=rem, high=0));
-    return (tokenURI=tokenURI);
+) -> (tokenURI_len: felt, tokenURI: felt*) {
+    alloc_locals;
+    // let (seed) = Player_seed.read();
+    // let (_, rem) = unsigned_div_rem(seed * tokenId.low, MAX);
+
+    let (arr) = alloc();
+    assert arr[0] = '<svg xmlns="http://www.w3.org/';
+    assert arr[1] = '2000/svg" shape-rendering="cri';
+    assert arr[2] = 'spEdges" width="320" height="3';
+    assert arr[3] = '20">';
+
+    let (_, body) = unsigned_div_rem(tokenId.low, 4);
+    let (_, team) = unsigned_div_rem(tokenId.low, 32);
+    let (_, number) = unsigned_div_rem(tokenId.low, 26);
+    let (_, boot) = unsigned_div_rem(tokenId.low, 4);
+    let (_, hair) = unsigned_div_rem(tokenId.low, 37);
+
+    let (body_len, body) = lookup_body(body);
+    let (teams_len, teams) = lookup_teams(team);
+    let (numbers_len, numbers) = lookup_numbers(number);
+    let (boots_len, boots) = lookup_boots(boot);
+    let (hairs_len, hairs) = lookup_hair(hair);
+
+    memcpy(arr + 4, body, body_len);
+    memcpy(arr + 4 + body_len, teams, teams_len);
+    memcpy(arr + 4 + body_len + teams_len, numbers, numbers_len);
+    memcpy(arr + 4 + body_len + teams_len + numbers_len, boots, boots_len);
+    memcpy(arr + 4 + body_len + teams_len + numbers_len + boots_len, hairs, hairs_len);
+
+    let len = 4 + hairs_len + boots_len + numbers_len + teams_len + body_len;
+
+    assert arr[len] = '</svg>';
+
+    return (tokenURI_len=len + 1, tokenURI=arr);
 }
 
 @view
@@ -257,15 +292,6 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
         assert_not_zero(success);
     }
 
-    return ();
-}
-
-@external
-func setTokenURI{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
-    tokenId: Uint256, tokenURI: felt
-) {
-    Ownable.assert_only_owner();
-    ERC721._set_token_uri(tokenId, tokenURI);
     return ();
 }
 
