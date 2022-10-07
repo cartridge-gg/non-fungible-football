@@ -30,84 +30,94 @@ import os.path
 
 VERSION = "0.3.0"
 
+HEADER = """
+%lang starknet
+
+from starkware.cairo.common.registers import get_label_location
+
+"""
+
+LOOKUP_FUC = """
+func lookup_{part}(index: felt) -> (part_len: felt, part: felt*) {{
+    let (addr) = get_label_location(data_start);
+
+    let mapping = alloc()
+    {mapping}
+
+    let value = cast(addr + index, felt*);
+    return (part_len=value[0], part=value+1);
+
+	data_start:"""
+
+output = HEADER
+
 if __name__ == "__main__":
+    for part in ["body", "boots", "hair", "numbers", "teams"]:
 
+        files = [os.path.join(part, f) for f in
+                    os.listdir(part)]
 
-    # Notes for Python 3, once PIL supports it
-    #
-    argument_parser = argparse.ArgumentParser(description="Convert pixel art to SVG")
-    
-    argument_parser.add_argument("img",
-                                help = "The image file to convert")
-    
-    argument_parser.add_argument("--overlap",
-                                action = "store_true",
-                                help = "If given, overlap vector squares by 1px")
-    
-    argument_parser.add_argument("--version",
-                                action = "version",
-                                version = VERSION,
-                                help = "Display the program version")
-    
-    # arguments = argument_parser.parse_args()
-    arguments = argument_parser.parse_args()
+        part_start = 0
 
-    if not len(arguments.img):
-        argument_parser.print_help()
+        mapping = ""
+        table = ""
+        for i, img in enumerate(files):
+            print("pixel2svg {0}".format(VERSION))
+            print("Reading image file '{0}'".format(img))
 
-        raise SystemExit
+            image = PIL.Image.open(img)
 
-    print("pixel2svg {0}".format(VERSION))
-    print("Reading image file '{0}'".format(arguments.img))
+            print("Converting image to RGBA")
 
-    image = PIL.Image.open(arguments.img)
+            image = image.convert("RGBA")
 
-    print("Converting image to RGBA")
+            (width, height) = image.size
 
-    image = image.convert("RGBA")
+            print("Image is {0}x{1}".format(width, height))
 
-    (width, height) = image.size
+            rgb_values = list(image.getdata())
 
-    print("Image is {0}x{1}".format(width, height))
+            svgdoc = svgwrite.Drawing(filename = os.path.splitext(img)[0] + ".svg",
+                                    size = ("{0}px".format(width),
+                                            "{0}px".format(height)))
 
-    rgb_values = list(image.getdata())
+            rowcount = 0
 
-    print("Read {0} pixels".format(len(rgb_values)))
+            rects = ""
+            while rowcount < height:
+                colcount = 0
 
-    svgdoc = svgwrite.Drawing(filename = os.path.splitext(arguments.img)[0] + ".svg",
-                              size = ("{0}px".format(width),
-                                      "{0}px".format(height)))
+                while colcount < width:
+                    rgb_tuple = rgb_values.pop(0)
 
-    rowcount = 0
+                    # Omit transparent pixels
+                    #
+                    if rgb_tuple[3] > 0:
+                        rects += svgdoc.rect(insert = ("{0}px".format(colcount),
+                                                        "{0}px".format(rowcount)),
+                                            fill = svgwrite.rgb(rgb_tuple[0],
+                                                                rgb_tuple[1],
+                                                                rgb_tuple[2])).tostring()
+                    colcount = colcount + 1
+                rowcount = rowcount + 1
 
-    print("Will use an square overlap of {0}px".format(arguments.overlap))
+            n = 30
+            split = ["\n\tdw '" + rects[i:i+n] + "';" for i in range(0, len(rects), n)]
+            num = len(rects)
+            
+            mapping += """\n\tmapping[{}] = {}""".format(i, part_start)
+            table += "\n\t// " + img + " " + str(num) + " " + str(part_start)
+            table += "\n\tdw " + str(num) + ";"
+            table += "".join(split)
 
-    rects = ""
-    while rowcount < height:
+            # Add one for the len
+            part_start += num + 1
 
-        print("Processing pixel row {0} of {1}".format(rowcount + 1, height))
+        output += LOOKUP_FUC.format(part=part, mapping=mapping)
+        output += table
+        output += "}\n"
 
-        colcount = 0
-
-        while colcount < width:
-
-            rgb_tuple = rgb_values.pop(0)
-
-            # Omit transparent pixels
-            #
-            if rgb_tuple[3] > 0:
-                rects += svgdoc.rect(insert = ("{0}px".format(colcount),
-                                                 "{0}px".format(rowcount)),
-                                       fill = svgwrite.rgb(rgb_tuple[0],
-                                                           rgb_tuple[1],
-                                                           rgb_tuple[2])).tostring()
-            colcount = colcount + 1
-        rowcount = rowcount + 1
-
-    n = 30
-    split = ["\n\t dw '" + rects[i:i+n] + "';" for i in range(0, len(rects), n)]
-
-    with open(arguments.img+'.txt', 'w') as f:
-        f.write("".join(split))
+    with open('../contracts/src/components.cairo', 'w') as f:
+        f.write(output)
 
     print("Operation finished. Have fun with your SVG.")

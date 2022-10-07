@@ -5,7 +5,7 @@
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.uint256 import Uint256
-from starkware.starknet.common.syscalls import get_block_timestamp, get_caller_address
+from starkware.starknet.common.syscalls import get_block_timestamp, get_caller_address, get_contract_address
 from starkware.cairo.common.math import assert_not_zero, assert_le, unsigned_div_rem
 
 from openzeppelin.access.ownable.library import Ownable
@@ -78,7 +78,7 @@ func Player_seed() -> (res : felt) {
 //
 
 @constructor
-func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt) {
+func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt, auction_start_time: felt) {
     ERC721.initializer('Player', 'PLAYER');
     Ownable.initializer(owner);
 
@@ -86,8 +86,6 @@ func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr
     let initial_price_fp = Math64x61.fromFelt(initial_price);
     let scale_factor_fp = Math64x61.div(Math64x61.fromFelt(11), Math64x61.fromFelt(10)); 
     let decay_constant_fp = Math64x61.div(Math64x61.fromFelt(1), Math64x61.fromFelt(2));
-
-    let (auction_start_time) = get_block_timestamp();
     let auction_start_time_fp = Math64x61.fromFelt(auction_start_time);
 
     DiscreteGDA.initializer(initial_price_fp, scale_factor_fp, decay_constant_fp, auction_start_time_fp);
@@ -231,7 +229,9 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
         assert_not_zero(MAX - supply);
     }
 
-    let price = DiscreteGDA.purchase_price(1, supply);
+    // Hardcoded until we can fix overflow issues with GDA.
+    let price = 1000000000000000;
+    // DiscreteGDA.purchase_price(1, supply);
 
     with_attr error_message("insufficient payment") {
         assert_le(price, value+1);
@@ -247,6 +247,14 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
         let (time) = get_block_timestamp();
         Player_seed.write(time);
         return ();
+    }
+
+    let (contract_address) = get_contract_address();
+
+    let (success) = IERC20.transferFrom(0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7, to, contract_address, Uint256(low=price, high=0));
+
+    with_attr error_message("payment failed") {
+        assert_not_zero(success);
     }
 
     return ();

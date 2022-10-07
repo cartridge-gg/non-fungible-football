@@ -115,6 +115,10 @@
             {
                 "name": "owner",
                 "type": "felt"
+            },
+            {
+                "name": "auction_start_time",
+                "type": "felt"
             }
         ],
         "name": "constructor",
