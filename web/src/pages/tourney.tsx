@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import {
   Flex,
   Box,
@@ -15,6 +15,7 @@ import { Grid } from "../components/Grid";
 import { MotionFlex, MotionGridItem } from "components/MotionWrappers";
 import { Playoff, Group, Toggle } from "components/tourney";
 import { Connect } from "components/Connect";
+import panzoom from "panzoom";
 
 enum State {
   GROUP,
@@ -22,7 +23,16 @@ enum State {
 }
 
 export default function Tourney() {
+  const playoffRef = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<State>(State.GROUP);
+  useEffect(() => {
+    const pz =
+      state === State.TOURNAMENT ? panzoom(playoffRef.current) : undefined;
+
+    return () => {
+      pz?.dispose();
+    };
+  }, [state]);
   return (
     <>
       <Head>
@@ -72,7 +82,9 @@ export default function Tourney() {
           )}
           {state === State.TOURNAMENT && (
             <MotionFlex h="full" alignItems="flex-start">
-              <Playoff />
+              <Flex ref={playoffRef}>
+                <Playoff />
+              </Flex>
             </MotionFlex>
           )}
         </MotionGridItem>

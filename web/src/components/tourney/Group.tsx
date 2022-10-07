@@ -9,8 +9,9 @@ import {
   TableCaption,
   TableContainer,
   Tbody,
-  Th,
   Thead,
+  Th,
+  Td,
   Tr,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -82,22 +83,19 @@ export const Group = () => {
         <Tbody>
           {teams.map(({ name, games, wins, draws, status, losses, pts }) => {
             return (
-              <>
-                <Tr bg="blue.200" key={name}>
-                  <Th>
-                    <VStack align="flex-start">
-                      <Text>{name}</Text>
-                      {status && <Text textStyle="bracket">{status}</Text>}
-                    </VStack>
-                  </Th>
-                  {isMobile && <Th>{games || "--"}</Th>}
-                  <Th>{wins || "--"}</Th>
-                  <Th>{draws || "--"}</Th>
-                  <Th>{losses || "--"}</Th>
-                  {isMobile && <Th>{pts || "--"}</Th>}
-                </Tr>
-                <Spacer minHeight="10px" />
-              </>
+              <Tr bg="blue.200" key={name}>
+                <Td>
+                  <VStack align="flex-start">
+                    <Text>{name}</Text>
+                    {status && <Text textStyle="bracket">{status}</Text>}
+                  </VStack>
+                </Td>
+                {isMobile && <Td>{games || "--"}</Td>}
+                <Td>{wins || "--"}</Td>
+                <Td>{draws || "--"}</Td>
+                <Td>{losses || "--"}</Td>
+                {isMobile && <Td>{pts || "--"}</Td>}
+              </Tr>
             );
           })}
         </Tbody>
