@@ -12,7 +12,7 @@ from starkware.cairo.common.math import assert_not_zero
 from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.security.pausable.library import Pausable
 
-from src.schedule import lookup_team, lookup_match, lookup_group_matches, Team, Match
+from src.data import lookup_team, lookup_match, lookup_group_matches, Team, Match
 
 struct Result {
     team_a: felt,

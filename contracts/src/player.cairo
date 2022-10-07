@@ -20,7 +20,7 @@ from openzeppelin.token.erc20.IERC20 import IERC20
 from src.discrete import DiscreteGDA
 from cairo_math_64x61.math64x61 import Math64x61
 from src.components import lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
-from src.schedule import lookup_team
+from src.data import lookup_team, lookup_number
 
 const MAX = 832;
 
@@ -93,7 +93,7 @@ func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr
     ERC721Enumerable.initializer();
     Ownable.initializer(owner);
 
-    let initial_price = 100000000000000000;
+    let initial_price = 1000000000000000;
     let initial_price_fp = Math64x61.fromFelt(initial_price);
     let scale_factor_fp = Math64x61.div(Math64x61.fromFelt(11), Math64x61.fromFelt(10)); 
     let decay_constant_fp = Math64x61.div(Math64x61.fromFelt(1), Math64x61.fromFelt(2));
@@ -174,40 +174,48 @@ func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     let (boots_len, boots) = lookup_boots(boot_idx);
     let (hair_len, hair) = lookup_hair(hair_idx);
 
-    let (arr) = alloc();
-    assert arr[0] = 'data:application/json,{"name":';
-    assert arr[1] = '"Non Fungible Football","descr';
-    assert arr[2] = 'iption":"2022 World Cup Playe';
-    assert arr[3] = 'r","image":"data:image/svg+xml';
-    assert arr[4] = ',<?xml version=\"1.0\"  encodi';
-    assert arr[5] = 'ng=\"UTF-8\"?><svg xmlns=\"htt';
-    assert arr[6] = 'p://www.w3.org/2000/svg\" shap';
-    assert arr[7] = 'e-rendering=\"crispEdges\" wid';
-    assert arr[8] = 'th=\"320\" height=\"320\"><rec';
-    assert arr[9] = 't width=\"100%25\" height=\"10';
-
-    if (background_idx == 0) {
-        assert arr[10] = '0%25\" fill=\"#ffcc02\" />';
-    } else {
-        assert arr[10] = '0%25\" fill=\"#5a6ec7\" />';
-    }
-
-    memcpy(arr + 11, body, body_len);
-    memcpy(arr + 11 + body_len, teams, teams_len);
-    memcpy(arr + 11 + body_len + teams_len, number, number_len);
-    memcpy(arr + 11 + body_len + teams_len + number_len, boots, boots_len);
-    memcpy(arr + 11 + body_len + teams_len + number_len + boots_len, hair, hair_len);
-
-    let len = 11 + hair_len + boots_len + number_len + teams_len + body_len;
-
     // Teams are 1 indexed in the schedule;
     let team = lookup_team(team_idx + 1);
+    let number_str = lookup_number(number_idx);
+
+    let (arr) = alloc();
+    assert arr[0] = 'data:application/json,{"name":"';
+    assert arr[1] = team.name;
+    assert arr[2] = ' #';
+    assert arr[3] = number_str;
+    assert arr[4] = '","descr';
+    assert arr[5] = 'iption":"2022 World Cup Playe';
+    assert arr[6] = 'r","image":"data:image/svg+xml';
+    assert arr[7] = ',<?xml version=\"1.0\"  encodi';
+    assert arr[8] = 'ng=\"UTF-8\"?><svg xmlns=\"htt';
+    assert arr[9] = 'p://www.w3.org/2000/svg\" shap';
+    assert arr[10] = 'e-rendering=\"crispEdges\" wid';
+    assert arr[11] = 'th=\"320\" height=\"320\"><rec';
+    assert arr[12] = 't width=\"320px\" height=\"';
+
+    if (background_idx == 0) {
+        assert arr[13] = '320px\" fill=\"#ffcc02\" />';
+    } else {
+        assert arr[13] = '320px\" fill=\"#5a6ec7\" />';
+    }
+
+    memcpy(arr + 14, body, body_len);
+    memcpy(arr + 14 + body_len, teams, teams_len);
+    memcpy(arr + 14 + body_len + teams_len, number, number_len);
+    memcpy(arr + 14 + body_len + teams_len + number_len, boots, boots_len);
+    memcpy(arr + 14 + body_len + teams_len + number_len + boots_len, hair, hair_len);
+
+    let len = 14 + hair_len + boots_len + number_len + teams_len + body_len;
+
     assert arr[len] = '</svg>","attributes":[{"trait_';
     assert arr[len + 1] = 'type":"Team","value":"';
     assert arr[len + 2] = team.name;
-    assert arr[len + 3] = '"}]}';
+    assert arr[len + 3] = '"},{"trait_type":"Group","valu';
+    assert arr[len + 4] = 'e":"';
+    assert arr[len + 5] = team.group;
+    assert arr[len + 6] = '"}]}';
 
-    return (tokenURI_len=len + 4, tokenURI=arr);
+    return (tokenURI_len=len + 7, tokenURI=arr);
 }
 
 @view
@@ -222,7 +230,7 @@ func paused{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -
 
 @view
 func price{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (price: felt) {
-    return (price=100000000000000000);
+    return (price=1000000000000000);
     // let (supply) = Player_supply.read();
     // let price = DiscreteGDA.purchase_price(1, supply);
     // return (price=price);

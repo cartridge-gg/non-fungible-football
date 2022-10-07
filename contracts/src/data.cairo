@@ -298,3 +298,36 @@ func lookup_group_matches(index: felt) -> felt* {
     dw 45;
     dw 46;
 }
+
+func lookup_number(index: felt) -> felt {
+    let (addr) = get_label_location(data_start);
+    return [addr + index];
+
+    data_start:
+    dw '1';
+    dw '2';
+    dw '3';
+    dw '4';
+    dw '5';
+    dw '6';
+    dw '7';
+    dw '8';
+    dw '9';
+    dw '10';
+    dw '11';
+    dw '12';
+    dw '13';
+    dw '14';
+    dw '15';
+    dw '16';
+    dw '17';
+    dw '18';
+    dw '19';
+    dw '20';
+    dw '21';
+    dw '22';
+    dw '23';
+    dw '24';
+    dw '25';
+    dw '26';
+}
