@@ -37,7 +37,7 @@ func lookup_{part}(index: felt) -> (part_len: felt, part: felt*) {{
     let (mapping: felt*) = alloc();
     {mapping}
 
-    let value = cast(addr + index, felt*);
+    let value = cast(addr + mapping[index], felt*);
     return (part_len=value[0], part=value+1);
 
 	data_start:"""

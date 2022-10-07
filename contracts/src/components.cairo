@@ -16,7 +16,7 @@ func lookup_body(index: felt) -> (part_len: felt, part: felt*) {
 	assert mapping[2] = 1052;
 	assert mapping[3] = 1578;
 
-    let value = cast(addr + index, felt*);
+    let value = cast(addr + mapping[index], felt*);
     return (part_len=value[0], part=value+1);
 
 	data_start:
@@ -2141,7 +2141,7 @@ func lookup_boots(index: felt) -> (part_len: felt, part: felt*) {
 	assert mapping[2] = 44;
 	assert mapping[3] = 66;
 
-    let value = cast(addr + index, felt*);
+    let value = cast(addr + mapping[index], felt*);
     return (part_len=value[0], part=value+1);
 
 	data_start:
@@ -2283,7 +2283,7 @@ func lookup_hair(index: felt) -> (part_len: felt, part: felt*) {
 	assert mapping[35] = 679;
 	assert mapping[36] = 701;
 
-    let value = cast(addr + index, felt*);
+    let value = cast(addr + mapping[index], felt*);
     return (part_len=value[0], part=value+1);
 
 	data_start:
@@ -3072,7 +3072,7 @@ func lookup_numbers(index: felt) -> (part_len: felt, part: felt*) {
 	assert mapping[24] = 539;
 	assert mapping[25] = 566;
 
-    let value = cast(addr + index, felt*);
+    let value = cast(addr + mapping[index], felt*);
     return (part_len=value[0], part=value+1);
 
 	data_start:
@@ -3741,7 +3741,7 @@ func lookup_teams(index: felt) -> (part_len: felt, part: felt*) {
 	assert mapping[30] = 10305;
 	assert mapping[31] = 10649;
 
-    let value = cast(addr + index, felt*);
+    let value = cast(addr + mapping[index], felt*);
     return (part_len=value[0], part=value+1);
 
 	data_start:

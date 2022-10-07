@@ -14,6 +14,7 @@ from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.introspection.erc165.library import ERC165
 from openzeppelin.security.pausable.library import Pausable
 from openzeppelin.token.erc721.library import ERC721
+from openzeppelin.token.erc721.enumerable.library import ERC721Enumerable
 from openzeppelin.token.erc20.IERC20 import IERC20
 
 from src.discrete import DiscreteGDA
@@ -61,7 +62,13 @@ namespace IPlayer {
     func price() -> (price: felt) {
     }
 
-    func supply() -> (supply: felt) {
+    func totalSupply() -> (totalSupply: Uint256) {
+    }
+
+    func tokenByIndex(index: Uint256) -> (tokenId: Uint256) {
+    }
+
+    func tokenOfOwnerByIndex(owner: felt, index: Uint256) -> (tokenId: Uint256) {
     }
 
     func tokenURI(tokenId: Uint256) -> (tokenURI_len: felt, tokenURI: felt*) {
@@ -70,10 +77,6 @@ namespace IPlayer {
 
 @storage_var
 func Player_payment_token() -> (res : felt) {
-}
-
-@storage_var
-func Player_supply() -> (res : felt) {
 }
 
 @storage_var
@@ -87,6 +90,7 @@ func Player_seed() -> (res : felt) {
 @constructor
 func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt, auction_start_time: felt) {
     ERC721.initializer('Player', 'PLAYER');
+    ERC721Enumerable.initializer();
     Ownable.initializer(owner);
 
     let initial_price = 100000000000000000;
@@ -180,12 +184,12 @@ func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     assert arr[6] = 'p://www.w3.org/2000/svg\" shap';
     assert arr[7] = 'e-rendering=\"crispEdges\" wid';
     assert arr[8] = 'th=\"320\" height=\"320\"><rec';
-    assert arr[9] = 't width=\"100%\" height=\"100%';
+    assert arr[9] = 't width=\"100%25\" height=\"10';
 
     if (background_idx == 0) {
-        assert arr[10] = '\" fill=\"#ffcc02\" />';
+        assert arr[10] = '0%25\" fill=\"#ffcc02\" />';
     } else {
-        assert arr[10] = '\" fill=\"#5a6ec7\" />';
+        assert arr[10] = '0%25\" fill=\"#5a6ec7\" />';
     }
 
     memcpy(arr + 11, body, body_len);
@@ -225,9 +229,27 @@ func price{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() ->
 }
 
 @view
-func supply{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (supply: felt) {
-    let (supply) = Player_supply.read();
-    return (supply=supply);
+func totalSupply{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (
+    totalSupply: Uint256
+) {
+    let (totalSupply: Uint256) = ERC721Enumerable.total_supply();
+    return (totalSupply=totalSupply);
+}
+
+@view
+func tokenByIndex{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
+    index: Uint256
+) -> (tokenId: Uint256) {
+    let (tokenId: Uint256) = ERC721Enumerable.token_by_index(index);
+    return (tokenId=tokenId);
+}
+
+@view
+func tokenOfOwnerByIndex{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
+    owner: felt, index: Uint256
+) -> (tokenId: Uint256) {
+    let (tokenId: Uint256) = ERC721Enumerable.token_of_owner_by_index(owner, index);
+    return (tokenId=tokenId);
 }
 
 //
@@ -257,7 +279,7 @@ func transferFrom{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_pt
     from_: felt, to: felt, tokenId: Uint256
 ) {
     Pausable.assert_not_paused();
-    ERC721.transfer_from(from_, to, tokenId);
+    ERC721Enumerable.transfer_from(from_, to, tokenId);
     return ();
 }
 
@@ -266,7 +288,7 @@ func safeTransferFrom{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_chec
     from_: felt, to: felt, tokenId: Uint256, data_len: felt, data: felt*
 ) {
     Pausable.assert_not_paused();
-    ERC721.safe_transfer_from(from_, to, tokenId, data_len, data);
+    ERC721Enumerable.safe_transfer_from(from_, to, tokenId, data_len, data);
     return ();
 }
 
@@ -278,26 +300,24 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
     Pausable.assert_not_paused();
 
     let (to) = get_caller_address();
-    let (supply) = Player_supply.read();
+    let (supply: Uint256) = ERC721Enumerable.total_supply();
 
     with_attr error_message("sold out") {
-        assert_not_zero(MAX - supply);
+        assert_not_zero(MAX - supply.low);
     }
 
     // Hardcoded until we can fix overflow issues with GDA.
-    let price = 1000000000000000;
+    let (_price) = price();
     // DiscreteGDA.purchase_price(1, supply);
 
     with_attr error_message("insufficient payment") {
-        assert_le(price, value+1);
+        assert_le(_price, value+1);
     }
 
-    Player_supply.write(supply + 1);
-
     // There can only ever be 832 NFTs.
-    ERC721._mint(to, Uint256(low=supply, high=0));
+    ERC721Enumerable._mint(to, supply);
 
-    if (supply + 1 == MAX) {
+    if (supply.low + 1 == MAX) {
         // We trust starkware not to manipulate the timestamp *shrug*
         let (time) = get_block_timestamp();
         Player_seed.write(time);
@@ -306,7 +326,7 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
 
     let (contract_address) = get_contract_address();
 
-    let (success) = IERC20.transferFrom(0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7, to, contract_address, Uint256(low=price, high=0));
+    let (success) = IERC20.transferFrom(0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7, to, contract_address, Uint256(low=_price, high=0));
 
     with_attr error_message("payment failed") {
         assert_not_zero(success);

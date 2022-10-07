@@ -10,7 +10,7 @@ from src.components import lookup_body
 func test_components{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
     alloc_locals;
 
-    let (body_len, body) = lookup_body(0);
+    let (body_len, body) = lookup_body(1);
 
     %{
         parts = memory.get_range(ids.body, ids.body_len)
