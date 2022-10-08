@@ -10,7 +10,7 @@ export const Table: ComponentMultiStyleConfig = {
       },
       tbody: {
         th: {
-          h: "72px",
+          height: "74px",
           fontSize: "16px",
           textTransform: "capitalize",
           ":first-of-type": {

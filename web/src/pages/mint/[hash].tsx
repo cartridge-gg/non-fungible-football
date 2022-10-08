@@ -64,7 +64,7 @@ export default function Mint() {
               background={`url('/mint_random.gif') no-repeat center/100%`}
             />
           )}
-          <Confetti active={!loading}/>
+          <Confetti active={!loading} />
           <HStack spacing="20px">
             <Circle size="48px" bg="blue.200">
               <Runner />

@@ -1,3 +1,4 @@
+import Image from "next/future/image";
 import { useEffect, useState, useCallback } from "react";
 import {
   Flex,
@@ -21,6 +22,7 @@ import { motion } from "framer-motion";
 type TeamData = {
   flag: string;
   name: string;
+  code: string;
   status: string;
   games: string;
   wins: string;
@@ -33,12 +35,13 @@ type TeamData = {
 export const Group = () => {
   const [group, setGroup] = useState("A");
   const [teams, setTeams] = useState<Partial<TeamData>[]>([]);
-  const isMobile = useBreakpointValue([false, false, true]);
+  const isMobile = useBreakpointValue([true, true, false]);
 
   useEffect(() => {
-    const data = TournamentData.groups[group].map((team) => {
+    const data = TournamentData.groups[group].map((name) => {
       return {
-        name: team,
+        name: name,
+        code: TournamentData.teams[name],
         isMobile: isMobile,
       } as TeamData;
     });
@@ -72,29 +75,38 @@ export const Group = () => {
                 <Toggle flex="1" next={onNext} prev={onPrev} size="sm" />
               </HStack>
             </Th>
-            {isMobile && <Th>PG</Th>}
+            {!isMobile && <Th>PG</Th>}
             <Th>W</Th>
             <Th>D</Th>
             <Th>L</Th>
-            {isMobile && <Th>PTS</Th>}
+            {!isMobile && <Th>PTS</Th>}
           </Tr>
         </Thead>
         <Tbody>
-          {teams.map(({ name, games, wins, draws, status, losses, pts }) => {
+          {teams.map(({ name, code, games, wins, draws, status, losses, pts }) => {
             return (
               <>
                 <Tr bg="blue.200" key={name}>
-                  <Th>
-                    <VStack align="flex-start">
-                      <Text>{name}</Text>
-                      {status && <Text textStyle="bracket">{status}</Text>}
-                    </VStack>
+                  <Th width="300px" pl="12px">
+                    <HStack spacing="24px">
+                      <Image
+                        height="48"
+                        width="72"
+                        src={`/flags/${name.toUpperCase()}.svg`}
+                        style={{ borderRadius: "2px" }}
+                        alt="flag"
+                      />
+                      <VStack align="flex-start">
+                        <Text>{!isMobile ? name : code}</Text>
+                        {status && <Text textStyle="bracket">{status}</Text>}
+                      </VStack>
+                    </HStack>
                   </Th>
-                  {isMobile && <Th>{games || "--"}</Th>}
+                  {!isMobile && <Th>{games || "--"}</Th>}
                   <Th>{wins || "--"}</Th>
                   <Th>{draws || "--"}</Th>
                   <Th>{losses || "--"}</Th>
-                  {isMobile && <Th>{pts || "--"}</Th>}
+                  {!isMobile && <Th>{pts || "--"}</Th>}
                 </Tr>
                 <Spacer minHeight="10px" />
               </>
