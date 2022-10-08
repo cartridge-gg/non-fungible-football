@@ -9,7 +9,6 @@ const Connector = ({
     <HStack spacing="0">
       <Box
         w="24px"
-        position="relative"
         borderRadius="0 4px 4px 0"
         border="1px solid"
         borderColor="blue.200"
@@ -17,7 +16,7 @@ const Connector = ({
         {...rest}
       />
       {showIcon && (
-        <>
+        <Box position="relative">
           <Box h="1px" w="24px" bg="blue.200"></Box>
           <Circle
             size="24px"
@@ -25,11 +24,11 @@ const Connector = ({
             borderColor="blue.200"
             bg="blue.300"
             position="absolute"
-            transform="translateX(50%)"
+            transform="translate(-50%, -50%)"
           >
             <SwordsIcon color="yellow.500" size="sm" />
           </Circle>
-        </>
+        </Box>
       )}
     </HStack>
   );

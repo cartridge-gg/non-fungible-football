@@ -73,15 +73,18 @@ export default function Tourney() {
             </Flex>
             {state === State.GROUP && (
               <MotionFlex direction="column" gap="40px">
-                {Object.keys(TournamentData.groups).map((letter) => {
-                  return <Group name={letter} />;
+                {Object.keys(TournamentData.groups).map((letter, idx) => {
+                  return <Group name={letter} key={idx} />;
                 })}
               </MotionFlex>
             )}
             {state === State.TOURNAMENT && (
-              <MotionFlex h="full">
-                <Playoff />
-              </MotionFlex>
+              <>
+                <MotionFlex h="full">
+                  <Playoff />
+                </MotionFlex>
+                <Spacer minHeight="100px" />
+              </>
             )}
           </Flex>
         </MotionGridItem>
