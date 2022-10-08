@@ -15,6 +15,7 @@ import { Grid } from "../components/Grid";
 import { MotionFlex, MotionGridItem } from "components/MotionWrappers";
 import { Playoff, Group, Toggle } from "components/tourney";
 import { Connect } from "components/Connect";
+import TournamentData from "tournament.json";
 
 enum State {
   GROUP,
@@ -32,9 +33,14 @@ export default function Tourney() {
         <GridItem area={"nav"}>
           <Nav w="full" h="full" active={1} />
         </GridItem>
-        <MotionGridItem area={"main"} ml={[0, 0, "140px"]}>
-          <Flex direction="column" h="full" justify="space-between">
-            <Flex height="100px" align="flex-end" pr={[0, 0, "48px"]}>
+        <MotionGridItem area={"main"} ml={[0, 0, "140px"]} overflowY="auto">
+          <Flex direction="column" h="full">
+            <Flex
+              align="flex-end"
+              pr={[0, 0, "48px"]}
+              py={[0, 0, "48px"]}
+              justify="space-between"
+            >
               <VStack spacing="5px" align="flex-start">
                 {state === State.GROUP ? (
                   <>
@@ -52,7 +58,6 @@ export default function Tourney() {
                   </>
                 )}
               </VStack>
-              <Spacer />
               <HStack>
                 <Toggle
                   next={() => {
@@ -66,22 +71,19 @@ export default function Tourney() {
                 />
               </HStack>
             </Flex>
-            <Spacer />
             {state === State.GROUP && (
-              <MotionFlex>
-                <Group />
+              <MotionFlex direction="column" gap="40px">
+                {Object.keys(TournamentData.groups).map((letter) => {
+                  return <Group name={letter} />;
+                })}
               </MotionFlex>
             )}
             {state === State.TOURNAMENT && (
-              <MotionFlex>
+              <MotionFlex h="full">
                 <Playoff />
               </MotionFlex>
             )}
-            <Spacer />
           </Flex>
-        </MotionGridItem>
-        <MotionGridItem area={"footer"}>
-          <Connect />
         </MotionGridItem>
       </Grid>
     </>

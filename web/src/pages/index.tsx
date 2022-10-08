@@ -20,9 +20,6 @@ export default function Home() {
         <MotionGridItem area={"main"}>
           <Details />
         </MotionGridItem>
-        <MotionGridItem area={"footer"}>
-          <Connect />
-        </MotionGridItem>
       </Grid>
     </>
   );

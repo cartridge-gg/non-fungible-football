@@ -3,14 +3,13 @@ import { ReactNode } from "react";
 
 export const Grid = ({ children }: { children: ReactNode }) => {
   const desktopArea = `"nav main"
-                        "nav footer"`;
-  const desktopRow = "1fr minmax(100px, 130px)";
+                        "nav main"`;
+  const desktopRow = "1fr";
   const desktopCol = "minmax(100px, 300px) 1fr";
 
   const mobileArea = `"nav"
-                      "main"
-                      "footer"`;
-  const mobileRow = "100px 1fr 100px";
+                      "main"`;
+  const mobileRow = "100px 1fr";
   const mobileCol = "1fr";
 
   return (
