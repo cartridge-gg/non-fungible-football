@@ -7,6 +7,7 @@ import {
   VStack,
   Circle,
   Button,
+  StyleProps,
 } from "@chakra-ui/react";
 import RunnerIcon from "../components/icons/Runner";
 import CartridgeIcon from "../components/icons/Cartridge";
@@ -21,7 +22,7 @@ import { formatAddress } from "utils/contracts";
 import { useEffect, useMemo, useCallback } from "react";
 import { CONTRACT_ETH, CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
 
-export const Connect = () => {
+export const Connect = (props: StyleProps) => {
   const router = useRouter();
   const { account } = useStarknet();
   const { connect, disconnect, connectors } = useConnectors();
@@ -50,14 +51,15 @@ export const Connect = () => {
 
   return (
     <HStack
-      h="full"
-      align="center"
       justify={["space-around", "space-around", "flex-end"]}
-      px={[0, 0, "48px"]}
       spacing="12px"
+      {...props}
     >
       {account ? (
         <>
+          <Button variant="secondary">
+            <CartridgeIcon /> {formatAddress(account)}
+          </Button>
           <Circle
             as="button"
             size="46px"
@@ -70,18 +72,6 @@ export const Connect = () => {
           >
             <LogoutIcon />
           </Circle>
-          <Button variant="secondary">
-            <CartridgeIcon /> {formatAddress(account)}
-          </Button>
-          <Button
-            variant="mint"
-            onClick={() => {
-              execute();
-            }}
-          >
-            <RunnerIcon />
-            Mint
-          </Button>
         </>
       ) : (
         <Button

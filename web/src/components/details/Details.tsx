@@ -1,10 +1,13 @@
-import { Box, Flex, VStack } from "@chakra-ui/react";
+import { Box, Flex, VStack, Button } from "@chakra-ui/react";
 import { Callout } from "./Callout";
 import BellIcon from "../../components/icons/Bell";
 import EthereumIcon from "../../components/icons/Ethereum";
 import TicketIcon from "../../components/icons/Ticket";
+import RunnerIcon from "components/icons/Runner";
+import { useStarknet } from "@starknet-react/core";
 
-export const Details = () => {
+export const Details = ({ onMint }: { onMint: () => void }) => {
+  const { account } = useStarknet();
   return (
     <Flex
       h="full"
@@ -14,8 +17,8 @@ export const Details = () => {
       direction={["column", "column", "row"]}
     >
       <Box
-        minWidth="300px"
-        minHeight="300px"
+        minWidth={["250px", "300px", "300px"]}
+        minHeight={["250px", "300px", "300px"]}
         borderRadius="12px"
         background="url(/trophy.png) center"
         backgroundSize="contain"
@@ -37,6 +40,14 @@ export const Details = () => {
           title="Mint Limit"
           description="1 Entry per Person"
         />
+        {account && (
+          <Box pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
+            <Button variant="mint" onClick={onMint} w="inherit">
+              <RunnerIcon />
+              Mint
+            </Button>
+          </Box>
+        )}
       </VStack>
     </Flex>
   );
