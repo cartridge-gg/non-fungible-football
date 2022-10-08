@@ -13,7 +13,7 @@ import {
 import { Nav } from "../components/Nav";
 import { Grid } from "../components/Grid";
 import { MotionFlex, MotionGridItem } from "components/MotionWrappers";
-import { Playoff, Group, Toggle } from "components/tourney";
+import { Playoff, Group, Toggle, Tournament } from "components/tourney";
 import { Connect } from "components/Connect";
 import TournamentData from "tournament.json";
 
@@ -80,7 +80,7 @@ export default function Tourney() {
             )}
             {state === State.TOURNAMENT && (
               <MotionFlex h="full">
-                <Playoff />
+                <Tournament />
               </MotionFlex>
             )}
           </Flex>
