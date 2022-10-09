@@ -14,7 +14,6 @@ import { Nav } from "../components/Nav";
 import { Grid } from "../components/Grid";
 import { MotionFlex, MotionGridItem } from "components/MotionWrappers";
 import { Playoff, Group, Toggle } from "components/tourney";
-import { Connect } from "components/Connect";
 import TournamentData from "tournament.json";
 
 enum State {
@@ -74,7 +73,8 @@ export default function Tourney() {
             {state === State.GROUP && (
               <MotionFlex direction="column" gap="40px">
                 {Object.keys(TournamentData.groups).map((letter, idx) => {
-                  return <Group name={letter} key={idx} />;
+                  const teams = TournamentData.groups[letter];
+                  return <Group letter={letter} key={idx} teams={teams} />;
                 })}
               </MotionFlex>
             )}

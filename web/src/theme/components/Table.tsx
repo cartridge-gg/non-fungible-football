@@ -4,13 +4,19 @@ export const Table: ComponentMultiStyleConfig = {
   parts: ["table", "thead", "tbody", "tr", "th", "td", "tfoot", "caption"],
   variants: {
     custom: {
+      table: {
+        borderCollapse: "separate",
+        borderSpacing: "0 10px",
+      },
       thead: {
         textTransform: "uppercase",
         fontSize: "16px",
+        th: {
+          pb: 0
+        }
       },
       tbody: {
         th: {
-          height: "74px",
           fontSize: "16px",
           textTransform: "capitalize",
           ":first-of-type": {
@@ -21,6 +27,7 @@ export const Table: ComponentMultiStyleConfig = {
           },
         },
       },
+     
     },
   },
 };

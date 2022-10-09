@@ -1,46 +1,86 @@
 {
-  "teams": {
-    "Qatar": "QAT",
-    "Ecuador": "ECU",
-    "Senegal": "SEN",
-    "Netherlands": "NED",
-    "England": "ENG",
-    "Iran": "IRN",
-    "United States": "USA",
-    "Wales": "WAL",
-    "Argentina": "ARG",
-    "Saudi Arabia": "KSA",
-    "Mexico": "MEX",
-    "Poland": "POL",
-    "France": "FRA",
-    "Australia": "AUS",
-    "Denmark": "DEN",
-    "Tunisia": "TUN",
-    "Spain": "ESP",
-    "Costa Rica": "CRC",
-    "Germany": "GER",
-    "Japan": "JPN",
-    "Belgium": "BEL",
-    "Canada": "CAN",
-    "Morocco": "MAR",
-    "Croatia": "CRO",
-    "Brazil": "BRA",
-    "Serbia": "SRB",
-    "Switzerland": "SUI",
-    "Cameroon": "CMR",
-    "Portugal": "POR",
-    "Ghana": "GHA",
-    "Uruguay": "URU",
-    "South Korea": "KOR"
-  },
+  "teams": [
+    "Qatar",
+    "Ecuador",
+    "Senegal",
+    "Netherlands",
+    "England",
+    "Iran",
+    "United States",
+    "Wales",
+    "Argentina",
+    "Saudi Arabia",
+    "Mexico",
+    "Poland",
+    "France",
+    "Australia",
+    "Denmark",
+    "Tunisia",
+    "Spain",
+    "Costa Rica",
+    "Germany",
+    "Japan",
+    "Belgium",
+    "Canada",
+    "Morocco",
+    "Croatia",
+    "Brazil",
+    "Serbia",
+    "Switzerland",
+    "Cameroon",
+    "Portugal",
+    "Ghana",
+    "Uruguay",
+    "South Korea"
+  ],
   "groups": {
-    "A": ["Qatar", "Ecuador", "Senegal", "Netherlands"],
-    "B": ["England", "Iran", "United States", "Wales"],
-    "C": ["Argentina", "Saudi Arabia", "Mexico", "Poland"],
-    "D": ["France", "Australia", "Denmark", "Tunisia"],
-    "E": ["Spain", "Costa Rica", "Germany", "Japan"],
-    "F": ["Belgium", "Canada", "Morocco", "Croatia"],
-    "G": ["Brazil", "Serbia", "Switzerland", "Cameroon"],
-    "H": ["Portugal", "Ghana", "Uruguay", "South Korea"]
+    "A": [
+      { "name": "Qatar", "code": "QAT" },
+      { "name": "Ecuador", "code": "ECU" },
+      { "name": "Senegal", "code": "SEN" },
+      { "name": "Netherlands", "code": "NED" }
+    ],
+    "B": [
+      { "name": "England", "code": "ENG" },
+      { "name": "Iran", "code": "IRN" },
+      { "name": "United States", "code": "USA" },
+      { "name": "Wales", "code": "WAL" }
+    ],
+    "C": [
+      { "name": "Argentina", "code": "ARG" },
+      { "name": "Saudi Arabia", "code": "KSA" },
+      { "name": "Mexico", "code": "MEX" },
+      { "name": "Poland", "code": "POL" }
+    ],
+    "D": [
+      { "name": "France", "code": "FRA" },
+      { "name": "Australia", "code": "AUS" },
+      { "name": "Denmark", "code": "DEN" },
+      { "name": "Tunisia", "code": "TUN" }
+    ],
+    "E": [
+      { "name": "Spain", "code": "ESP" },
+      { "name": "Costa Rica", "code": "CRC" },
+      { "name": "Germany", "code": "GER" },
+      { "name": "Japan", "code": "JPN" }
+    ],
+    "F": [
+      { "name": "Belgium", "code": "BEL" },
+      { "name": "Canada", "code": "CAN" },
+      { "name": "Morocco", "code": "MAR" },
+      { "name": "Croatia", "code": "CRO" }
+    ],
+    "G": [
+      { "name": "Brazil", "code": "BRA" },
+      { "name": "Serbia", "code": "SRB" },
+      { "name": "Switzerland", "code": "SUI" },
+      { "name": "Cameroon", "code": "CMR" }
+    ],
+    "H": [
+      { "name": "Portugal", "code": "POR" },
+      { "name": "Ghana", "code": "GHA" },
+      { "name": "Uruguay", "code": "URU" },
+      { "name": "South Korea", "code": "KOR" }
+    ]
   }
 }
