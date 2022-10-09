@@ -1,15 +1,29 @@
 import { useState, useCallback, useEffect } from "react";
+import { useStarknet } from "@starknet-react/core";
 import { defaultProvider, InvokeTransactionReceiptResponse } from "starknet";
 import { CONTRACT_PLAYER } from "utils/constants";
 import dataUriToBuffer from "data-uri-to-buffer";
 import { bnToUint256 } from "starknet/utils/uint256";
-import { toFelt } from "starknet/utils/number";
+import { toFelt, hexToDecimalString } from "starknet/utils/number";
 
 const INTERVAL = 2500;
 
 export const usePlayer = () => {
   const [svg, setSvg] = useState<string>();
-  const [loading, setLoading] = useState<boolean>();
+  const [balance, setBalance] = useState<number>();
+  const [loading, setLoading] = useState<boolean>(true);
+
+
+  const fetchPlayers = useCallback(async (account: string) =>{
+    setLoading(true);
+    const balance = await defaultProvider.callContract({
+      contractAddress: CONTRACT_PLAYER,
+      entrypoint: "balanceOf",
+      calldata: [toFelt(account)]
+    });
+
+    setBalance(Number(balance[0]));
+  },[])
 
   const waitForMint = useCallback(async (hash: string) => {
     setLoading(true);
@@ -44,7 +58,9 @@ export const usePlayer = () => {
 
   return {
     svg: svg,
+    balance: balance,
     loading: loading,
     waitForMint: waitForMint,
+    fetchPlayers: fetchPlayers,
   };
 };

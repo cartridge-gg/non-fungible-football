@@ -19,7 +19,6 @@ export type NavProps = {
 };
 
 export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
-  const { account } = useStarknet();
   const items = [
     { name: "Mint", url: "/" },
     { name: "Tourney", url: "/tourney" },
