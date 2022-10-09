@@ -12,8 +12,8 @@ export const Table: ComponentMultiStyleConfig = {
         textTransform: "uppercase",
         fontSize: "16px",
         th: {
-          pb: 0
-        }
+          pb: 0,
+        },
       },
       tbody: {
         th: {
@@ -27,7 +27,6 @@ export const Table: ComponentMultiStyleConfig = {
           },
         },
       },
-     
     },
   },
 };

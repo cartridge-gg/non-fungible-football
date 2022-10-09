@@ -26,9 +26,9 @@ export const Group = ({ letter, teams: data }: GroupProps) => {
   const [teams, setTeams] = useState<TeamData[]>([]);
   const isMobile = useBreakpointValue([true, true, false]);
 
-  useEffect(()=>{
+  useEffect(() => {
     setTeams(data);
-  },[])
+  }, []);
 
   return (
     <TableContainer w="full">
@@ -49,31 +49,31 @@ export const Group = ({ letter, teams: data }: GroupProps) => {
         </Thead>
         <Tbody>
           {teams.map(({ name, code }) => (
-              <Tr bg="blue.200" key={name}>
-                <Th minWidth="200px" pl="12px">
-                  <HStack spacing="24px">
-                    <Image
-                      height="48"
-                      width="72"
-                      src={`/flags/${name.toUpperCase()}.svg`}
-                      style={{
-                        minHeight: "48px",
-                        borderRadius: "2px",
-                        boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
-                      }}
-                      alt={`${name} flag`}
-                    />
-                    <VStack align="flex-start">
-                      <Text>{!isMobile ? name : code}</Text>
-                    </VStack>
-                  </HStack>
-                </Th>
-                {!isMobile && <Th>{"--"}</Th>}
-                <Th>{"--"}</Th>
-                <Th>{"--"}</Th>
-                <Th>{"--"}</Th>
-                {!isMobile && <Th>{"--"}</Th>}
-              </Tr>
+            <Tr bg="blue.200" key={name}>
+              <Th minWidth="200px" pl="12px">
+                <HStack spacing="24px">
+                  <Image
+                    height="48"
+                    width="72"
+                    src={`/flags/${name.toUpperCase()}.svg`}
+                    style={{
+                      minHeight: "48px",
+                      borderRadius: "2px",
+                      boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
+                    }}
+                    alt={`${name} flag`}
+                  />
+                  <VStack align="flex-start">
+                    <Text>{!isMobile ? name : code}</Text>
+                  </VStack>
+                </HStack>
+              </Th>
+              {!isMobile && <Th>{"--"}</Th>}
+              <Th>{"--"}</Th>
+              <Th>{"--"}</Th>
+              <Th>{"--"}</Th>
+              {!isMobile && <Th>{"--"}</Th>}
+            </Tr>
           ))}
         </Tbody>
       </Table>

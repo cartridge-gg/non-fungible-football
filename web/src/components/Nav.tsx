@@ -19,6 +19,7 @@ export type NavProps = {
 };
 
 export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
+  const {players: ownedPlayers} = usePlayer();
   const items = [
     { name: "Mint", url: "/" },
     { name: "Tourney", url: "/tourney" },
@@ -33,10 +34,7 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
       {...rest}
     >
       <HStack>
-        <Link href="/">
-          <Logo height="60px" width="60px" _hover={{ cursor: "pointer" }} />
-        </Link>
-
+        <Logo height="60px" width="60px" />
         <Word pl="10px" width="100px" height="100px" />
       </HStack>
       <Flex
@@ -60,7 +58,7 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
           </Link>
         ))}
       </Flex>
-      <Connect display={["none", "none", "flex"]} />
+      <Connect display={["none", "none", "flex"]} minHeight="50px" />
     </Flex>
   );
 };

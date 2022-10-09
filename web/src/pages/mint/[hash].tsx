@@ -21,12 +21,15 @@ import Confetti from "react-dom-confetti";
 export default function Mint() {
   const router = useRouter();
   const { hash } = router.query as { hash: string };
-  const { loading, svg, waitForMint } = usePlayer();
+  const { loading, waitForMint } = usePlayer();
+  const [svg, setSvg] = useState<string>();
   const [error, setError] = useState<Error>();
 
   useEffect(() => {
     if (hash) {
-      waitForMint(hash).catch((e) => setError(e));
+      waitForMint(hash)
+        .then((svg) => setSvg(svg))
+        .catch((e) => setError(e));
     }
   }, [hash]);
 

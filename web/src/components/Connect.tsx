@@ -8,6 +8,7 @@ import {
   Circle,
   Button,
   StyleProps,
+  useToast,
 } from "@chakra-ui/react";
 import RunnerIcon from "../components/icons/Runner";
 import CartridgeIcon from "../components/icons/Cartridge";
@@ -19,13 +20,14 @@ import {
   useStarknetInvoke,
 } from "@starknet-react/core";
 import { formatAddress } from "utils/contracts";
-import { useEffect, useMemo, useCallback } from "react";
+import { useEffect, useMemo, useCallback, useState } from "react";
 import { CONTRACT_ETH, CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
 
 export const Connect = (props: StyleProps) => {
   const router = useRouter();
   const { account } = useStarknet();
   const { connect, disconnect, connectors } = useConnectors();
+  const toast = useToast();
 
   const calls = useMemo(() => {
     const ethApprove = {
@@ -49,6 +51,24 @@ export const Connect = (props: StyleProps) => {
     }
   }, [data]);
 
+  const onConnect = useCallback(() => {
+    if (connectors.length === 0) {
+      if (!toast.isActive("wallet-toast")) {
+        toast({
+          id: "wallet-toast",
+          position: "bottom-right",
+          render: () => (
+            <Box bg="red.500" p="20px" borderRadius="5px">
+              <Text textStyle="boldUpper">No Wallets Detected</Text>
+            </Box>
+          ),
+        });
+      }
+      return;
+    }
+    connect(connectors[0]);
+  }, []);
+
   return (
     <HStack
       justify={["space-around", "space-around", "flex-end"]}
@@ -66,19 +86,13 @@ export const Connect = (props: StyleProps) => {
             border="2px solid"
             borderColor="blue.100"
             display={["none", "none", "block"]}
-            onClick={() => {
-              disconnect();
-            }}
+            onClick={disconnect}
           >
             <LogoutIcon />
           </Circle>
         </>
       ) : (
-        <Button
-          onClick={() => {
-            connect(connectors[0]);
-          }}
-        >
+        <Button onClick={onConnect}>
           <CartridgeIcon /> Connect
         </Button>
       )}

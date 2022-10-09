@@ -9,21 +9,32 @@ import { toFelt, hexToDecimalString } from "starknet/utils/number";
 const INTERVAL = 2500;
 
 export const usePlayer = () => {
-  const [svg, setSvg] = useState<string>();
-  const [balance, setBalance] = useState<number>();
+  const { account } = useStarknet();
+  const [players, setPlayers] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
+  useEffect(()=>{
+    if(account) {
+      fetchPlayer(account);
+    }
+  }, [account])
 
-  const fetchPlayers = useCallback(async (account: string) =>{
-    setLoading(true);
-    const balance = await defaultProvider.callContract({
+  const fetchPlayer = async (account: string) => {
+    const response = await defaultProvider.callContract({
       contractAddress: CONTRACT_PLAYER,
       entrypoint: "balanceOf",
-      calldata: [toFelt(account)]
+      calldata: [toFelt(account)],
     });
 
-    setBalance(Number(balance[0]));
-  },[])
+    const balance = Number(response.result[0]);
+
+    if(balance == 0) {
+      return;
+    }
+
+    // check if cached
+    
+  }
 
   const waitForMint = useCallback(async (hash: string) => {
     setLoading(true);
@@ -52,15 +63,13 @@ export const usePlayer = () => {
     const decodedUri = dataUriToBuffer(data.join(""));
     const json = JSON.parse(decodedUri.toString());
 
-    setSvg(json.image);
     setLoading(false);
+    return json.image;
   }, []);
 
   return {
-    svg: svg,
-    balance: balance,
+    players: players,
     loading: loading,
     waitForMint: waitForMint,
-    fetchPlayers: fetchPlayers,
   };
 };
