@@ -20,7 +20,7 @@ export const Details = ({ onMint }: { onMint: () => void }) => {
         minWidth={["250px", "300px", "300px"]}
         minHeight={["250px", "300px", "300px"]}
         borderRadius="12px"
-        background="url(/trophy.png) center"
+        background="url(/mint_random.gif) center"
         backgroundSize="contain"
         boxShadow="15px 15px 20px rgba(0,0,0,0.2)"
       />
