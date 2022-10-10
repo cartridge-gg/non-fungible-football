@@ -175,14 +175,14 @@ func test_results{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     ITournament.update(contract_address, 1, 1, 2);
 
     let (team1_a, team1_b) = ITournament.result(contract_address, 1);
-    assert team1_a = 1;
-    assert team1_b = 2;
+    assert team1_a = 2;
+    assert team1_b = 3;
 
     ITournament.update(contract_address, 11, 19, 0);
 
     let (team2_a, team2_b) = ITournament.result(contract_address, 11);
-    assert team2_a = 19;
-    assert team2_b = 0;
+    assert team2_a = 20;
+    assert team2_b = 1;
 
     let (match_ids: felt*) = alloc();
     assert match_ids[0] = 1;
@@ -190,10 +190,10 @@ func test_results{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
 
     let (matches_len, matches) = ITournament.results(contract_address, 2, match_ids);
     assert matches_len = 4;
-    assert matches[0] = 1;
-    assert matches[1] = 2;
-    assert matches[2] = 19;
-    assert matches[3] = 0;
+    assert matches[0] = 2;
+    assert matches[1] = 3;
+    assert matches[2] = 20;
+    assert matches[3] = 1;
 
     %{ stop_prank_callable() %}
 

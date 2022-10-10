@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useMemo } from "react";
 import {
   HStack,
   VStack,
@@ -12,6 +12,7 @@ import {
   Tr,
   useBreakpointValue,
 } from "@chakra-ui/react";
+
 type TeamData = {
   name: string;
   code: string;
@@ -20,15 +21,44 @@ type TeamData = {
 export type GroupProps = {
   letter: string;
   teams: TeamData[];
+  results: { [team: number]: [number, number, number, number] }
 };
 
-export const Group = ({ letter, teams: data }: GroupProps) => {
-  const [teams, setTeams] = useState<TeamData[]>([]);
+const GroupTeam = ({ name, code, result }: TeamData & {
+  result?: [number, number, number, number]
+}) => {
   const isMobile = useBreakpointValue([true, true, false]);
 
-  useEffect(()=>{
-    setTeams(data);
-  },[])
+  return (
+    <Tr bg="blue.200" key={name}>
+      <Th minWidth="200px" pl="12px">
+        <HStack spacing="24px">
+          <Image
+            height="48"
+            width="72"
+            src={`/flags/${name.toUpperCase()}.svg`}
+            style={{
+              minHeight: "48px",
+              borderRadius: "2px",
+              boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
+            }}
+            alt={`${name} flag`}
+          />
+          <VStack align="flex-start">
+            <Text>{!isMobile ? name : code}</Text>
+          </VStack>
+        </HStack>
+      </Th>
+      {!isMobile && <Th>{result && result[0] > 0 ? result[0] : "--"}</Th>}
+      <Th>{result && result[1] > 0 ? result[1] : "--"}</Th>
+      <Th>{result && result[2] > 0 ? result[2] : "--"}</Th>
+      <Th>{result && result[3] > 0 ? result[3] : "--"}</Th>
+    </Tr>
+  )
+}
+
+export const Group = ({ letter, teams, results }: GroupProps) => {
+  const isMobile = useBreakpointValue([true, true, false]);
 
   return (
     <TableContainer w="full">
@@ -48,33 +78,7 @@ export const Group = ({ letter, teams: data }: GroupProps) => {
           </Tr>
         </Thead>
         <Tbody>
-          {teams.map(({ name, code }) => (
-              <Tr bg="blue.200" key={name}>
-                <Th minWidth="200px" pl="12px">
-                  <HStack spacing="24px">
-                    <Image
-                      height="48"
-                      width="72"
-                      src={`/flags/${name.toUpperCase()}.svg`}
-                      style={{
-                        minHeight: "48px",
-                        borderRadius: "2px",
-                        boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
-                      }}
-                      alt={`${name} flag`}
-                    />
-                    <VStack align="flex-start">
-                      <Text>{!isMobile ? name : code}</Text>
-                    </VStack>
-                  </HStack>
-                </Th>
-                {!isMobile && <Th>{"--"}</Th>}
-                <Th>{"--"}</Th>
-                <Th>{"--"}</Th>
-                <Th>{"--"}</Th>
-                {!isMobile && <Th>{"--"}</Th>}
-              </Tr>
-          ))}
+          {teams.map((team, i) => <GroupTeam key={i} {...team} result={results ? results[i] : undefined} />)}
         </Tbody>
       </Table>
     </TableContainer>
