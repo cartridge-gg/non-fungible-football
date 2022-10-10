@@ -21,17 +21,21 @@ type TeamData = {
 export type GroupProps = {
   letter: string;
   teams: TeamData[];
-  results: { [team: number]: [number, number, number, number] }
+  results: { [team: number]: [number, number, number, number] };
 };
 
-const GroupTeam = ({ name, code, result }: TeamData & {
-  result?: [number, number, number, number]
+const GroupTeam = ({
+  name,
+  code,
+  result,
+}: TeamData & {
+  result?: [number, number, number, number];
 }) => {
   const isMobile = useBreakpointValue([true, true, false]);
 
   return (
     <Tr bg="blue.200" key={name}>
-      <Th minWidth="200px" pl="12px">
+      <Th minWidth={["150px", "200px", "300px"]} pl="12px">
         <HStack spacing="24px">
           <Image
             height="48"
@@ -54,8 +58,8 @@ const GroupTeam = ({ name, code, result }: TeamData & {
       <Th>{result && result[2] > 0 ? result[2] : "--"}</Th>
       <Th>{result && result[3] > 0 ? result[3] : "--"}</Th>
     </Tr>
-  )
-}
+  );
+};
 
 export const Group = ({ letter, teams, results }: GroupProps) => {
   const isMobile = useBreakpointValue([true, true, false]);
@@ -74,11 +78,16 @@ export const Group = ({ letter, teams, results }: GroupProps) => {
             <Th>W</Th>
             <Th>D</Th>
             <Th>L</Th>
-            {!isMobile && <Th>PTS</Th>}
           </Tr>
         </Thead>
         <Tbody>
-          {teams.map((team, i) => <GroupTeam key={i} {...team} result={results ? results[i] : undefined} />)}
+          {teams.map((team, i) => (
+            <GroupTeam
+              key={i}
+              {...team}
+              result={results ? results[i] : undefined}
+            />
+          ))}
         </Tbody>
       </Table>
     </TableContainer>
