@@ -33,13 +33,9 @@ export const Details = ({ onMint }: { onMint: () => void }) => {
         <Callout
           icon={<EthereumIcon />}
           title="Mint Price"
-          description="0.05 ETH"
+          description="0.01 ETH"
         />
-        <Callout
-          icon={<TicketIcon />}
-          title="Mint Limit"
-          description="1 Entry per Person"
-        />
+        <Callout icon={<TicketIcon />} title="Restrictions" description="TBD" />
         {account && (
           <Box pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
             <Button variant="mint" onClick={onMint} w="inherit">
