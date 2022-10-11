@@ -11,7 +11,7 @@ It's an NFT based game, where players randomly draw a player at the beginning of
 1. 1 Player == 1 NFT.
 1. 32 national teams with 26 players each == 832 total players.
 1. Once a team is knocked out, all its players are knocked out.
-1. Holders of the championship teams players win a portion of the pot.
+1. Holders of the championship teams players win the championship.
 
 ## Implementation
 
@@ -46,10 +46,30 @@ func lookup_body(index: felt) -> (part_len: felt, part: felt*) {
 }
 ```
 
-## Minting
+### Oracle
+
+Currently the tournament relies on an oracle for game outcomes. In the future, we would like to gamify this aspect. The mechanism would work as follows:
+
+1. One of the teams participating in a match can propose an outcome (score).
+1. All teams not participating can vote y/n to confirm the score.
+1. If the score is overturned, the proposers NFT is burned.
+1. Participants are rewarded for proposals / votes inline with the confirmed outcome with a portion of the pot.
+
+### Bracket resolution
+
+Once the group stage has been finalized, the knockout bracket is seeded. The tournament contract computes the outcome of the tournament onchain, based on each individual game outcome (i.e. implements the official tournament rules).
+
+### Minting
 
 Players will be auctioned off using a [Gradual Dutch Auction](https://www.paradigm.xyz/2022/04/gda). A percentage of proceeds from the player auction will accumulate into a pool (final prize).
 
 Players will be revealed after the mint is complete, so you can't pick a player or team.
 
 The winners will receive a trophy, which unlocks the final prize.
+
+## Credits
+
+Mr Fax (art)
+Click_save / Sobriquet (design)
+Broody (web)
+Tarrence (contracts)
