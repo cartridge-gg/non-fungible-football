@@ -133,12 +133,15 @@ export default function Tourney() {
               <MotionFlex direction="column" gap="40px">
                 {Object.keys(TournamentData.groups).map((letter, idx) => {
                   const teams = TournamentData.groups[letter];
+                  const groupResults = Object.values(teams).map(({ name }) => {
+                    return results ? results[TournamentData.teams.indexOf(name)] : null
+                  })
                   return (
                     <Group
                       letter={letter}
                       key={idx}
                       teams={teams}
-                      results={results}
+                      results={groupResults}
                     />
                   );
                 })}
