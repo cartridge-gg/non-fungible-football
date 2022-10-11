@@ -99,7 +99,7 @@ export default function Tourney() {
               py={[0, 0, "48px"]}
               justify="space-between"
             >
-              <VStack spacing="5px" align="flex-start">
+              <VStack spacing="5px" align="flex-start" borderBottom="1p solid">
                 {state === State.GROUP ? (
                   <>
                     <Text textStyle="h1">Group Stage</Text>
