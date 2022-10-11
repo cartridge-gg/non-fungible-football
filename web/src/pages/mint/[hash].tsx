@@ -52,24 +52,15 @@ export default function Mint() {
         align="center"
       >
         <VStack spacing="50px">
-          {svg ? (
-            <Box
-              height="300px"
-              width="300px"
-              borderRadius="10px"
-              background={`url('${svg.replace(
-                /#/g,
-                "%23",
-              )}') no-repeat center/100%`}
-            />
-          ) : (
-            <Box
-              height="300px"
-              width="300px"
-              borderRadius="10px"
-              background={`url('/mint_random.gif') no-repeat center/100%`}
-            />
-          )}
+          <Box
+            height="300px"
+            width="300px"
+            borderRadius="10px"
+            background={`url('${
+              svg ? svg.replace(/#/g, "%23") : "/mint_random.gif"
+            }') no-repeat center/100%`}
+            boxShadow="0px 0px 20px rgba(0,0,0,0.2)"
+          />
           <Confetti active={!loading} />
           <HStack spacing="20px">
             <Circle size="48px" bg="blue.200">
