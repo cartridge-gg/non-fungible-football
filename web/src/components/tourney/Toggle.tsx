@@ -1,14 +1,17 @@
 import { Circle, HStack, StyleProps } from "@chakra-ui/react";
 import ArrowIcon from "components/icons/Arrow";
+import CaretIcon from "components/icons/Caret";
 import { useState } from "react";
 
 export const Toggle = ({
   size = "md",
+  arrow = true,
   next,
   prev,
   ...rest
 }: {
   size?: "md" | "sm";
+  arrow?: boolean;
   next: () => boolean;
   prev: () => boolean;
 } & StyleProps) => {
@@ -19,7 +22,7 @@ export const Toggle = ({
       <Circle
         as="button"
         size={size === "md" ? "48px" : "24px"}
-        bg="blue.200"
+        bg={arrow && "blue.200"}
         onClick={() => {
           setHasPrev(prev());
           setHasNext(true);
@@ -28,12 +31,16 @@ export const Toggle = ({
         opacity={hasPrev ? "1" : "0.3"}
         transition="opacity 0.2s ease"
       >
-        <ArrowIcon transform="rotate(180deg)" size={size} />
+        {arrow ? (
+          <ArrowIcon transform="rotate(180deg)" size={size} />
+        ) : (
+          <CaretIcon transform="rotate(180deg)" size={size} />
+        )}
       </Circle>
       <Circle
         as="button"
         size={size === "md" ? "48px" : "24px"}
-        bg="blue.200"
+        bg={arrow && "blue.200"}
         onClick={() => {
           setHasNext(next());
           setHasPrev(true);
@@ -42,7 +49,7 @@ export const Toggle = ({
         opacity={hasNext ? "1" : "0.3"}
         transition="opacity 0.2s ease"
       >
-        <ArrowIcon size={size} />
+        {arrow ? <ArrowIcon size={size} /> : <CaretIcon size={size} />}
       </Circle>
     </HStack>
   );

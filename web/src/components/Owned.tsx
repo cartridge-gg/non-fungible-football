@@ -33,7 +33,7 @@ export const Owned = ({ tokenIds }: { tokenIds: Array<number> }) => {
         <Spacer />
         {tokenIds.length > 1 && (
           <MotionFlex gap="20px">
-            <Toggle size="sm" next={onNext} prev={onPrev} />
+            <Toggle size="sm" next={onNext} prev={onPrev} arrow={false} />
           </MotionFlex>
         )}
       </HStack>

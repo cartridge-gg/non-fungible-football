@@ -7,6 +7,7 @@ import {
   VStack,
   Spacer,
   StyleProps,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import Logo from "../components/brand/Logo";
 import Word from "../components/brand/Word";
@@ -20,6 +21,7 @@ export type NavProps = {
 };
 
 export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
+  const isMobile = useBreakpointValue([true, true, false]);
   const { tokenIds } = usePlayer();
   const items = [
     { name: "Mint", url: "/" },
@@ -38,8 +40,7 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
         <Logo height="60px" width="60px" />
         <Word pl="10px" width="100px" height="100px" />
       </HStack>
-      <VStack w="full" spacing="40px">
-        <Owned tokenIds={tokenIds} />
+      <VStack w="full" spacing="50px">
         <Flex
           w="full"
           gap={["5px", "5px", "18px"]}
@@ -61,6 +62,7 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
             </Link>
           ))}
         </Flex>
+        {!isMobile && <Owned tokenIds={tokenIds} />}
       </VStack>
       <Connect display={["none", "none", "flex"]} minHeight="50px" />
     </Flex>
