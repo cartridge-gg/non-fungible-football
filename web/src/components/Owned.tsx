@@ -10,7 +10,6 @@ import Soccerball from "./icons/Soccerball";
 const CDN = `https://static.cartridge.gg/starknet:sn_goerli/${CONTRACT_PLAYER}`;
 
 export const Owned = ({ tokenIds }: { tokenIds: Array<number> }) => {
-  const { account } = useStarknet();
   const [idx, setIdx] = useState<number>(0);
 
   const onNext = () => {
@@ -23,12 +22,13 @@ export const Owned = ({ tokenIds }: { tokenIds: Array<number> }) => {
     return idx - 1 === 0 ? false : true;
   };
 
-  if (!account) {
-    return <></>;
-  }
-
   return (
-    <MotionFlex direction="column" w="180px" gap="10px">
+    <MotionFlex
+      direction="column"
+      w="180px"
+      gap="10px"
+      display={["none", "none", "flex"]}
+    >
       <HStack w="full">
         <Text textStyle="bracket" color="whiteAlpha.400">
           {tokenIds.length} OWNED

@@ -63,7 +63,7 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
             </HStack>
           </Link>
         ))}
-        {!isMobile && <Owned tokenIds={tokenIds} />}
+        <Owned tokenIds={tokenIds} />
       </Flex>
       <Connect display={["none", "none", "flex"]} minHeight="50px" />
     </Flex>
