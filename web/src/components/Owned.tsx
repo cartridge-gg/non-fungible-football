@@ -40,7 +40,7 @@ export const Owned = ({ tokenIds }: { tokenIds: Array<number> }) => {
             next={onNext}
             prev={onPrev}
             arrow={false}
-            disabled={tokenIds.length === 0}
+            disabled={tokenIds.length <= 1}
             gap="5px"
           />
         </MotionFlex>
