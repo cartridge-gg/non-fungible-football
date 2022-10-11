@@ -22,6 +22,14 @@ from cairo_math_64x61.math64x61 import Math64x61
 from src.components import lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
 from src.data import lookup_team, lookup_number
 
+@event
+func quest_progress(
+  id: felt,
+  player: felt,
+  metadata_len: felt,
+  metadataURI: felt*
+) -> ()
+
 const MAX = 832;
 
 @contract_interface
@@ -73,10 +81,6 @@ namespace IPlayer {
 
     func tokenURI(tokenId: Uint256) -> (tokenURI_len: felt, tokenURI: felt*) {
     }
-}
-
-@storage_var
-func Player_payment_token() -> (res : felt) {
 }
 
 @storage_var

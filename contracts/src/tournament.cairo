@@ -229,13 +229,6 @@ func alive{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(team
     return (alive=0);
 }
 
-// returns champion team if the tournament has been finalized. otherwise returns
-// returns 0.
-@view
-func champion() -> (team_id: felt) {
-    return (team_id=0);
-}
-
 @view
 func owner{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -> (owner: felt) {
     return Ownable.owner();
@@ -249,7 +242,8 @@ func update{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
 ) {
     alloc_locals;
     Ownable.assert_only_owner();
-    Tournament_result.write(match_id, Result(team_a, team_b));
+    // We add one to results so we can tell the difference between a 0-0 draw and not played.
+    Tournament_result.write(match_id, Result(team_a + 1, team_b + 1));
     return ();
 }
 

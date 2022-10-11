@@ -5,39 +5,71 @@ import { CONTRACT_PLAYER } from "utils/constants";
 import dataUriToBuffer from "data-uri-to-buffer";
 import { bnToUint256 } from "starknet/utils/uint256";
 import { toFelt, hexToDecimalString } from "starknet/utils/number";
+import Storage from "utils/storage";
 
 const INTERVAL = 2500;
 
+export type Mints = {
+  [address: string]: {
+    tokenIds: number[];
+  };
+};
+
 export const usePlayer = () => {
   const { account } = useStarknet();
-  const [players, setPlayers] = useState<string[]>([]);
+  const [tokenIds, setTokenIds] = useState<number[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(()=>{
-    if(account) {
+  useEffect(() => {
+    if (account) {
+      const cached = Storage.get("mints");
+      if (cached) {
+        setTokenIds(cached[account]?.tokenIds || []);
+      }
+
       fetchPlayer(account);
     }
-  }, [account])
+  }, [account]);
 
   const fetchPlayer = async (account: string) => {
-    const response = await defaultProvider.callContract({
+    setLoading(true);
+    let response = await defaultProvider.callContract({
       contractAddress: CONTRACT_PLAYER,
       entrypoint: "balanceOf",
       calldata: [toFelt(account)],
     });
 
     const balance = Number(response.result[0]);
-
-    if(balance == 0) {
+    if (balance == 0) {
       return;
     }
 
-    // check if cached
-    
-  }
+    let mints: Mints = Storage.get("mints") || {};
+    if (mints[account]?.tokenIds.length === balance) {
+      setTokenIds(mints[account].tokenIds);
+      setLoading(false);
+      return;
+    }
+
+    let ids = Array<number>();
+    for (let i = 0; i < balance; i++) {
+      response = await defaultProvider.callContract({
+        contractAddress: CONTRACT_PLAYER,
+        entrypoint: "tokenOfOwnerByIndex",
+        calldata: [toFelt(account), toFelt(i), toFelt(0)],
+      });
+
+      ids.push(Number(response.result[0]));
+    }
+
+    mints[account] = { tokenIds: ids };
+    Storage.set("mints", mints);
+
+    setTokenIds(ids);
+    setLoading(false);
+  };
 
   const waitForMint = useCallback(async (hash: string) => {
-    setLoading(true);
     await defaultProvider.waitForTransaction(hash, INTERVAL);
     const receipt = (await defaultProvider.getTransactionReceipt(
       hash,
@@ -63,12 +95,11 @@ export const usePlayer = () => {
     const decodedUri = dataUriToBuffer(data.join(""));
     const json = JSON.parse(decodedUri.toString());
 
-    setLoading(false);
     return json.image;
   }, []);
 
   return {
-    players: players,
+    tokenIds: tokenIds,
     loading: loading,
     waitForMint: waitForMint,
   };
