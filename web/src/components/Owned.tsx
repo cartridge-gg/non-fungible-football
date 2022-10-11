@@ -45,6 +45,7 @@ export const Owned = ({ tokenIds }: { tokenIds: Array<number> }) => {
         style={{
           borderRadius: "10px",
           userSelect: "none",
+          boxShadow: "0px 6px 10px rgba(0,0,0,0.2)"
         }}
       />
     </MotionFlex>
