@@ -11,7 +11,6 @@ import {
   Circle,
   HStack,
   VStack,
-  useInterval,
 } from "@chakra-ui/react";
 import Runner from "components/icons/Runner";
 import Logo from "components/brand/Logo";
@@ -26,7 +25,6 @@ export default function Mint() {
   const [svg, setSvg] = useState<string>();
   const [error, setError] = useState<Error>();
   const [loading, setLoading] = useState<boolean>(false);
-  const [explode, setExplode] = useState<boolean>(false);
 
   useEffect(() => {
     if (hash) {
@@ -34,17 +32,9 @@ export default function Mint() {
       waitForMint(hash)
         .then((svg) => setSvg(svg))
         .catch((e) => setError(e))
-        .finally(() => {
-          setLoading(false);
-          setExplode(true);
-        });
+        .finally(() => setLoading(false));
     }
   }, [hash]);
-
-  useInterval(() => {
-    console.log("exploding!");
-    setExplode(!explode);
-  }, 1000);
 
   return (
     <>
@@ -71,7 +61,7 @@ export default function Mint() {
             }') no-repeat center/100%`}
             boxShadow="0px 0px 20px rgba(0,0,0,0.2)"
           />
-          <Confetti active={explode} config={{ angle: 90 }} />
+          <Confetti active={!loading} />
           <HStack spacing="20px">
             <Circle size="48px" bg="blue.200">
               <Runner />
