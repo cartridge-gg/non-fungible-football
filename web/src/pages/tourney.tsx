@@ -134,8 +134,10 @@ export default function Tourney() {
                 {Object.keys(TournamentData.groups).map((letter, idx) => {
                   const teams = TournamentData.groups[letter];
                   const groupResults = Object.values(teams).map(({ name }) => {
-                    return results ? results[TournamentData.teams.indexOf(name)] : null
-                  })
+                    return results
+                      ? results[TournamentData.teams.indexOf(name)]
+                      : null;
+                  });
                   return (
                     <Group
                       letter={letter}

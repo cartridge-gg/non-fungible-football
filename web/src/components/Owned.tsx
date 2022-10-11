@@ -4,10 +4,12 @@ import { Text, HStack, Spacer, StyleProps } from "@chakra-ui/react";
 import { MotionFlex } from "./MotionWrappers";
 import { Toggle } from "./tourney";
 import { CONTRACT_PLAYER } from "utils/constants";
+import { useStarknet } from "@starknet-react/core";
 
 const CDN = `https://static.cartridge.gg/starknet:sn_goerli/${CONTRACT_PLAYER}`;
 
 export const Owned = ({ tokenIds }: { tokenIds: Array<number> }) => {
+  const { account } = useStarknet();
   const [idx, setIdx] = useState<number>(0);
 
   const onNext = () => {
@@ -20,7 +22,7 @@ export const Owned = ({ tokenIds }: { tokenIds: Array<number> }) => {
     return idx - 1 === 0 ? false : true;
   };
 
-  if (tokenIds.length === 0) {
+  if (tokenIds.length === 0 || !account) {
     return <></>;
   }
 
@@ -45,7 +47,7 @@ export const Owned = ({ tokenIds }: { tokenIds: Array<number> }) => {
         style={{
           borderRadius: "10px",
           userSelect: "none",
-          boxShadow: "0px 6px 10px rgba(0,0,0,0.2)"
+          boxShadow: "0px 6px 10px rgba(0,0,0,0.2)",
         }}
       />
     </MotionFlex>
