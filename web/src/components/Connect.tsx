@@ -87,6 +87,9 @@ export const Connect = (props: StyleProps) => {
             borderColor="blue.100"
             display={["none", "none", "block"]}
             onClick={disconnect}
+            _hover={{
+              bgColor: "blue.100",
+            }}
           >
             <LogoutIcon />
           </Circle>

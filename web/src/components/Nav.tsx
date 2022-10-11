@@ -51,10 +51,12 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
           <Link href={item.url} key={i}>
             <HStack
               as="button"
+              px="10px"
               w={["auto", "auto", "full"]}
               borderBottom="2px solid"
               color={active === i ? "yellow.500" : "blue.100"}
-              px="10px"
+              _hover={{ color: active === i ? "yellow.500" : "white" }}
+              transition="all 0.25s ease"
             >
               <Spacer maxWidth="60%" display={["none", "none", "block"]} />
               <Text textStyle="boldUpper">{item.name}</Text>

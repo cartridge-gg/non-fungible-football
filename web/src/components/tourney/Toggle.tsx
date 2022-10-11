@@ -43,7 +43,6 @@ export const Toggle = ({
           <CircleButton
             size={size}
             onClick={onPrev}
-            disabled={!hasPrev}
             opacity={hasPrev && !disabled ? "1" : "0.3"}
             transform="rotate(180deg)"
           >
@@ -52,7 +51,6 @@ export const Toggle = ({
           <CircleButton
             size={size}
             onClick={onNext}
-            disabled={!hasNext}
             opacity={hasNext ? "1" : "0.3"}
           >
             <ArrowIcon size={size} />
@@ -92,6 +90,10 @@ const CircleButton = ({
       as="button"
       bg="blue.200"
       size={size === "md" ? "48px" : "24px"}
+      transition="all 0.25s ease"
+      _hover={{
+        bg: "blue.100",
+      }}
       {...rest}
     >
       {children}

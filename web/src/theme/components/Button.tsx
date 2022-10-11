@@ -15,6 +15,10 @@ export const Button: ComponentStyleConfig = {
       fontSize: "16px",
       py: "22px",
       px: "30px",
+      _hover: {
+        bgColor: "mint.500",
+        color: "blue.200",
+      },
     },
     primary: {
       borderColor: "blue.100",
@@ -25,9 +29,12 @@ export const Button: ComponentStyleConfig = {
     },
     secondary: {
       borderColor: "blue.100",
-      color: "blue.100",
+      color: "white",
       py: "22px",
       px: "30px",
+      _hover: {
+        bgColor: "blue.100",
+      },
     },
   },
   defaultProps: {
