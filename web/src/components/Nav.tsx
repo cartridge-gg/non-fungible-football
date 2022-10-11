@@ -40,30 +40,29 @@ export const Nav = ({ active = 0, ...rest }: NavProps & StyleProps) => {
         <Logo height="60px" width="60px" />
         <Word pl="10px" width="100px" height="100px" />
       </HStack>
-      <VStack w="full" spacing="50px">
-        <Flex
-          w="full"
-          gap={["5px", "5px", "18px"]}
-          direction={["row", "row", "column"]}
-          justify="flex-end"
-        >
-          {items.map((item, i) => (
-            <Link href={item.url} key={i}>
-              <HStack
-                as="button"
-                w={["auto", "auto", "full"]}
-                borderBottom="2px solid"
-                color={active === i ? "yellow.500" : "blue.100"}
-                px="10px"
-              >
-                <Spacer maxWidth="60%" display={["none", "none", "block"]} />
-                <Text textStyle="boldUpper">{item.name}</Text>
-              </HStack>
-            </Link>
-          ))}
-        </Flex>
+      <Flex
+        w="full"
+        gap={["5px", "5px", "20px"]}
+        direction={["row", "row", "column"]}
+        justify="flex-end"
+        align="flex-end"
+      >
+        {items.map((item, i) => (
+          <Link href={item.url} key={i}>
+            <HStack
+              as="button"
+              w={["auto", "auto", "full"]}
+              borderBottom="2px solid"
+              color={active === i ? "yellow.500" : "blue.100"}
+              px="10px"
+            >
+              <Spacer maxWidth="60%" display={["none", "none", "block"]} />
+              <Text textStyle="boldUpper">{item.name}</Text>
+            </HStack>
+          </Link>
+        ))}
         {!isMobile && <Owned tokenIds={tokenIds} />}
-      </VStack>
+      </Flex>
       <Connect display={["none", "none", "flex"]} minHeight="50px" />
     </Flex>
   );

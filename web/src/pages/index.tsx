@@ -49,7 +49,7 @@ export default function Home() {
         <GridItem area={"nav"}>
           <Nav w="full" h="full" />
         </GridItem>
-        <MotionGridItem area={"main"}>
+        <MotionGridItem area={"main"} ml={[0, 0, "50px"]}>
           <Details
             onMint={() => {
               execute();
