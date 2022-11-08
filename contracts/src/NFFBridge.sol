@@ -17,9 +17,7 @@ contract NFFBridge is Ownable {
         emit Deposit(msg.sender, to, msg.value);
     }
 
-    function withdraw() external {
-        require(msg.sender == cartridge || msg.sender == mrfax || msg.sender == address(this), "NFFBridge: not allowed");
-        
+    function withdraw() external {        
         payable(cartridge).transfer(address(this).balance / 2);
         payable(mrfax).transfer(address(this).balance / 2);
     }
