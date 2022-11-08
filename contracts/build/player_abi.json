@@ -111,6 +111,29 @@
         "type": "event"
     },
     {
+        "data": [
+            {
+                "name": "id",
+                "type": "felt"
+            },
+            {
+                "name": "player",
+                "type": "felt"
+            },
+            {
+                "name": "metadataURI_len",
+                "type": "felt"
+            },
+            {
+                "name": "metadataURI",
+                "type": "felt*"
+            }
+        ],
+        "keys": [],
+        "name": "quest_progress",
+        "type": "event"
+    },
+    {
         "inputs": [
             {
                 "name": "owner",

@@ -17,8 +17,6 @@ from openzeppelin.token.erc721.library import ERC721
 from openzeppelin.token.erc721.enumerable.library import ERC721Enumerable
 from openzeppelin.token.erc20.IERC20 import IERC20
 
-from src.discrete import DiscreteGDA
-from cairo_math_64x61.math64x61 import Math64x61
 from src.components import lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
 from src.data import lookup_team, lookup_number
 
@@ -26,9 +24,10 @@ from src.data import lookup_team, lookup_number
 func quest_progress(
   id: felt,
   player: felt,
-  metadata_len: felt,
+  metadataURI_len: felt,
   metadataURI: felt*
-) -> ()
+) {
+}
 
 const MAX = 832;
 
@@ -96,14 +95,6 @@ func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr
     ERC721.initializer('Player', 'PLAYER');
     ERC721Enumerable.initializer();
     Ownable.initializer(owner);
-
-    let initial_price = 1000000000000000;
-    let initial_price_fp = Math64x61.fromFelt(initial_price);
-    let scale_factor_fp = Math64x61.div(Math64x61.fromFelt(11), Math64x61.fromFelt(10)); 
-    let decay_constant_fp = Math64x61.div(Math64x61.fromFelt(1), Math64x61.fromFelt(2));
-    let auction_start_time_fp = Math64x61.fromFelt(auction_start_time);
-
-    DiscreteGDA.initializer(initial_price_fp, scale_factor_fp, decay_constant_fp, auction_start_time_fp);
     return ();
 }
 
@@ -234,10 +225,7 @@ func paused{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -
 
 @view
 func price{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (price: felt) {
-    return (price=1000000000000000);
-    // let (supply) = Player_supply.read();
-    // let price = DiscreteGDA.purchase_price(1, supply);
-    // return (price=price);
+    return (price=20000000000000000);
 }
 
 @view
@@ -318,9 +306,7 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
         assert_not_zero(MAX - supply.low);
     }
 
-    // Hardcoded until we can fix overflow issues with GDA.
     let (_price) = price();
-    // DiscreteGDA.purchase_price(1, supply);
 
     with_attr error_message("insufficient payment") {
         assert_le(_price, value+1);
@@ -337,7 +323,6 @@ func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
     }
 
     let (contract_address) = get_contract_address();
-
     let (success) = IERC20.transferFrom(0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7, to, contract_address, Uint256(low=_price, high=0));
 
     with_attr error_message("payment failed") {

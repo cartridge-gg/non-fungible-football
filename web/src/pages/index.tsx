@@ -30,7 +30,7 @@ export default function Home() {
       calldata: [PLAYER_PRICE],
     };
     return [ethApprove, mint];
-  }, [account]);
+  }, []);
 
   const { data, loading, error, execute } = useStarknetExecute({ calls });
 
@@ -38,7 +38,7 @@ export default function Home() {
     if (data) {
       router.push(`/mint/${data}`);
     }
-  }, [data]);
+  }, [router, data]);
 
   return (
     <>

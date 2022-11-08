@@ -204,18 +204,6 @@
     },
     {
         "inputs": [],
-        "name": "champion",
-        "outputs": [
-            {
-                "name": "team_id",
-                "type": "felt"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
         "name": "owner",
         "outputs": [
             {

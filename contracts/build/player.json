@@ -112,6 +112,29 @@
             "type": "event"
         },
         {
+            "data": [
+                {
+                    "name": "id",
+                    "type": "felt"
+                },
+                {
+                    "name": "player",
+                    "type": "felt"
+                },
+                {
+                    "name": "metadataURI_len",
+                    "type": "felt"
+                },
+                {
+                    "name": "metadataURI",
+                    "type": "felt*"
+                }
+            ],
+            "keys": [],
+            "name": "quest_progress",
+            "type": "event"
+        },
+        {
             "inputs": [
                 {
                     "name": "owner",
@@ -21524,49 +21547,6 @@
                 "destination": "openzeppelin.security.pausable.library.Pausable",
                 "type": "alias"
             },
-            "__main__.Player_payment_token": {
-                "type": "namespace"
-            },
-            "__main__.Player_payment_token.Args": {
-                "full_name": "__main__.Player_payment_token.Args",
-                "members": {},
-                "size": 0,
-                "type": "struct"
-            },
-            "__main__.Player_payment_token.HashBuiltin": {
-                "destination": "starkware.cairo.common.cairo_builtins.HashBuiltin",
-                "type": "alias"
-            },
-            "__main__.Player_payment_token.ImplicitArgs": {
-                "full_name": "__main__.Player_payment_token.ImplicitArgs",
-                "members": {},
-                "size": 0,
-                "type": "struct"
-            },
-            "__main__.Player_payment_token.Return": {
-                "cairo_type": "()",
-                "type": "type_definition"
-            },
-            "__main__.Player_payment_token.SIZEOF_LOCALS": {
-                "type": "const",
-                "value": 0
-            },
-            "__main__.Player_payment_token.hash2": {
-                "destination": "starkware.cairo.common.hash.hash2",
-                "type": "alias"
-            },
-            "__main__.Player_payment_token.normalize_address": {
-                "destination": "starkware.starknet.common.storage.normalize_address",
-                "type": "alias"
-            },
-            "__main__.Player_payment_token.storage_read": {
-                "destination": "starkware.starknet.common.syscalls.storage_read",
-                "type": "alias"
-            },
-            "__main__.Player_payment_token.storage_write": {
-                "destination": "starkware.starknet.common.syscalls.storage_write",
-                "type": "alias"
-            },
             "__main__.Player_seed": {
                 "type": "namespace"
             },
@@ -24101,6 +24081,45 @@
                     }
                 ],
                 "type": "reference"
+            },
+            "__main__.quest_progress": {
+                "type": "namespace"
+            },
+            "__main__.quest_progress.Args": {
+                "full_name": "__main__.quest_progress.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.quest_progress.ImplicitArgs": {
+                "full_name": "__main__.quest_progress.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.quest_progress.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.quest_progress.SELECTOR": {
+                "type": "const",
+                "value": 1427425878974896367319838875314244186746530359427048910462059226106643312064
+            },
+            "__main__.quest_progress.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.quest_progress.alloc": {
+                "destination": "starkware.cairo.common.alloc.alloc",
+                "type": "alias"
+            },
+            "__main__.quest_progress.emit_event": {
+                "destination": "starkware.starknet.common.syscalls.emit_event",
+                "type": "alias"
+            },
+            "__main__.quest_progress.memcpy": {
+                "destination": "starkware.cairo.common.memcpy.memcpy",
+                "type": "alias"
             },
             "__main__.renounceOwnership": {
                 "decorators": [

@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import {
   StarknetProvider,
-  getInstalledInjectedConnectors,
 } from "@starknet-react/core";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../theme";
