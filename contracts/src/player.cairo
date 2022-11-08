@@ -63,6 +63,9 @@ namespace IPlayer {
     func paused() -> (paused: felt) {
     }
 
+    func unpause() {
+    }
+
     func purchase(value: felt) {
     }
 
@@ -91,10 +94,11 @@ func Player_seed() -> (res : felt) {
 //
 
 @constructor
-func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt, auction_start_time: felt) {
+func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt) {
     ERC721.initializer('Player', 'PLAYER');
     ERC721Enumerable.initializer();
     Ownable.initializer(owner);
+    Pausable._pause();
     return ();
 }
 
