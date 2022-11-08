@@ -11,6 +11,7 @@ from starkware.cairo.common.math import assert_not_zero
 
 from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.security.pausable.library import Pausable
+from openzeppelin.upgrades.library import Proxy
 
 from src.data import lookup_team, lookup_match, lookup_group_matches, Team, Match
 
@@ -66,6 +67,7 @@ func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr
     owner: felt
 ) {
     Ownable.initializer(owner);
+    Proxy.initializer(owner);
     return ();
 }
 
@@ -272,11 +274,27 @@ func transferOwnership{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_che
     newOwner: felt
 ) {
     Ownable.transfer_ownership(newOwner);
+    Proxy._set_admin(newOwner);
     return ();
 }
 
 @external
 func renounceOwnership{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() {
     Ownable.renounce_ownership();
+    Proxy._set_admin(0);
     return ();
+}
+
+@external
+func upgrade{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
+    implementation: felt
+) {
+    Proxy.assert_only_admin();
+    Proxy._set_implementation_hash(implementation);
+    return ();
+}
+
+@view
+func implementation{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -> (implementation: felt) {
+    return Proxy.get_implementation_hash();
 }

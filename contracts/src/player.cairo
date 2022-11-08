@@ -16,6 +16,7 @@ from openzeppelin.security.pausable.library import Pausable
 from openzeppelin.token.erc721.library import ERC721
 from openzeppelin.token.erc721.enumerable.library import ERC721Enumerable
 from openzeppelin.token.erc20.IERC20 import IERC20
+from openzeppelin.upgrades.library import Proxy
 
 from src.components import lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
 from src.data import lookup_team, lookup_number
@@ -98,6 +99,7 @@ func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr
     ERC721.initializer('Player', 'PLAYER');
     ERC721Enumerable.initializer();
     Ownable.initializer(owner);
+    Proxy.initializer(owner);
     Pausable._pause();
     return ();
 }
@@ -341,12 +343,14 @@ func transferOwnership{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_che
     newOwner: felt
 ) {
     Ownable.transfer_ownership(newOwner);
+    Proxy._set_admin(newOwner);
     return ();
 }
 
 @external
 func renounceOwnership{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() {
     Ownable.renounce_ownership();
+    Proxy._set_admin(0);
     return ();
 }
 
@@ -362,4 +366,18 @@ func unpause{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() 
     Ownable.assert_only_owner();
     Pausable._unpause();
     return ();
+}
+
+@external
+func upgrade{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
+    implementation: felt
+) {
+    Proxy.assert_only_admin();
+    Proxy._set_implementation_hash(implementation);
+    return ();
+}
+
+@view
+func implementation{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -> (implementation: felt) {
+    return Proxy.get_implementation_hash();
 }
