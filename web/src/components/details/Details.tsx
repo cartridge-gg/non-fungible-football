@@ -4,10 +4,8 @@ import BellIcon from "../../components/icons/Bell";
 import EthereumIcon from "../../components/icons/Ethereum";
 import TicketIcon from "../../components/icons/Ticket";
 import RunnerIcon from "components/icons/Runner";
-import { useStarknet } from "@starknet-react/core";
 
 export const Details = ({ onMint }: { onMint: () => void }) => {
-  const { account } = useStarknet();
   return (
     <Flex
       h="full"
@@ -36,14 +34,12 @@ export const Details = ({ onMint }: { onMint: () => void }) => {
           description="0.01 ETH"
         />
         <Callout icon={<TicketIcon />} title="Restrictions" description="TBD" />
-        {account && (
-          <Box pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
-            <Button variant="mint" onClick={onMint} w="inherit">
-              <RunnerIcon />
-              Mint
-            </Button>
-          </Box>
-        )}
+        <Box pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
+          <Button variant="mint" onClick={onMint} w="inherit">
+            <RunnerIcon />
+            Mint
+          </Button>
+        </Box>
       </VStack>
     </Flex>
   );

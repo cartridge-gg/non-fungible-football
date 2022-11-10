@@ -52,7 +52,13 @@ export default function Home() {
         <MotionGridItem area={"main"} ml={[0, 0, "50px"]}>
           <Details
             onMint={() => {
-              execute();
+              if (account) {
+                execute();
+              } else {
+                window.open(
+                  "https://cartridge.gg/signup/non-fungible-football",
+                );
+              }
             }}
           />
         </MotionGridItem>
