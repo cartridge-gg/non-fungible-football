@@ -869,8 +869,8 @@
       }
     },
     "src/NFFBridge.sol": {
-      "lastModificationDate": 1667939499718,
-      "contentHash": "de675a12414786230183d201c2eeea1a",
+      "lastModificationDate": 1668116623670,
+      "contentHash": "ba46c9dadede0bd9908b689be880aa9d",
       "sourceName": "src/NFFBridge.sol",
       "solcConfig": {
         "settings": {
