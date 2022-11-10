@@ -20,5 +20,7 @@ contract NFFBridgeTest is Test {
         bridge.deposit{
             value: 0.02 ether
         }(0x07b5d15786D84555A6bd9A5B532EAe27B0f64Dbc5F3E99971CD6904a5DfF432b);
+
+        require(bridge.deposit_count() == 1, "NFFBridge: deposit count not incremented");
     }
 }
