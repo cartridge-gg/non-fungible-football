@@ -67,10 +67,10 @@ namespace IPlayer {
     func unpause() {
     }
 
-    func purchase(value: felt) {
+    func mint_to(to: felt) {
     }
 
-    func price() -> (price: felt) {
+    func reveal() {
     }
 
     func totalSupply() -> (totalSupply: Uint256) {
@@ -159,15 +159,16 @@ func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     tokenId: Uint256
 ) -> (tokenURI_len: felt, tokenURI: felt*) {
     alloc_locals;
-    // let (seed) = Player_seed.read();
-    // let (_, rem) = unsigned_div_rem(seed * tokenId.low, MAX);
 
-    let (_, background_idx) = unsigned_div_rem(tokenId.low, 2);
-    let (_, body_idx) = unsigned_div_rem(tokenId.low, 4);
-    let (_, team_idx) = unsigned_div_rem(tokenId.low, 32);
-    let (_, number_idx) = unsigned_div_rem(tokenId.low, 26);
-    let (_, boot_idx) = unsigned_div_rem(tokenId.low, 4);
-    let (_, hair_idx) = unsigned_div_rem(tokenId.low, 37);
+    let (seed) = Player_seed.read();
+    let (_, rem) = unsigned_div_rem(seed * tokenId.low, MAX);
+
+    let (_, background_idx) = unsigned_div_rem(rem, 2);
+    let (_, body_idx) = unsigned_div_rem(rem, 4);
+    let (_, team_idx) = unsigned_div_rem(rem, 32);
+    let (_, number_idx) = unsigned_div_rem(rem, 26);
+    let (_, boot_idx) = unsigned_div_rem(rem, 4);
+    let (_, hair_idx) = unsigned_div_rem(rem, 37);
 
     let (body_len, body) = lookup_body(body_idx);
     let (teams_len, teams) = lookup_teams(team_idx);
@@ -227,11 +228,6 @@ func owner{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() ->
 @view
 func paused{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -> (paused: felt) {
     return Pausable.is_paused();
-}
-
-@view
-func price{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}() -> (price: felt) {
-    return (price=20000000000000000);
 }
 
 @view
@@ -299,42 +295,35 @@ func safeTransferFrom{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_chec
 }
 
 @external
-func purchase{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
-    value: felt,
+func mint_to{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_check_ptr}(
+    to: felt,
 ) {
     alloc_locals;
-    Pausable.assert_not_paused();
+    Ownable.assert_only_owner();
 
-    let (to) = get_caller_address();
-    let (supply: Uint256) = ERC721Enumerable.total_supply();
-
-    with_attr error_message("sold out") {
-        assert_not_zero(MAX - supply.low);
+    let (seed) = Player_seed.read();
+    with_attr error_message("mint over") {
+        assert seed = 0;
     }
 
-    let (_price) = price();
-
-    with_attr error_message("insufficient payment") {
-        assert_le(_price, value+1);
+    let (supply: Uint256) = ERC721Enumerable.total_supply();
+    with_attr error_message("sold out") {
+        assert_not_zero(MAX - supply.low);
     }
 
     // There can only ever be 832 NFTs.
     ERC721Enumerable._mint(to, supply);
 
-    if (supply.low + 1 == MAX) {
-        // We trust starkware not to manipulate the timestamp *shrug*
-        let (time) = get_block_timestamp();
-        Player_seed.write(time);
-        return ();
-    }
+    return ();
+}
 
-    let (contract_address) = get_contract_address();
-    let (success) = IERC20.transferFrom(0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7, to, contract_address, Uint256(low=_price, high=0));
+@external
+func reveal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() {
+    Ownable.assert_only_owner();
 
-    with_attr error_message("payment failed") {
-        assert_not_zero(success);
-    }
-
+    // We trust starkware not to manipulate the timestamp *shrug*
+    let (time) = get_block_timestamp();
+    Player_seed.write(time);
     return ();
 }
 
