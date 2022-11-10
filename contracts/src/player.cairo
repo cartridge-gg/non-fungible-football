@@ -12,6 +12,7 @@ from starkware.cairo.common.alloc import alloc
 
 from openzeppelin.access.ownable.library import Ownable
 from openzeppelin.introspection.erc165.library import ERC165
+from openzeppelin.security.initializable.library import Initializable
 from openzeppelin.security.pausable.library import Pausable
 from openzeppelin.token.erc721.library import ERC721
 from openzeppelin.token.erc721.enumerable.library import ERC721Enumerable
@@ -84,6 +85,12 @@ namespace IPlayer {
 
     func tokenURI(tokenId: Uint256) -> (tokenURI_len: felt, tokenURI: felt*) {
     }
+
+    func upgrade(implementation: felt) {
+    }
+
+    func implementation() -> (implementation: felt) {
+    }
 }
 
 @storage_var
@@ -94,8 +101,9 @@ func Player_seed() -> (res : felt) {
 // Constructor
 //
 
-@constructor
-func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt) {
+@external
+func initialize{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt) {
+    Initializable.initialize();
     ERC721.initializer('Player', 'PLAYER');
     ERC721Enumerable.initializer();
     Ownable.initializer(owner);

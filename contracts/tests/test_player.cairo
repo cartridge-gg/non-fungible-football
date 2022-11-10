@@ -77,3 +77,33 @@ func test_token_uri{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuilt
 
     return ();
 }
+
+@external
+func test_upgrade{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+    alloc_locals;
+
+    local initial_implementation: felt;
+    local fake_implementation: felt;
+    local contract_address: felt;
+    %{
+        from starkware.starknet.compiler.compile import get_selector_from_name
+        ids.initial_implementation = declare("./src/player.cairo").class_hash
+        ids.fake_implementation = declare("./src/tournament.cairo").class_hash
+        ids.contract_address = deploy_contract("./lib/cairo_contracts/src/openzeppelin/upgrades/presets/proxy.cairo", [ids.initial_implementation, get_selector_from_name('initialize'), 1, 123]).contract_address
+        stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
+    %}
+
+    let (implementation) = IPlayer.implementation(contract_address);
+    assert implementation = initial_implementation;
+
+    IPlayer.upgrade(contract_address, fake_implementation);
+
+    let (next_implementation) = IPlayer.implementation(contract_address);
+    assert next_implementation = fake_implementation;
+
+    %{ 
+        stop_prank_callable()
+    %}
+
+    return ();
+}

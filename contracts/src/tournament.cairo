@@ -10,6 +10,7 @@ from starkware.cairo.common.math_cmp import is_le
 from starkware.cairo.common.math import assert_not_zero
 
 from openzeppelin.access.ownable.library import Ownable
+from openzeppelin.security.initializable.library import Initializable
 from openzeppelin.security.pausable.library import Pausable
 from openzeppelin.upgrades.library import Proxy
 
@@ -48,6 +49,12 @@ namespace ITournament {
 
     func finalize_group(results_len: felt, results: felt*) {
     }
+
+    func upgrade(implementation: felt) {
+    }
+
+    func implementation() -> (implementation: felt) {
+    }
 }
 
 @storage_var
@@ -62,10 +69,11 @@ func Tournament_result(match_id: felt) -> (result: Result) {
 func Tournament_round_sixteen(match_id: felt) -> (match: Match) {
 }
 
-@constructor
-func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
+@external
+func initialize{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     owner: felt
 ) {
+    Initializable.initialize();
     Ownable.initializer(owner);
     Proxy.initializer(owner);
     return ();
