@@ -23,6 +23,9 @@ struct Result {
 
 @contract_interface
 namespace ITournament {
+    func initialize(owner: felt) {
+    }
+
     func add(name: felt, group: felt) -> () {
     }
 

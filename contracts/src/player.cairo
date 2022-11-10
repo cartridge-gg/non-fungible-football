@@ -35,6 +35,9 @@ const MAX = 832;
 
 @contract_interface
 namespace IPlayer {
+    func initialize(owner: felt) {
+    }
+
     func balanceOf(owner: felt) -> (balance: Uint256) {
     }
 

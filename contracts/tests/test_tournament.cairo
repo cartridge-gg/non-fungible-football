@@ -42,9 +42,10 @@ func test_teams{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}
 
     local contract_address: felt;
     %{ 
-        ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+        ids.contract_address = deploy_contract("./src/tournament.cairo").contract_address
     %}
 
+    ITournament.initialize(contract_address, 123);
     let (name, group) = ITournament.team(contract_address, 1);
     assert name = 'Qatar';
     assert group = 'A';
@@ -72,9 +73,11 @@ func test_matches{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
 
     local contract_address: felt;
     %{
-        ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+        ids.contract_address = deploy_contract("./src/tournament.cairo").contract_address
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
     %}
+
+    ITournament.initialize(contract_address, 123);
 
     let (team_a, team_b) = ITournament.match(contract_address, 1);
     assert team_a = 1;
@@ -168,10 +171,11 @@ func test_results{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
 
     local contract_address: felt;
     %{ 
-        ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+        ids.contract_address = deploy_contract("./src/tournament.cairo").contract_address
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
     %}
 
+    ITournament.initialize(contract_address, 123);
     ITournament.update(contract_address, 1, 1, 2);
 
     let (team1_a, team1_b) = ITournament.result(contract_address, 1);

@@ -12,12 +12,13 @@ func test_mint_to{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
 
     local contract_address: felt;
     %{ 
-        ids.contract_address = deploy_contract("./src/player.cairo", [123]).contract_address
+        ids.contract_address = deploy_contract("./src/player.cairo").contract_address
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
         stop_mock = mock_call(0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7, "transferFrom", [1])
         stop_warp = warp(1665017283, ids.contract_address)
     %}
 
+    IPlayer.initialize(contract_address, 123);
     IPlayer.unpause(contract_address);
     IPlayer.mint_to(contract_address, 123);
     let (balance) = IPlayer.balanceOf(contract_address, 123);
@@ -46,11 +47,12 @@ func test_token_uri{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuilt
 
     local contract_address: felt;
     %{ 
-        ids.contract_address = deploy_contract("./src/player.cairo", [123]).contract_address
+        ids.contract_address = deploy_contract("./src/player.cairo").contract_address
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
         stop_warp = warp(1665017283, ids.contract_address)
     %}
-
+    
+    IPlayer.initialize(contract_address, 123);
     IPlayer.reveal(contract_address);
 
     let (uri_len, uri) = IPlayer.tokenURI(contract_address, Uint256(low=1, high=0));
