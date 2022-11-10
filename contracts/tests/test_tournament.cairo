@@ -139,7 +139,7 @@ func test_matches{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     assert match_ids2[6] = 55;
     assert match_ids2[7] = 56;
     let (matches_len2, matches2) = ITournament.matches(contract_address, 8, match_ids2);
-    
+
     assert matches2[0] = 2;
     assert matches2[1] = 3;
     assert matches2[2] = 7;

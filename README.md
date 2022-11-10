@@ -61,11 +61,32 @@ Once the group stage has been finalized, the knockout bracket is seeded. The tou
 
 ### Minting
 
-Players will be auctioned off using a [Gradual Dutch Auction](https://www.paradigm.xyz/2022/04/gda). A percentage of proceeds from the player auction will accumulate into a pool (final prize).
-
 Players will be revealed after the mint is complete, so you can't pick a player or team.
 
 The winners will receive a trophy, which unlocks the final prize.
+
+## Development
+
+### Testing
+
+```
+protostar test tests
+```
+
+### Deployment
+
+```
+protostar build
+protostar declare ./build/proxy.json --network=testnet
+protostar declare ./build/player.json --network=testnet
+protostar declare ./build/tournament.json --network=testnet
+```
+
+Proxy Class Hash: `0x01067c8f4aa8f7d6380cc1b633551e2a516d69ad3de08af1b3d82e111b4feda4`
+
+Player Class Hash: `0x064f2b0e41576d9bd4bcb99c2ca244c470da76204d360b2f8214cbd317a17286`
+
+Tournament Class Hash: `0x06994d18b6cd2106cac9fc1aa1acf6472274430d0cff0c705ef1c758b9426a5e`
 
 ## Credits
 
