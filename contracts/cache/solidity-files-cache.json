@@ -869,8 +869,8 @@
       }
     },
     "src/NFFBridge.sol": {
-      "lastModificationDate": 1668116623670,
-      "contentHash": "ba46c9dadede0bd9908b689be880aa9d",
+      "lastModificationDate": 1668118368167,
+      "contentHash": "bedf5f0f699036a5fc497c4d92cbe1af",
       "sourceName": "src/NFFBridge.sol",
       "solcConfig": {
         "settings": {
@@ -913,8 +913,8 @@
       }
     },
     "test/NFFBridge.t.sol": {
-      "lastModificationDate": 1667940400727,
-      "contentHash": "1ae4acdf17770b9eb4a768a64a615f4c",
+      "lastModificationDate": 1668118467741,
+      "contentHash": "321279ca72bf339a597d254554e298d4",
       "sourceName": "test/NFFBridge.t.sol",
       "solcConfig": {
         "settings": {

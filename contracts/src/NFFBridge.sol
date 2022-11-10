@@ -12,7 +12,7 @@ contract NFFBridge is Ownable {
     uint256 private constant cost = 0.02 ether;
 
     uint16 private constant max_deposits = 832;
-    uint16 private deposit_count = 0;
+    uint16 public deposit_count = 0;
 
     function deposit(uint256 to) external payable {
         require(msg.value == cost, "NFFBridge: invalid amount");
