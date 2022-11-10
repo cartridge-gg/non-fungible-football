@@ -1,15 +1,8 @@
-["protostar.config"]
-protostar_version = "0.7.0"
+[project]
+protostar-version = "0.7.0"
+lib-path = "lib"
+cairo-path = ["./lib/cairo_contracts/src"]
 
-["protostar.project"]
-libs_path = "lib"
-
-["protostar.contracts"]
+[contracts]
 player = ["src/player.cairo"]
 tournament = ["src/tournament.cairo"]
-
-["protostar.build"]
-cairo-path = ["./lib/cairo_contracts/src", "./lib/cairo_math_64x61/contracts"]
-
-["protostar.test"]
-cairo-path = ["./lib/cairo_contracts/src", "./lib/cairo_math_64x61/contracts"]
