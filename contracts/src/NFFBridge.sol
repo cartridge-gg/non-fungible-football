@@ -16,7 +16,7 @@ contract NFFBridge is Ownable {
 
     function deposit(uint256 to) external payable {
         require(msg.value == cost, "NFFBridge: invalid amount");
-        require(deposit_count <= max_deposits, "NFFBridge: max deposits reached");
+        require(deposit_count < max_deposits, "NFFBridge: max deposits reached");
 
         deposit_count++;
         emit Deposit(msg.sender, to, msg.value);
