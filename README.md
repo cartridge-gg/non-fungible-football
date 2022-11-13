@@ -76,6 +76,7 @@ protostar test tests
 ### Deployment
 
 ```
+cd contracts
 protostar build
 protostar declare ./build/proxy.json --network=testnet
 protostar declare ./build/player.json --network=testnet
@@ -84,9 +85,9 @@ protostar declare ./build/tournament.json --network=testnet
 
 Proxy Class Hash: `0x01067c8f4aa8f7d6380cc1b633551e2a516d69ad3de08af1b3d82e111b4feda4`
 
-Player Class Hash: `0x064f2b0e41576d9bd4bcb99c2ca244c470da76204d360b2f8214cbd317a17286`
+Player Class Hash: `0x024aa9356c18b6c7a5eca66ee205d4cedc97e5949528440854ea593ce7e6f1e0`
 
-Tournament Class Hash: `0x06994d18b6cd2106cac9fc1aa1acf6472274430d0cff0c705ef1c758b9426a5e`
+Tournament Class Hash: `0x0224a662815053f659ddb817b0b5a5243af52f83a2ea53950619f97a77f3e699`
 
 ## Credits
 
