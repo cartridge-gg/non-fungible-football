@@ -69,10 +69,16 @@ if __name__ == "__main__":
         playerreader = csv.reader(csvfile)
         for row in playerreader:
             team = int(row[0])
-            body = int(row[1])
+            body = int(row[1]) - 1
+            if body < 0:
+                raise "invalid body"
+
             hair = get(row[2], 53)
             beard = get_beard(row[3])
-            number = int(row[4])
+            number = int(row[4]) - 1
+            if number < 0:
+                raise "invalid number"
+
             boot = get_boots(row[5])
             keeper = row[8]
 
