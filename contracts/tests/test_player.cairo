@@ -42,22 +42,33 @@ func test_mint_to{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
 }
 
 @external
-func test_token_uri{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+func setup_token_uri() {
+    %{
+        given(
+            id = strategy.integers(0, 832),
+        )
+    %}
+    return ();
+}
+
+@external
+func test_token_uri{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(id: felt) {
     alloc_locals;
 
     local contract_address: felt;
     %{ 
         ids.contract_address = deploy_contract("./src/player.cairo").contract_address
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
-        stop_warp = warp(1665017283, ids.contract_address)
+        stop_warp = warp(1, ids.contract_address)
     %}
     
     IPlayer.initialize(contract_address, 123);
     IPlayer.reveal(contract_address);
 
-    let (uri_len, uri) = IPlayer.tokenURI(contract_address, Uint256(low=1, high=0));
+    let (uri_len, uri) = IPlayer.tokenURI(contract_address, Uint256(low=id, high=0));
 
     %{
+        import json
         parts = memory.get_range(ids.uri, ids.uri_len)
         svg = ""
         for felt in parts:
@@ -68,8 +79,13 @@ func test_token_uri{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuilt
             except:
                 print(felt)
 
-        with open('tests/test_player.json', 'w') as f:
-            f.write(svg)
+        svg = svg[len("data:application/json,"):]
+        parsed = json.loads(svg)
+        # with open('tests/outputs/test_player_'+str(ids.id)+'.json', 'w') as f:
+        #    f.write(svg)
+
+        with open('tests/outputs/test_player_'+str(ids.id)+'.svg', 'w') as f:
+            f.write(parsed["image"][len("data:image/svg+xml,"):])
     %}
 
     %{ 

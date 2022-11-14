@@ -19,6 +19,7 @@ from openzeppelin.token.erc721.enumerable.library import ERC721Enumerable
 from openzeppelin.token.erc20.IERC20 import IERC20
 from openzeppelin.upgrades.library import Proxy
 
+from src.configuration import lookup_config
 from src.components import lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
 from src.data import lookup_team, lookup_number
 
@@ -175,11 +176,7 @@ func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     let (_, rem) = unsigned_div_rem(seed * tokenId.low, MAX);
 
     let (_, background_idx) = unsigned_div_rem(rem, 2);
-    let (_, body_idx) = unsigned_div_rem(rem, 4);
-    let (_, team_idx) = unsigned_div_rem(rem, 32);
-    let (_, number_idx) = unsigned_div_rem(rem, 26);
-    let (_, boot_idx) = unsigned_div_rem(rem, 4);
-    let (_, hair_idx) = unsigned_div_rem(rem, 37);
+    let (accessory_idx, beard_idx, body_idx, boot_idx, hair_idx, number_idx, team_idx) = lookup_config(rem);
 
     let (body_len, body) = lookup_body(body_idx);
     let (teams_len, teams) = lookup_teams(team_idx);
