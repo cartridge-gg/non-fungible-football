@@ -45,7 +45,7 @@ func test_mint_to{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
 func setup_token_uri() {
     %{
         given(
-            id = strategy.integers(0, 832),
+            id = strategy.integers(0, 5),
         )
     %}
     return ();

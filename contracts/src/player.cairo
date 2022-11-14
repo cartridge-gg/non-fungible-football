@@ -108,7 +108,7 @@ func Player_seed() -> (res : felt) {
 @external
 func initialize{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(owner: felt) {
     Initializable.initialize();
-    ERC721.initializer('Player', 'PLAYER');
+    ERC721.initializer('Non Fungible Player', 'PLAYER');
     ERC721Enumerable.initializer();
     Ownable.initializer(owner);
     Proxy.initializer(owner);
