@@ -45,8 +45,8 @@ def get(v, n):
 
 def get_beard(v):
     if random.randint(0, 100) > 70:
-        return 0
-    return get(v, 15)
+        return get(v, 14)
+    return 0
 
 def get_boots(v):
     if v != '':

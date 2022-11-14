@@ -20,7 +20,7 @@ from openzeppelin.token.erc20.IERC20 import IERC20
 from openzeppelin.upgrades.library import Proxy
 
 from src.configuration import lookup_config
-from src.components import lookup_accessory, lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
+from src.components import lookup_accessory, lookup_beards, lookup_body, lookup_boots, lookup_hair, lookup_numbers, lookup_teams
 from src.data import lookup_team, lookup_number
 
 @event
@@ -184,6 +184,7 @@ func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     let (_, background_idx) = unsigned_div_rem(rem, 2);
     let (accessory_idx, beard_idx, body_idx, boot_idx, hair_idx, number_idx, team_idx) = lookup_config(rem);
 
+    let (beard_len, beard) = lookup_beards(beard_idx);
     let (body_len, body) = lookup_body(body_idx);
     let (teams_len, teams) = lookup_teams(team_idx);
     let (number_len, number) = lookup_numbers(number_idx);
@@ -222,8 +223,9 @@ func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     memcpy(arr + 14 + body_len + teams_len + number_len, boots, boots_len);
     memcpy(arr + 14 + body_len + teams_len + number_len + boots_len, hair, hair_len);
     memcpy(arr + 14 + body_len + teams_len + number_len + boots_len + hair_len, accessory, accessory_len);
+    memcpy(arr + 14 + body_len + teams_len + number_len + boots_len + hair_len + accessory_len, beard, beard_len);
 
-    let len = 14 + accessory_len + hair_len + boots_len + number_len + teams_len + body_len;
+    let len = 14 + beard_len + accessory_len + hair_len + boots_len + number_len + teams_len + body_len;
 
     assert arr[len] = '</svg>","attributes":[{"trait_';
     assert arr[len + 1] = 'type":"Team","value":"';

@@ -38,9 +38,9 @@ func lookup_config(index: felt) -> (
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 27; // hair
 	dw 1; // number
 	dw 0; // team
@@ -48,13 +48,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 9; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 27; // hair
 	dw 2; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 4; // hair
@@ -64,24 +64,24 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 1; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 5; // hair
 	dw 4; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 2; // hair
 	dw 5; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
-	dw 44; // hair
+	dw 6; // hair
 	dw 6; // number
 	dw 0; // team
 	// team 0
@@ -96,21 +96,21 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 8; // beard
 	dw 3; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 1; // hair
 	dw 8; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 4; // hair
 	dw 9; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 37; // hair
@@ -118,7 +118,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // team
 	// team 0
 	dw 2; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -129,15 +129,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
-	dw 13; // hair
+	dw 52; // hair
 	dw 12; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 0; // beard
+	dw 7; // beard
 	dw 2; // body
 	dw 0; // boot
-	dw 25; // hair
+	dw 22; // hair
 	dw 13; // number
 	dw 0; // team
 	// team 0
@@ -152,13 +152,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 24; // hair
 	dw 15; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -166,17 +166,17 @@ func lookup_config(index: felt) -> (
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
-	dw 40; // hair
+	dw 33; // hair
 	dw 17; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 2; // hair
 	dw 18; // number
 	dw 0; // team
@@ -184,8 +184,8 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
-	dw 53; // hair
+	dw 0; // boot
+	dw 26; // hair
 	dw 19; // number
 	dw 0; // team
 	// team 0
@@ -198,7 +198,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 0; // beard
+	dw 2; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 5; // hair
@@ -206,15 +206,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // team
 	// team 0
 	dw 2; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 2; // boot
-	dw 44; // hair
+	dw 0; // boot
+	dw 28; // hair
 	dw 22; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 4; // hair
@@ -222,23 +222,23 @@ func lookup_config(index: felt) -> (
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
-	dw 44; // hair
+	dw 20; // hair
 	dw 24; // number
 	dw 0; // team
 	// team 0
 	dw 0; // accessory
-	dw 4; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 2; // boot
-	dw 0; // hair
+	dw 3; // boot
+	dw 8; // hair
 	dw 25; // number
 	dw 0; // team
 	// team 1
 	dw 2; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 28; // hair
@@ -264,13 +264,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 1; // hair
 	dw 3; // number
 	dw 1; // team
 	// team 1
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -288,7 +288,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 7; // hair
 	dw 6; // number
 	dw 1; // team
@@ -312,7 +312,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 49; // hair
 	dw 9; // number
 	dw 1; // team
@@ -334,7 +334,7 @@ func lookup_config(index: felt) -> (
 	dw 1; // team
 	// team 1
 	dw 1; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 1; // boot
 	dw 0; // hair
@@ -368,15 +368,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 12; // hair
 	dw 16; // number
 	dw 1; // team
 	// team 1
 	dw 0; // accessory
-	dw 0; // beard
+	dw 8; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 7; // hair
 	dw 17; // number
 	dw 1; // team
@@ -384,7 +384,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 6; // hair
 	dw 18; // number
 	dw 1; // team
@@ -424,7 +424,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 23; // number
 	dw 1; // team
@@ -456,7 +456,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 6; // hair
 	dw 1; // number
 	dw 2; // team
@@ -464,7 +464,7 @@ func lookup_config(index: felt) -> (
 	dw 1; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 0; // hair
 	dw 2; // number
 	dw 2; // team
@@ -478,7 +478,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // team
 	// team 2
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -502,15 +502,15 @@ func lookup_config(index: felt) -> (
 	dw 2; // team
 	// team 2
 	dw 0; // accessory
-	dw 0; // beard
+	dw 11; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 9; // hair
 	dw 7; // number
 	dw 2; // team
 	// team 2
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -552,13 +552,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 2; // hair
 	dw 13; // number
 	dw 2; // team
 	// team 2
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -566,7 +566,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // team
 	// team 2
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 1; // hair
@@ -576,7 +576,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 16; // number
 	dw 2; // team
@@ -606,7 +606,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // team
 	// team 2
 	dw 0; // accessory
-	dw 0; // beard
+	dw 1; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -630,7 +630,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // team
 	// team 2
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 1; // boot
 	dw 6; // hair
@@ -654,9 +654,9 @@ func lookup_config(index: felt) -> (
 	dw 2; // team
 	// team 3
 	dw 2; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 2; // hair
 	dw 0; // number
 	dw 3; // team
@@ -664,7 +664,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 9; // hair
 	dw 1; // number
 	dw 3; // team
@@ -678,9 +678,9 @@ func lookup_config(index: felt) -> (
 	dw 3; // team
 	// team 3
 	dw 1; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 51; // hair
 	dw 3; // number
 	dw 3; // team
@@ -688,13 +688,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 50; // hair
 	dw 4; // number
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 26; // hair
@@ -710,7 +710,7 @@ func lookup_config(index: felt) -> (
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 15; // hair
@@ -718,7 +718,7 @@ func lookup_config(index: felt) -> (
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 45; // hair
@@ -726,7 +726,7 @@ func lookup_config(index: felt) -> (
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 0; // beard
+	dw 6; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 7; // hair
@@ -744,21 +744,21 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 2; // boot
+	dw 1; // boot
 	dw 14; // hair
 	dw 11; // number
 	dw 3; // team
 	// team 3
 	dw 2; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 42; // hair
 	dw 12; // number
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 4; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 0; // hair
@@ -774,15 +774,15 @@ func lookup_config(index: felt) -> (
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 9; // hair
 	dw 15; // number
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 7; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 16; // hair
@@ -792,23 +792,23 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 41; // hair
 	dw 17; // number
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 42; // hair
 	dw 18; // number
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 7; // hair
 	dw 19; // number
 	dw 3; // team
@@ -824,7 +824,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 6; // hair
 	dw 21; // number
 	dw 3; // team
@@ -846,15 +846,15 @@ func lookup_config(index: felt) -> (
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 3; // boot
 	dw 7; // hair
 	dw 24; // number
 	dw 3; // team
 	// team 3
 	dw 0; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 29; // hair
@@ -864,13 +864,13 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 25; // hair
 	dw 0; // number
 	dw 4; // team
 	// team 4
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 57; // hair
@@ -888,13 +888,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
+	dw 1; // boot
 	dw 18; // hair
 	dw 3; // number
 	dw 4; // team
 	// team 4
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 27; // hair
@@ -904,15 +904,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 25; // hair
 	dw 5; // number
 	dw 4; // team
 	// team 4
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 28; // hair
 	dw 6; // number
 	dw 4; // team
@@ -952,7 +952,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 23; // hair
 	dw 11; // number
 	dw 4; // team
@@ -974,7 +974,7 @@ func lookup_config(index: felt) -> (
 	dw 4; // team
 	// team 4
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 7; // hair
@@ -982,15 +982,15 @@ func lookup_config(index: felt) -> (
 	dw 4; // team
 	// team 4
 	dw 0; // accessory
-	dw 7; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 34; // hair
 	dw 15; // number
 	dw 4; // team
 	// team 4
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 7; // hair
@@ -1000,13 +1000,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 6; // hair
 	dw 17; // number
 	dw 4; // team
 	// team 4
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 11; // hair
@@ -1030,7 +1030,7 @@ func lookup_config(index: felt) -> (
 	dw 4; // team
 	// team 4
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 50; // hair
@@ -1072,13 +1072,13 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 3; // hair
 	dw 0; // number
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -1086,7 +1086,7 @@ func lookup_config(index: felt) -> (
 	dw 5; // team
 	// team 5
 	dw 1; // accessory
-	dw 0; // beard
+	dw 2; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 1; // hair
@@ -1094,7 +1094,7 @@ func lookup_config(index: felt) -> (
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 20; // hair
@@ -1104,15 +1104,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 35; // hair
 	dw 4; // number
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 7; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 28; // hair
 	dw 5; // number
 	dw 5; // team
@@ -1128,7 +1128,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 5; // hair
 	dw 7; // number
 	dw 5; // team
@@ -1142,9 +1142,9 @@ func lookup_config(index: felt) -> (
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 2; // hair
 	dw 9; // number
 	dw 5; // team
@@ -1158,7 +1158,7 @@ func lookup_config(index: felt) -> (
 	dw 5; // team
 	// team 5
 	dw 2; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -1168,7 +1168,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 6; // hair
 	dw 12; // number
 	dw 5; // team
@@ -1176,7 +1176,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 20; // hair
 	dw 13; // number
 	dw 5; // team
@@ -1184,13 +1184,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 4; // hair
 	dw 14; // number
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 8; // hair
@@ -1200,13 +1200,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 5; // hair
 	dw 16; // number
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 25; // hair
@@ -1224,7 +1224,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 10; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 49; // hair
 	dw 19; // number
 	dw 5; // team
@@ -1254,23 +1254,23 @@ func lookup_config(index: felt) -> (
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 3; // hair
 	dw 23; // number
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 4; // hair
 	dw 24; // number
 	dw 5; // team
 	// team 5
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -1312,7 +1312,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 40; // hair
 	dw 4; // number
 	dw 6; // team
@@ -1326,9 +1326,9 @@ func lookup_config(index: felt) -> (
 	dw 6; // team
 	// team 6
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 1; // hair
 	dw 6; // number
 	dw 6; // team
@@ -1342,7 +1342,7 @@ func lookup_config(index: felt) -> (
 	dw 6; // team
 	// team 6
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -1376,7 +1376,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 26; // hair
 	dw 12; // number
 	dw 6; // team
@@ -1392,7 +1392,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 6; // hair
 	dw 14; // number
 	dw 6; // team
@@ -1432,7 +1432,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 9; // hair
 	dw 19; // number
 	dw 6; // team
@@ -1440,7 +1440,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 8; // hair
 	dw 20; // number
 	dw 6; // team
@@ -1454,9 +1454,9 @@ func lookup_config(index: felt) -> (
 	dw 6; // team
 	// team 6
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 22; // number
 	dw 6; // team
@@ -1472,7 +1472,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 15; // hair
 	dw 24; // number
 	dw 6; // team
@@ -1486,17 +1486,17 @@ func lookup_config(index: felt) -> (
 	dw 6; // team
 	// team 7
 	dw 2; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 16; // hair
 	dw 0; // number
 	dw 7; // team
 	// team 7
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 56; // hair
 	dw 1; // number
 	dw 7; // team
@@ -1504,7 +1504,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 5; // hair
 	dw 2; // number
 	dw 7; // team
@@ -1520,7 +1520,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 29; // hair
 	dw 4; // number
 	dw 7; // team
@@ -1534,9 +1534,9 @@ func lookup_config(index: felt) -> (
 	dw 7; // team
 	// team 7
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 41; // hair
 	dw 6; // number
 	dw 7; // team
@@ -1552,7 +1552,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 38; // hair
 	dw 8; // number
 	dw 7; // team
@@ -1560,7 +1560,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 6; // hair
 	dw 9; // number
 	dw 7; // team
@@ -1592,7 +1592,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 11; // hair
 	dw 13; // number
 	dw 7; // team
@@ -1616,13 +1616,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 46; // hair
 	dw 16; // number
 	dw 7; // team
 	// team 7
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 56; // hair
@@ -1632,7 +1632,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 0; // hair
 	dw 18; // number
 	dw 7; // team
@@ -1648,7 +1648,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 36; // hair
 	dw 20; // number
 	dw 7; // team
@@ -1670,9 +1670,9 @@ func lookup_config(index: felt) -> (
 	dw 7; // team
 	// team 7
 	dw 0; // accessory
-	dw 0; // beard
+	dw 10; // beard
 	dw 0; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 25; // hair
 	dw 23; // number
 	dw 7; // team
@@ -1686,17 +1686,17 @@ func lookup_config(index: felt) -> (
 	dw 7; // team
 	// team 7
 	dw 0; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 29; // hair
 	dw 25; // number
 	dw 7; // team
 	// team 8
 	dw 2; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 26; // hair
 	dw 0; // number
 	dw 8; // team
@@ -1720,13 +1720,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 23; // hair
 	dw 3; // number
 	dw 8; // team
 	// team 8
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 35; // hair
@@ -1752,7 +1752,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 31; // hair
 	dw 7; // number
 	dw 8; // team
@@ -1768,7 +1768,7 @@ func lookup_config(index: felt) -> (
 	dw 1; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 10; // hair
 	dw 9; // number
 	dw 8; // team
@@ -1792,7 +1792,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 1; // hair
 	dw 12; // number
 	dw 8; // team
@@ -1800,7 +1800,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 3; // hair
 	dw 13; // number
 	dw 8; // team
@@ -1816,7 +1816,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 8; // hair
 	dw 15; // number
 	dw 8; // team
@@ -1824,7 +1824,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 7; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 42; // hair
 	dw 16; // number
 	dw 8; // team
@@ -1838,7 +1838,7 @@ func lookup_config(index: felt) -> (
 	dw 8; // team
 	// team 8
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 20; // hair
@@ -1848,7 +1848,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 36; // hair
 	dw 19; // number
 	dw 8; // team
@@ -1864,7 +1864,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 39; // hair
 	dw 21; // number
 	dw 8; // team
@@ -1886,7 +1886,7 @@ func lookup_config(index: felt) -> (
 	dw 8; // team
 	// team 8
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 42; // hair
@@ -1910,15 +1910,15 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 9; // hair
 	dw 1; // number
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 1; // hair
@@ -1926,7 +1926,7 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 4; // hair
@@ -1934,7 +1934,7 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 8; // hair
@@ -1942,7 +1942,7 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 5; // hair
@@ -1958,15 +1958,15 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 25; // hair
 	dw 7; // number
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 19; // hair
@@ -1974,15 +1974,15 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 0; // beard
+	dw 10; // beard
 	dw 2; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 49; // hair
 	dw 9; // number
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 2; // hair
@@ -1992,13 +1992,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 4; // hair
 	dw 11; // number
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -2008,13 +2008,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 20; // hair
 	dw 13; // number
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 20; // hair
@@ -2024,7 +2024,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 35; // hair
 	dw 15; // number
 	dw 9; // team
@@ -2038,7 +2038,7 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 5; // hair
@@ -2046,17 +2046,17 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 25; // hair
 	dw 18; // number
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 0; // beard
+	dw 2; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 19; // number
 	dw 9; // team
@@ -2072,13 +2072,13 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 6; // hair
 	dw 21; // number
 	dw 9; // team
 	// team 9
 	dw 2; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 24; // hair
@@ -2086,7 +2086,7 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 3; // hair
@@ -2094,7 +2094,7 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 3; // hair
@@ -2102,7 +2102,7 @@ func lookup_config(index: felt) -> (
 	dw 9; // team
 	// team 9
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -2128,7 +2128,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
+	dw 1; // boot
 	dw 15; // hair
 	dw 2; // number
 	dw 10; // team
@@ -2152,15 +2152,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 6; // hair
 	dw 5; // number
 	dw 10; // team
 	// team 10
 	dw 0; // accessory
-	dw 0; // beard
+	dw 6; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 9; // hair
 	dw 6; // number
 	dw 10; // team
@@ -2168,15 +2168,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 24; // hair
 	dw 7; // number
 	dw 10; // team
 	// team 10
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 29; // hair
 	dw 8; // number
 	dw 10; // team
@@ -2192,7 +2192,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 28; // hair
 	dw 10; // number
 	dw 10; // team
@@ -2200,7 +2200,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 20; // hair
 	dw 11; // number
 	dw 10; // team
@@ -2208,13 +2208,13 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 49; // hair
 	dw 12; // number
 	dw 10; // team
 	// team 10
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 1; // boot
 	dw 15; // hair
@@ -2238,7 +2238,7 @@ func lookup_config(index: felt) -> (
 	dw 10; // team
 	// team 10
 	dw 0; // accessory
-	dw 0; // beard
+	dw 8; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 1; // hair
@@ -2248,7 +2248,7 @@ func lookup_config(index: felt) -> (
 	dw 1; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 17; // number
 	dw 10; // team
@@ -2264,7 +2264,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 31; // hair
 	dw 19; // number
 	dw 10; // team
@@ -2272,7 +2272,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 38; // hair
 	dw 20; // number
 	dw 10; // team
@@ -2280,7 +2280,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 24; // hair
 	dw 21; // number
 	dw 10; // team
@@ -2302,7 +2302,7 @@ func lookup_config(index: felt) -> (
 	dw 10; // team
 	// team 10
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 40; // hair
@@ -2310,7 +2310,7 @@ func lookup_config(index: felt) -> (
 	dw 10; // team
 	// team 10
 	dw 0; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 27; // hair
@@ -2320,7 +2320,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 36; // hair
 	dw 0; // number
 	dw 11; // team
@@ -2368,13 +2368,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 26; // hair
 	dw 6; // number
 	dw 11; // team
 	// team 11
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 8; // hair
@@ -2408,7 +2408,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 15; // hair
 	dw 11; // number
 	dw 11; // team
@@ -2416,15 +2416,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 45; // hair
 	dw 12; // number
 	dw 11; // team
 	// team 11
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 34; // hair
 	dw 13; // number
 	dw 11; // team
@@ -2432,7 +2432,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 42; // hair
 	dw 14; // number
 	dw 11; // team
@@ -2448,7 +2448,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 28; // hair
 	dw 16; // number
 	dw 11; // team
@@ -2456,15 +2456,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 11; // hair
 	dw 17; // number
 	dw 11; // team
 	// team 11
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 42; // hair
 	dw 18; // number
 	dw 11; // team
@@ -2472,7 +2472,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 3; // hair
 	dw 19; // number
 	dw 11; // team
@@ -2480,7 +2480,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 48; // hair
 	dw 20; // number
 	dw 11; // team
@@ -2488,7 +2488,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 29; // hair
 	dw 21; // number
 	dw 11; // team
@@ -2502,9 +2502,9 @@ func lookup_config(index: felt) -> (
 	dw 11; // team
 	// team 11
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 23; // number
 	dw 11; // team
@@ -2512,13 +2512,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 24; // hair
 	dw 24; // number
 	dw 11; // team
 	// team 11
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 48; // hair
@@ -2528,7 +2528,7 @@ func lookup_config(index: felt) -> (
 	dw 3; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 3; // hair
 	dw 0; // number
 	dw 12; // team
@@ -2536,15 +2536,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 5; // hair
 	dw 1; // number
 	dw 12; // team
 	// team 12
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 2; // number
 	dw 12; // team
@@ -2552,7 +2552,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 4; // hair
 	dw 3; // number
 	dw 12; // team
@@ -2590,7 +2590,7 @@ func lookup_config(index: felt) -> (
 	dw 12; // team
 	// team 12
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 3; // hair
@@ -2606,7 +2606,7 @@ func lookup_config(index: felt) -> (
 	dw 12; // team
 	// team 12
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 7; // hair
@@ -2622,7 +2622,7 @@ func lookup_config(index: felt) -> (
 	dw 12; // team
 	// team 12
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 7; // hair
@@ -2646,15 +2646,15 @@ func lookup_config(index: felt) -> (
 	dw 12; // team
 	// team 12
 	dw 2; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 36; // hair
 	dw 15; // number
 	dw 12; // team
 	// team 12
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 19; // hair
@@ -2702,7 +2702,7 @@ func lookup_config(index: felt) -> (
 	dw 12; // team
 	// team 12
 	dw 2; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -2718,9 +2718,9 @@ func lookup_config(index: felt) -> (
 	dw 12; // team
 	// team 12
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 0; // hair
 	dw 24; // number
 	dw 12; // team
@@ -2758,7 +2758,7 @@ func lookup_config(index: felt) -> (
 	dw 13; // team
 	// team 13
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 2; // boot
 	dw 56; // hair
@@ -2774,17 +2774,17 @@ func lookup_config(index: felt) -> (
 	dw 13; // team
 	// team 13
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 32; // hair
 	dw 5; // number
 	dw 13; // team
 	// team 13
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 1; // hair
 	dw 6; // number
 	dw 13; // team
@@ -2816,7 +2816,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 7; // hair
 	dw 10; // number
 	dw 13; // team
@@ -2832,13 +2832,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 56; // hair
 	dw 12; // number
 	dw 13; // team
 	// team 13
 	dw 0; // accessory
-	dw 0; // beard
+	dw 14; // beard
 	dw 0; // body
 	dw 2; // boot
 	dw 48; // hair
@@ -2854,9 +2854,9 @@ func lookup_config(index: felt) -> (
 	dw 13; // team
 	// team 13
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 2; // hair
 	dw 15; // number
 	dw 13; // team
@@ -2888,7 +2888,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 20; // hair
 	dw 19; // number
 	dw 13; // team
@@ -2902,7 +2902,7 @@ func lookup_config(index: felt) -> (
 	dw 13; // team
 	// team 13
 	dw 0; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 21; // hair
@@ -2910,7 +2910,7 @@ func lookup_config(index: felt) -> (
 	dw 13; // team
 	// team 13
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 2; // boot
 	dw 46; // hair
@@ -2926,7 +2926,7 @@ func lookup_config(index: felt) -> (
 	dw 13; // team
 	// team 13
 	dw 0; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 1; // hair
@@ -2960,13 +2960,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 45; // hair
 	dw 2; // number
 	dw 14; // team
 	// team 14
 	dw 1; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 41; // hair
@@ -2990,7 +2990,7 @@ func lookup_config(index: felt) -> (
 	dw 14; // team
 	// team 14
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 21; // hair
@@ -3000,7 +3000,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 1; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 28; // hair
 	dw 7; // number
 	dw 14; // team
@@ -3014,9 +3014,9 @@ func lookup_config(index: felt) -> (
 	dw 14; // team
 	// team 14
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 45; // hair
 	dw 9; // number
 	dw 14; // team
@@ -3024,7 +3024,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 14; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 48; // hair
 	dw 10; // number
 	dw 14; // team
@@ -3040,7 +3040,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 46; // hair
 	dw 12; // number
 	dw 14; // team
@@ -3072,7 +3072,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 18; // hair
 	dw 16; // number
 	dw 14; // team
@@ -3088,13 +3088,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 32; // hair
 	dw 18; // number
 	dw 14; // team
 	// team 14
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 41; // hair
@@ -3104,13 +3104,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 3; // hair
 	dw 20; // number
 	dw 14; // team
 	// team 14
 	dw 2; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 48; // hair
@@ -3118,7 +3118,7 @@ func lookup_config(index: felt) -> (
 	dw 14; // team
 	// team 14
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 16; // hair
@@ -3128,7 +3128,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 21; // hair
 	dw 23; // number
 	dw 14; // team
@@ -3136,7 +3136,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 47; // hair
 	dw 24; // number
 	dw 14; // team
@@ -3166,7 +3166,7 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -3184,21 +3184,21 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 2; // boot
 	dw 35; // hair
 	dw 4; // number
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 35; // hair
 	dw 5; // number
 	dw 15; // team
 	// team 15
 	dw 1; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 4; // hair
@@ -3214,9 +3214,9 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 24; // hair
 	dw 8; // number
 	dw 15; // team
@@ -3238,15 +3238,15 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 2; // boot
 	dw 9; // hair
 	dw 11; // number
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 3; // hair
@@ -3254,9 +3254,9 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 2; // boot
 	dw 2; // hair
 	dw 13; // number
 	dw 15; // team
@@ -3270,7 +3270,7 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 2; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -3278,23 +3278,23 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 16; // number
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 1; // hair
 	dw 17; // number
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 0; // beard
+	dw 2; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -3302,7 +3302,7 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 1; // boot
 	dw 8; // hair
@@ -3326,7 +3326,7 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 49; // hair
@@ -3334,7 +3334,7 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 31; // hair
@@ -3342,9 +3342,9 @@ func lookup_config(index: felt) -> (
 	dw 15; // team
 	// team 15
 	dw 2; // accessory
-	dw 11; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 6; // hair
 	dw 24; // number
 	dw 15; // team
@@ -3352,7 +3352,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 3; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 24; // hair
 	dw 25; // number
 	dw 15; // team
@@ -3360,7 +3360,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 9; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 2; // hair
 	dw 0; // number
 	dw 16; // team
@@ -3368,15 +3368,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 24; // hair
 	dw 1; // number
 	dw 16; // team
 	// team 16
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 4; // hair
 	dw 2; // number
 	dw 16; // team
@@ -3390,7 +3390,7 @@ func lookup_config(index: felt) -> (
 	dw 16; // team
 	// team 16
 	dw 1; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 2; // hair
@@ -3400,7 +3400,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 3; // boot
 	dw 28; // hair
 	dw 5; // number
 	dw 16; // team
@@ -3414,9 +3414,9 @@ func lookup_config(index: felt) -> (
 	dw 16; // team
 	// team 16
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 3; // hair
 	dw 7; // number
 	dw 16; // team
@@ -3430,9 +3430,9 @@ func lookup_config(index: felt) -> (
 	dw 16; // team
 	// team 16
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 39; // hair
 	dw 9; // number
 	dw 16; // team
@@ -3440,7 +3440,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 9; // hair
 	dw 10; // number
 	dw 16; // team
@@ -3454,15 +3454,15 @@ func lookup_config(index: felt) -> (
 	dw 16; // team
 	// team 16
 	dw 2; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 1; // hair
 	dw 12; // number
 	dw 16; // team
 	// team 16
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 20; // hair
@@ -3470,7 +3470,7 @@ func lookup_config(index: felt) -> (
 	dw 16; // team
 	// team 16
 	dw 0; // accessory
-	dw 0; // beard
+	dw 5; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 23; // hair
@@ -3480,7 +3480,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 1; // hair
 	dw 15; // number
 	dw 16; // team
@@ -3496,13 +3496,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 2; // beard
 	dw 1; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 3; // hair
 	dw 17; // number
 	dw 16; // team
 	// team 16
 	dw 0; // accessory
-	dw 0; // beard
+	dw 10; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 34; // hair
@@ -3512,7 +3512,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 1; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 8; // hair
 	dw 19; // number
 	dw 16; // team
@@ -3520,7 +3520,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 8; // hair
 	dw 20; // number
 	dw 16; // team
@@ -3544,7 +3544,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 25; // hair
 	dw 23; // number
 	dw 16; // team
@@ -3552,7 +3552,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 50; // hair
 	dw 24; // number
 	dw 16; // team
@@ -3568,7 +3568,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 46; // hair
 	dw 0; // number
 	dw 17; // team
@@ -3582,23 +3582,23 @@ func lookup_config(index: felt) -> (
 	dw 17; // team
 	// team 17
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 8; // hair
 	dw 2; // number
 	dw 17; // team
 	// team 17
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 3; // hair
 	dw 3; // number
 	dw 17; // team
 	// team 17
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -3624,7 +3624,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 40; // hair
 	dw 7; // number
 	dw 17; // team
@@ -3646,7 +3646,7 @@ func lookup_config(index: felt) -> (
 	dw 17; // team
 	// team 17
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 1; // hair
@@ -3656,7 +3656,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 23; // hair
 	dw 11; // number
 	dw 17; // team
@@ -3664,7 +3664,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 6; // hair
 	dw 12; // number
 	dw 17; // team
@@ -3672,13 +3672,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 3; // hair
 	dw 13; // number
 	dw 17; // team
 	// team 17
 	dw 0; // accessory
-	dw 0; // beard
+	dw 8; // beard
 	dw 2; // body
 	dw 1; // boot
 	dw 12; // hair
@@ -3688,13 +3688,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 50; // hair
 	dw 15; // number
 	dw 17; // team
 	// team 17
 	dw 0; // accessory
-	dw 0; // beard
+	dw 11; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 0; // hair
@@ -3702,15 +3702,15 @@ func lookup_config(index: felt) -> (
 	dw 17; // team
 	// team 17
 	dw 2; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 49; // hair
 	dw 17; // number
 	dw 17; // team
 	// team 17
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 2; // hair
@@ -3726,9 +3726,9 @@ func lookup_config(index: felt) -> (
 	dw 17; // team
 	// team 17
 	dw 0; // accessory
-	dw 0; // beard
+	dw 5; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 23; // hair
 	dw 20; // number
 	dw 17; // team
@@ -3744,7 +3744,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 8; // beard
 	dw 2; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 6; // hair
 	dw 22; // number
 	dw 17; // team
@@ -3784,7 +3784,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 9; // hair
 	dw 1; // number
 	dw 18; // team
@@ -3792,7 +3792,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 43; // hair
 	dw 2; // number
 	dw 18; // team
@@ -3800,7 +3800,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 36; // hair
 	dw 3; // number
 	dw 18; // team
@@ -3824,7 +3824,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 38; // hair
 	dw 6; // number
 	dw 18; // team
@@ -3838,7 +3838,7 @@ func lookup_config(index: felt) -> (
 	dw 18; // team
 	// team 18
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 28; // hair
@@ -3846,9 +3846,9 @@ func lookup_config(index: felt) -> (
 	dw 18; // team
 	// team 18
 	dw 0; // accessory
-	dw 0; // beard
+	dw 5; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 50; // hair
 	dw 9; // number
 	dw 18; // team
@@ -3888,7 +3888,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 29; // hair
 	dw 14; // number
 	dw 18; // team
@@ -3896,7 +3896,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 9; // hair
 	dw 15; // number
 	dw 18; // team
@@ -3934,9 +3934,9 @@ func lookup_config(index: felt) -> (
 	dw 18; // team
 	// team 18
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 3; // hair
 	dw 20; // number
 	dw 18; // team
@@ -3952,7 +3952,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 43; // hair
 	dw 22; // number
 	dw 18; // team
@@ -3974,9 +3974,9 @@ func lookup_config(index: felt) -> (
 	dw 18; // team
 	// team 18
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 7; // hair
 	dw 25; // number
 	dw 18; // team
@@ -3984,7 +3984,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 1; // hair
 	dw 0; // number
 	dw 19; // team
@@ -4016,7 +4016,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 1; // hair
 	dw 4; // number
 	dw 19; // team
@@ -4032,7 +4032,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 38; // hair
 	dw 6; // number
 	dw 19; // team
@@ -4040,7 +4040,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 49; // hair
 	dw 7; // number
 	dw 19; // team
@@ -4056,7 +4056,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 18; // hair
 	dw 9; // number
 	dw 19; // team
@@ -4080,7 +4080,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 41; // hair
 	dw 12; // number
 	dw 19; // team
@@ -4152,15 +4152,15 @@ func lookup_config(index: felt) -> (
 	dw 1; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 1; // hair
 	dw 21; // number
 	dw 19; // team
 	// team 19
 	dw 2; // accessory
-	dw 0; // beard
+	dw 10; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 25; // hair
 	dw 22; // number
 	dw 19; // team
@@ -4174,7 +4174,7 @@ func lookup_config(index: felt) -> (
 	dw 19; // team
 	// team 19
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 0; // hair
@@ -4192,7 +4192,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 1; // hair
 	dw 0; // number
 	dw 20; // team
@@ -4208,7 +4208,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 49; // hair
 	dw 2; // number
 	dw 20; // team
@@ -4216,15 +4216,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
-	dw 31; // hair
+	dw 3; // boot
+	dw 41; // hair
 	dw 3; // number
 	dw 20; // team
 	// team 20
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 48; // hair
 	dw 4; // number
 	dw 20; // team
@@ -4232,7 +4232,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 12; // hair
 	dw 5; // number
 	dw 20; // team
@@ -4248,13 +4248,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 34; // hair
 	dw 7; // number
 	dw 20; // team
 	// team 20
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 0; // hair
@@ -4262,7 +4262,7 @@ func lookup_config(index: felt) -> (
 	dw 20; // team
 	// team 20
 	dw 1; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -4270,7 +4270,7 @@ func lookup_config(index: felt) -> (
 	dw 20; // team
 	// team 20
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 23; // hair
@@ -4304,7 +4304,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 31; // hair
 	dw 14; // number
 	dw 20; // team
@@ -4336,7 +4336,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 9; // hair
 	dw 18; // number
 	dw 20; // team
@@ -4352,7 +4352,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 10; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 26; // hair
 	dw 20; // number
 	dw 20; // team
@@ -4376,7 +4376,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 50; // hair
 	dw 23; // number
 	dw 20; // team
@@ -4390,7 +4390,7 @@ func lookup_config(index: felt) -> (
 	dw 20; // team
 	// team 20
 	dw 0; // accessory
-	dw 7; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 34; // hair
@@ -4400,7 +4400,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 57; // hair
 	dw 0; // number
 	dw 21; // team
@@ -4430,7 +4430,7 @@ func lookup_config(index: felt) -> (
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 0; // beard
+	dw 1; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 4; // hair
@@ -4438,7 +4438,7 @@ func lookup_config(index: felt) -> (
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 21; // hair
@@ -4446,9 +4446,9 @@ func lookup_config(index: felt) -> (
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 8; // hair
 	dw 6; // number
 	dw 21; // team
@@ -4456,24 +4456,24 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 50; // hair
 	dw 7; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
-	dw 27; // hair
+	dw 0; // boot
+	dw 4; // hair
 	dw 8; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 0; // beard
+	dw 8; // beard
 	dw 3; // body
 	dw 0; // boot
-	dw 28; // hair
+	dw 0; // hair
 	dw 9; // number
 	dw 21; // team
 	// team 21
@@ -4488,8 +4488,8 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
-	dw 16; // hair
+	dw 2; // boot
+	dw 2; // hair
 	dw 11; // number
 	dw 21; // team
 	// team 21
@@ -4502,15 +4502,15 @@ func lookup_config(index: felt) -> (
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 0; // beard
+	dw 6; // beard
 	dw 3; // body
-	dw 0; // boot
-	dw 8; // hair
+	dw 1; // boot
+	dw 14; // hair
 	dw 13; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 11; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 53; // hair
@@ -4520,40 +4520,40 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 3; // boot
-	dw 8; // hair
+	dw 1; // boot
+	dw 42; // hair
 	dw 15; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 0; // beard
+	dw 7; // beard
 	dw 2; // body
 	dw 0; // boot
-	dw 5; // hair
+	dw 23; // hair
 	dw 16; // number
 	dw 21; // team
 	// team 21
 	dw 2; // accessory
-	dw 0; // beard
+	dw 1; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 30; // hair
+	dw 27; // hair
 	dw 17; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 6; // hair
 	dw 18; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 14; // beard
+	dw 9; // beard
 	dw 2; // body
-	dw 2; // boot
-	dw 15; // hair
+	dw 0; // boot
+	dw 14; // hair
 	dw 19; // number
 	dw 21; // team
 	// team 21
@@ -4561,15 +4561,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
-	dw 53; // hair
+	dw 4; // hair
 	dw 20; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 12; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
-	dw 11; // hair
+	dw 7; // hair
 	dw 21; // number
 	dw 21; // team
 	// team 21
@@ -4577,23 +4577,23 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 24; // hair
+	dw 13; // hair
 	dw 22; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
-	dw 15; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 9; // hair
+	dw 18; // hair
 	dw 23; // number
 	dw 21; // team
 	// team 21
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
-	dw 4; // hair
+	dw 0; // boot
+	dw 43; // hair
 	dw 24; // number
 	dw 21; // team
 	// team 21
@@ -4601,7 +4601,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 4; // hair
+	dw 21; // hair
 	dw 25; // number
 	dw 21; // team
 	// team 22
@@ -4616,13 +4616,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 2; // boot
 	dw 23; // hair
 	dw 1; // number
 	dw 22; // team
 	// team 22
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 9; // hair
@@ -4630,7 +4630,7 @@ func lookup_config(index: felt) -> (
 	dw 22; // team
 	// team 22
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 0; // hair
@@ -4672,13 +4672,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 31; // hair
 	dw 8; // number
 	dw 22; // team
 	// team 22
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 2; // hair
@@ -4694,7 +4694,7 @@ func lookup_config(index: felt) -> (
 	dw 22; // team
 	// team 22
 	dw 2; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -4702,9 +4702,9 @@ func lookup_config(index: felt) -> (
 	dw 22; // team
 	// team 22
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 1; // hair
 	dw 12; // number
 	dw 22; // team
@@ -4712,7 +4712,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 9; // hair
 	dw 13; // number
 	dw 22; // team
@@ -4720,13 +4720,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 14; // number
 	dw 22; // team
 	// team 22
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 4; // hair
@@ -4774,10 +4774,10 @@ func lookup_config(index: felt) -> (
 	dw 22; // team
 	// team 22
 	dw 2; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
-	dw 26; // hair
+	dw 35; // hair
 	dw 21; // number
 	dw 22; // team
 	// team 22
@@ -4790,26 +4790,26 @@ func lookup_config(index: felt) -> (
 	dw 22; // team
 	// team 22
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 23; // hair
 	dw 23; // number
 	dw 22; // team
 	// team 22
 	dw 0; // accessory
-	dw 11; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
-	dw 48; // hair
+	dw 2; // boot
+	dw 49; // hair
 	dw 24; // number
 	dw 22; // team
 	// team 22
 	dw 0; // accessory
-	dw 7; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
-	dw 28; // hair
+	dw 2; // boot
+	dw 22; // hair
 	dw 25; // number
 	dw 22; // team
 	// team 23
@@ -4830,15 +4830,15 @@ func lookup_config(index: felt) -> (
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 0; // beard
+	dw 3; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 9; // hair
+	dw 34; // hair
 	dw 2; // number
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 0; // beard
+	dw 12; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 28; // hair
@@ -4846,9 +4846,9 @@ func lookup_config(index: felt) -> (
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 4; // hair
 	dw 4; // number
 	dw 23; // team
@@ -4878,9 +4878,9 @@ func lookup_config(index: felt) -> (
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 0; // beard
+	dw 7; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 34; // hair
 	dw 8; // number
 	dw 23; // team
@@ -4888,7 +4888,7 @@ func lookup_config(index: felt) -> (
 	dw 1; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 41; // hair
 	dw 9; // number
 	dw 23; // team
@@ -4904,7 +4904,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 35; // hair
 	dw 11; // number
 	dw 23; // team
@@ -4928,32 +4928,32 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 26; // hair
 	dw 14; // number
-	dw 23; // team
-	// team 23
-	dw 0; // accessory
-	dw 4; // beard
-	dw 1; // body
-	dw 1; // boot
-	dw 11; // hair
-	dw 15; // number
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 29; // hair
+	dw 43; // hair
+	dw 15; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 4; // hair
 	dw 16; // number
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
-	dw 4; // hair
+	dw 0; // boot
+	dw 23; // hair
 	dw 17; // number
 	dw 23; // team
 	// team 23
@@ -4966,17 +4966,17 @@ func lookup_config(index: felt) -> (
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
-	dw 3; // hair
+	dw 1; // boot
+	dw 23; // hair
 	dw 19; // number
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 22; // hair
 	dw 20; // number
 	dw 23; // team
@@ -4985,39 +4985,39 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 17; // hair
+	dw 13; // hair
 	dw 21; // number
 	dw 23; // team
 	// team 23
 	dw 2; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
-	dw 17; // hair
+	dw 3; // boot
+	dw 1; // hair
 	dw 22; // number
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 4; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 26; // hair
+	dw 29; // hair
 	dw 23; // number
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
-	dw 36; // hair
+	dw 0; // boot
+	dw 13; // hair
 	dw 24; // number
 	dw 23; // team
 	// team 23
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
-	dw 3; // hair
+	dw 0; // boot
+	dw 30; // hair
 	dw 25; // number
 	dw 23; // team
 	// team 24
@@ -5030,7 +5030,7 @@ func lookup_config(index: felt) -> (
 	dw 24; // team
 	// team 24
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 23; // hair
@@ -5048,7 +5048,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 5; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 49; // hair
 	dw 3; // number
 	dw 24; // team
@@ -5056,7 +5056,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 14; // hair
 	dw 4; // number
 	dw 24; // team
@@ -5078,7 +5078,7 @@ func lookup_config(index: felt) -> (
 	dw 24; // team
 	// team 24
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 57; // hair
@@ -5088,7 +5088,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 46; // hair
 	dw 8; // number
 	dw 24; // team
@@ -5102,7 +5102,7 @@ func lookup_config(index: felt) -> (
 	dw 24; // team
 	// team 24
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 41; // hair
@@ -5110,23 +5110,23 @@ func lookup_config(index: felt) -> (
 	dw 24; // team
 	// team 24
 	dw 2; // accessory
-	dw 0; // beard
+	dw 1; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 11; // number
 	dw 24; // team
 	// team 24
 	dw 0; // accessory
-	dw 15; // beard
+	dw 10; // beard
 	dw 0; // body
 	dw 0; // boot
-	dw 4; // hair
+	dw 46; // hair
 	dw 12; // number
 	dw 24; // team
 	// team 24
 	dw 0; // accessory
-	dw 13; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -5144,16 +5144,16 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 15; // number
 	dw 24; // team
 	// team 24
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 53; // hair
+	dw 46; // hair
 	dw 16; // number
 	dw 24; // team
 	// team 24
@@ -5166,9 +5166,9 @@ func lookup_config(index: felt) -> (
 	dw 24; // team
 	// team 24
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 3; // boot
+	dw 1; // boot
 	dw 43; // hair
 	dw 18; // number
 	dw 24; // team
@@ -5176,7 +5176,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 2; // boot
 	dw 6; // hair
 	dw 19; // number
 	dw 24; // team
@@ -5192,13 +5192,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 6; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 3; // hair
 	dw 21; // number
 	dw 24; // team
 	// team 24
 	dw 2; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 2; // hair
@@ -5216,7 +5216,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 31; // hair
 	dw 24; // number
 	dw 24; // team
@@ -5224,15 +5224,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 3; // hair
 	dw 25; // number
 	dw 24; // team
 	// team 25
 	dw 2; // accessory
-	dw 0; // beard
+	dw 4; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 0; // hair
 	dw 0; // number
 	dw 25; // team
@@ -5240,24 +5240,24 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 1; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 13; // beard
+	dw 11; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 6; // hair
+	dw 18; // hair
 	dw 2; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 10; // hair
+	dw 0; // hair
 	dw 3; // number
 	dw 25; // team
 	// team 25
@@ -5265,46 +5265,46 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 3; // hair
+	dw 10; // hair
 	dw 4; // number
-	dw 25; // team
-	// team 25
-	dw 0; // accessory
-	dw 13; // beard
-	dw 1; // body
-	dw 0; // boot
-	dw 17; // hair
-	dw 5; // number
-	dw 25; // team
-	// team 25
-	dw 0; // accessory
-	dw 8; // beard
-	dw 1; // body
-	dw 0; // boot
-	dw 24; // hair
-	dw 6; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 51; // hair
+	dw 43; // hair
+	dw 5; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 6; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 13; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 41; // hair
 	dw 7; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 15; // beard
+	dw 1; // beard
 	dw 1; // body
-	dw 1; // boot
-	dw 48; // hair
+	dw 0; // boot
+	dw 6; // hair
 	dw 8; // number
 	dw 25; // team
 	// team 25
 	dw 1; // accessory
 	dw 2; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 4; // hair
 	dw 9; // number
 	dw 25; // team
@@ -5313,24 +5313,16 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 47; // hair
+	dw 7; // hair
 	dw 10; // number
 	dw 25; // team
 	// team 25
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 14; // hair
 	dw 11; // number
-	dw 25; // team
-	// team 25
-	dw 0; // accessory
-	dw 3; // beard
-	dw 1; // body
-	dw 1; // boot
-	dw 0; // hair
-	dw 12; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
@@ -5338,46 +5330,54 @@ func lookup_config(index: felt) -> (
 	dw 1; // body
 	dw 0; // boot
 	dw 5; // hair
-	dw 13; // number
+	dw 12; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 3; // boot
-	dw 12; // hair
-	dw 14; // number
+	dw 31; // hair
+	dw 13; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
 	dw 11; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 49; // hair
+	dw 33; // hair
+	dw 14; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 41; // hair
 	dw 15; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 3; // beard
+	dw 13; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 27; // hair
+	dw 42; // hair
 	dw 16; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 4; // hair
 	dw 17; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 0; // beard
+	dw 6; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 42; // hair
+	dw 50; // hair
 	dw 18; // number
 	dw 25; // team
 	// team 25
@@ -5392,55 +5392,55 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
-	dw 40; // hair
+	dw 0; // boot
+	dw 1; // hair
 	dw 20; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 53; // hair
+	dw 39; // hair
 	dw 21; // number
 	dw 25; // team
 	// team 25
 	dw 2; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 0; // hair
 	dw 22; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 2; // beard
+	dw 7; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 7; // hair
+	dw 2; // hair
 	dw 23; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 22; // hair
+	dw 32; // hair
 	dw 24; // number
 	dw 25; // team
 	// team 25
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
-	dw 8; // hair
+	dw 0; // boot
+	dw 40; // hair
 	dw 25; // number
 	dw 25; // team
 	// team 26
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 18; // hair
 	dw 0; // number
 	dw 26; // team
@@ -5454,7 +5454,7 @@ func lookup_config(index: felt) -> (
 	dw 26; // team
 	// team 26
 	dw 0; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 48; // hair
@@ -5464,7 +5464,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 43; // hair
 	dw 3; // number
 	dw 26; // team
@@ -5480,7 +5480,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 50; // hair
 	dw 5; // number
 	dw 26; // team
@@ -5502,9 +5502,9 @@ func lookup_config(index: felt) -> (
 	dw 26; // team
 	// team 26
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 19; // hair
 	dw 8; // number
 	dw 26; // team
@@ -5528,13 +5528,13 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 42; // hair
 	dw 11; // number
 	dw 26; // team
 	// team 26
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 6; // hair
@@ -5558,7 +5558,7 @@ func lookup_config(index: felt) -> (
 	dw 26; // team
 	// team 26
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
 	dw 47; // hair
@@ -5568,13 +5568,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
-	dw 43; // hair
+	dw 1; // boot
+	dw 32; // hair
 	dw 16; // number
 	dw 26; // team
 	// team 26
 	dw 0; // accessory
-	dw 0; // beard
+	dw 10; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 28; // hair
@@ -5585,22 +5585,22 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 33; // hair
+	dw 26; // hair
 	dw 18; // number
 	dw 26; // team
 	// team 26
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
-	dw 3; // hair
+	dw 1; // boot
+	dw 45; // hair
 	dw 19; // number
 	dw 26; // team
 	// team 26
 	dw 2; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 7; // hair
 	dw 20; // number
 	dw 26; // team
@@ -5608,7 +5608,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 39; // hair
 	dw 21; // number
 	dw 26; // team
@@ -5630,7 +5630,7 @@ func lookup_config(index: felt) -> (
 	dw 26; // team
 	// team 26
 	dw 0; // accessory
-	dw 4; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
 	dw 0; // hair
@@ -5648,7 +5648,7 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 5; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 0; // hair
 	dw 0; // number
 	dw 27; // team
@@ -5656,15 +5656,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 1; // number
 	dw 27; // team
 	// team 27
 	dw 0; // accessory
-	dw 11; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 2; // number
 	dw 27; // team
@@ -5680,7 +5680,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 11; // hair
 	dw 4; // number
 	dw 27; // team
@@ -5712,7 +5712,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 9; // hair
 	dw 8; // number
 	dw 27; // team
@@ -5734,9 +5734,9 @@ func lookup_config(index: felt) -> (
 	dw 27; // team
 	// team 27
 	dw 0; // accessory
-	dw 11; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 0; // hair
 	dw 11; // number
 	dw 27; // team
@@ -5744,7 +5744,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 3; // hair
 	dw 12; // number
 	dw 27; // team
@@ -5782,7 +5782,7 @@ func lookup_config(index: felt) -> (
 	dw 27; // team
 	// team 27
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 12; // hair
@@ -5790,34 +5790,34 @@ func lookup_config(index: felt) -> (
 	dw 27; // team
 	// team 27
 	dw 0; // accessory
-	dw 8; // beard
+	dw 14; // beard
 	dw 3; // body
 	dw 0; // boot
-	dw 7; // hair
+	dw 5; // hair
 	dw 18; // number
 	dw 27; // team
 	// team 27
 	dw 0; // accessory
-	dw 12; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
-	dw 31; // hair
+	dw 10; // hair
 	dw 19; // number
 	dw 27; // team
 	// team 27
 	dw 0; // accessory
-	dw 8; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
-	dw 40; // hair
+	dw 1; // boot
+	dw 26; // hair
 	dw 20; // number
 	dw 27; // team
 	// team 27
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
-	dw 38; // hair
+	dw 49; // hair
 	dw 21; // number
 	dw 27; // team
 	// team 27
@@ -5838,10 +5838,10 @@ func lookup_config(index: felt) -> (
 	dw 27; // team
 	// team 27
 	dw 0; // accessory
-	dw 0; // beard
+	dw 2; // beard
 	dw 3; // body
-	dw 0; // boot
-	dw 39; // hair
+	dw 1; // boot
+	dw 5; // hair
 	dw 24; // number
 	dw 27; // team
 	// team 27
@@ -5849,7 +5849,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 3; // body
 	dw 0; // boot
-	dw 12; // hair
+	dw 42; // hair
 	dw 25; // number
 	dw 27; // team
 	// team 28
@@ -5870,9 +5870,9 @@ func lookup_config(index: felt) -> (
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 9; // hair
 	dw 2; // number
 	dw 28; // team
@@ -5880,7 +5880,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 28; // hair
 	dw 3; // number
 	dw 28; // team
@@ -5888,7 +5888,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 9; // hair
 	dw 4; // number
 	dw 28; // team
@@ -5910,7 +5910,7 @@ func lookup_config(index: felt) -> (
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 3; // hair
@@ -5918,31 +5918,31 @@ func lookup_config(index: felt) -> (
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 7; // beard
+	dw 2; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 37; // hair
+	dw 17; // hair
 	dw 8; // number
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 4; // hair
 	dw 9; // number
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
-	dw 51; // hair
+	dw 2; // boot
+	dw 4; // hair
 	dw 10; // number
 	dw 28; // team
 	// team 28
 	dw 2; // accessory
-	dw 14; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 48; // hair
@@ -5950,7 +5950,7 @@ func lookup_config(index: felt) -> (
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 0; // beard
+	dw 6; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 0; // hair
@@ -5974,10 +5974,10 @@ func lookup_config(index: felt) -> (
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 5; // hair
+	dw 37; // hair
 	dw 15; // number
 	dw 28; // team
 	// team 28
@@ -5990,7 +5990,7 @@ func lookup_config(index: felt) -> (
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 2; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 20; // hair
@@ -5998,18 +5998,18 @@ func lookup_config(index: felt) -> (
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 0; // beard
+	dw 2; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 46; // hair
+	dw 45; // hair
 	dw 18; // number
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 3; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 9; // hair
+	dw 37; // hair
 	dw 19; // number
 	dw 28; // team
 	// team 28
@@ -6038,10 +6038,10 @@ func lookup_config(index: felt) -> (
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 12; // beard
+	dw 8; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 24; // hair
+	dw 36; // hair
 	dw 23; // number
 	dw 28; // team
 	// team 28
@@ -6049,15 +6049,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
-	dw 21; // hair
+	dw 13; // hair
 	dw 24; // number
 	dw 28; // team
 	// team 28
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 3; // boot
-	dw 27; // hair
+	dw 0; // boot
+	dw 3; // hair
 	dw 25; // number
 	dw 28; // team
 	// team 29
@@ -6072,13 +6072,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 6; // hair
 	dw 1; // number
 	dw 29; // team
 	// team 29
 	dw 0; // accessory
-	dw 0; // beard
+	dw 1; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 0; // hair
@@ -6094,15 +6094,15 @@ func lookup_config(index: felt) -> (
 	dw 29; // team
 	// team 29
 	dw 0; // accessory
-	dw 6; // beard
+	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 6; // hair
 	dw 4; // number
 	dw 29; // team
 	// team 29
 	dw 0; // accessory
-	dw 0; // beard
+	dw 3; // beard
 	dw 3; // body
 	dw 0; // boot
 	dw 2; // hair
@@ -6128,7 +6128,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 45; // hair
 	dw 8; // number
 	dw 29; // team
@@ -6176,7 +6176,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 9; // hair
 	dw 14; // number
 	dw 29; // team
@@ -6192,7 +6192,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 2; // hair
 	dw 16; // number
 	dw 29; // team
@@ -6200,7 +6200,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 53; // hair
 	dw 17; // number
 	dw 29; // team
@@ -6216,7 +6216,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 57; // hair
 	dw 19; // number
 	dw 29; // team
@@ -6232,7 +6232,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 7; // hair
 	dw 21; // number
 	dw 29; // team
@@ -6240,7 +6240,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 0; // boot
+	dw 3; // boot
 	dw 23; // hair
 	dw 22; // number
 	dw 29; // team
@@ -6256,7 +6256,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 50; // hair
 	dw 24; // number
 	dw 29; // team
@@ -6264,7 +6264,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 3; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 15; // hair
 	dw 25; // number
 	dw 29; // team
@@ -6278,10 +6278,10 @@ func lookup_config(index: felt) -> (
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 9; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
-	dw 50; // hair
+	dw 26; // hair
 	dw 1; // number
 	dw 30; // team
 	// team 30
@@ -6320,13 +6320,13 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 2; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 7; // hair
 	dw 6; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 7; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 24; // hair
@@ -6360,48 +6360,48 @@ func lookup_config(index: felt) -> (
 	dw 2; // accessory
 	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
+	dw 2; // boot
 	dw 6; // hair
 	dw 11; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 12; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 22; // hair
+	dw 49; // hair
 	dw 12; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 12; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 0; // boot
-	dw 11; // hair
+	dw 2; // boot
+	dw 43; // hair
 	dw 13; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
 	dw 10; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 32; // hair
 	dw 14; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 5; // beard
+	dw 0; // beard
 	dw 2; // body
 	dw 0; // boot
-	dw 47; // hair
+	dw 12; // hair
 	dw 15; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
-	dw 50; // hair
+	dw 25; // hair
 	dw 16; // number
 	dw 30; // team
 	// team 30
@@ -6409,7 +6409,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 34; // hair
+	dw 51; // hair
 	dw 17; // number
 	dw 30; // team
 	// team 30
@@ -6417,12 +6417,12 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 29; // hair
+	dw 50; // hair
 	dw 18; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 1; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 28; // hair
@@ -6430,15 +6430,15 @@ func lookup_config(index: felt) -> (
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 4; // beard
+	dw 0; // beard
 	dw 0; // body
 	dw 0; // boot
-	dw 9; // hair
+	dw 30; // hair
 	dw 20; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 10; // beard
+	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
 	dw 21; // hair
@@ -6446,18 +6446,18 @@ func lookup_config(index: felt) -> (
 	dw 30; // team
 	// team 30
 	dw 2; // accessory
-	dw 1; // beard
+	dw 4; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 25; // hair
+	dw 23; // hair
 	dw 22; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 15; // beard
+	dw 0; // beard
 	dw 1; // body
-	dw 1; // boot
-	dw 34; // hair
+	dw 2; // boot
+	dw 23; // hair
 	dw 23; // number
 	dw 30; // team
 	// team 30
@@ -6465,15 +6465,15 @@ func lookup_config(index: felt) -> (
 	dw 0; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 12; // hair
+	dw 41; // hair
 	dw 24; // number
 	dw 30; // team
 	// team 30
 	dw 0; // accessory
-	dw 3; // beard
+	dw 12; // beard
 	dw 1; // body
 	dw 0; // boot
-	dw 45; // hair
+	dw 16; // hair
 	dw 25; // number
 	dw 30; // team
 	// team 31
@@ -6496,7 +6496,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 2; // boot
+	dw 0; // boot
 	dw 4; // hair
 	dw 2; // number
 	dw 31; // team
@@ -6512,7 +6512,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 0; // boot
 	dw 24; // hair
 	dw 4; // number
 	dw 31; // team
@@ -6528,7 +6528,7 @@ func lookup_config(index: felt) -> (
 	dw 1; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 3; // boot
+	dw 0; // boot
 	dw 31; // hair
 	dw 6; // number
 	dw 31; // team
@@ -6560,7 +6560,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 50; // hair
 	dw 10; // number
 	dw 31; // team
@@ -6600,7 +6600,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 5; // hair
 	dw 15; // number
 	dw 31; // team
@@ -6616,7 +6616,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 1; // boot
+	dw 2; // boot
 	dw 50; // hair
 	dw 17; // number
 	dw 31; // team
@@ -6680,7 +6680,7 @@ func lookup_config(index: felt) -> (
 	dw 0; // accessory
 	dw 0; // beard
 	dw 0; // body
-	dw 0; // boot
+	dw 1; // boot
 	dw 38; // hair
 	dw 25; // number
 	dw 31; // team
