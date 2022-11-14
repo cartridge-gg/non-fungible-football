@@ -52,6 +52,50 @@ func setup_token_uri() {
 }
 
 @external
+func test_placeholder{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+    alloc_locals;
+
+    local contract_address: felt;
+    %{ 
+        ids.contract_address = deploy_contract("./src/player.cairo").contract_address
+        stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
+        stop_warp = warp(1, ids.contract_address)
+    %}
+    
+    IPlayer.initialize(contract_address, 123);
+
+    let (uri_len, uri) = IPlayer.tokenURI(contract_address, Uint256(low=420, high=0));
+
+    %{
+        import json
+        parts = memory.get_range(ids.uri, ids.uri_len)
+        svg = ""
+        for felt in parts:
+            try:
+                bytes_object = bytes.fromhex(hex(felt)[2:])
+                ascii_string = bytes_object.decode("ASCII")
+                svg += ascii_string
+            except:
+                print(felt)
+
+        svg = svg[len("data:application/json,"):]
+        parsed = json.loads(svg)
+        with open('tests/outputs/test_placeholder.json', 'w') as f:
+            f.write(svg)
+
+        with open('tests/outputs/test_placeholder.svg', 'w') as f:
+            f.write(parsed["image"][len("data:image/svg+xml,"):])
+    %}
+
+    %{ 
+        stop_warp()
+        stop_prank_callable()
+    %}
+
+    return ();
+}
+
+@external
 func test_token_uri{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(id: felt) {
     alloc_locals;
 

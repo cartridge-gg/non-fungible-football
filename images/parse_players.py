@@ -92,13 +92,14 @@ if __name__ == "__main__":
             if keeper == 'GK / CAPTAIN':
                 accessory = 3
 
-            table += "\n\tdw " + str(accessory) + ";"
-            table += "\n\tdw " + str(beard) + ";"
-            table += "\n\tdw " + str(body) + ";"
-            table += "\n\tdw " + str(boot) + ";"
-            table += "\n\tdw " + str(hair) + ";"
-            table += "\n\tdw " + str(number) + ";"
-            table += "\n\tdw " + str(team) + ";"
+            table += "\n\t// team " + str(team)
+            table += "\n\tdw " + str(accessory) + "; // accessory"
+            table += "\n\tdw " + str(beard) + "; // beard"
+            table += "\n\tdw " + str(body) + "; // body"
+            table += "\n\tdw " + str(boot) + "; // boot"
+            table += "\n\tdw " + str(hair) + "; // hair"
+            table += "\n\tdw " + str(number) + "; // number"
+            table += "\n\tdw " + str(team) + "; // team"
 
     output += LOOKUP_FUC
     output += table

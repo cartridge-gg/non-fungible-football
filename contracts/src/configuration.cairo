@@ -28,5828 +28,6660 @@ func lookup_config(index: felt) -> (
     return (accessory=accessory, beard=beard, body=body, boot=boot, hair=hair, number=number, team=team);
 
 	data_start:
-	dw 2;
-	dw 1;
-	dw 2;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 27;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 9;
-	dw 3;
-	dw 0;
-	dw 27;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 4;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 5;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 2;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 8;
-	dw 2;
-	dw 0;
-	dw 11;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 11;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 8;
-	dw 3;
-	dw 0;
-	dw 1;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 4;
-	dw 9;
-	dw 0;
-	dw 0;
-	dw 8;
-	dw 3;
-	dw 0;
-	dw 37;
-	dw 10;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 11;
-	dw 3;
-	dw 0;
-	dw 41;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 49;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 13;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 24;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 48;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 5;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 24;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 5;
-	dw 21;
-	dw 0;
-	dw 2;
-	dw 4;
-	dw 2;
-	dw 2;
-	dw 2;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 4;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 5;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 15;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 25;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 8;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 4;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 3;
-	dw 5;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 6;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 7;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 6;
-	dw 8;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 49;
-	dw 9;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 10;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 9;
-	dw 11;
-	dw 1;
-	dw 1;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 12;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 43;
-	dw 13;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 14;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 3;
-	dw 15;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 12;
-	dw 16;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 3;
-	dw 1;
-	dw 7;
-	dw 17;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 18;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 23;
-	dw 19;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 11;
-	dw 20;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 15;
-	dw 21;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 22;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 23;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 3;
-	dw 24;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 25;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 1;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 3;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 4;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 5;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 7;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 8;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 14;
-	dw 9;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 2;
-	dw 11;
-	dw 10;
-	dw 2;
-	dw 2;
-	dw 8;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 11;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 6;
-	dw 12;
-	dw 2;
-	dw 0;
-	dw 5;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 13;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 14;
-	dw 2;
-	dw 0;
-	dw 5;
-	dw 3;
-	dw 1;
-	dw 1;
-	dw 15;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 16;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 17;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 1;
-	dw 18;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 19;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 9;
-	dw 20;
-	dw 2;
-	dw 0;
-	dw 5;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 21;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 22;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 3;
-	dw 6;
-	dw 23;
-	dw 2;
-	dw 0;
-	dw 5;
-	dw 3;
-	dw 0;
-	dw 5;
-	dw 24;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 25;
-	dw 2;
-	dw 2;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 26;
-	dw 2;
-	dw 3;
-	dw 1;
-	dw 5;
-	dw 2;
-	dw 0;
-	dw 51;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 50;
-	dw 4;
-	dw 3;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 26;
-	dw 5;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 15;
-	dw 7;
-	dw 3;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 45;
-	dw 8;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 1;
-	dw 7;
-	dw 9;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 10;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 14;
-	dw 11;
-	dw 3;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 42;
-	dw 12;
-	dw 3;
-	dw 0;
-	dw 4;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 13;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 13;
-	dw 14;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 15;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 16;
-	dw 16;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 41;
-	dw 17;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 42;
-	dw 18;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 7;
-	dw 19;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 47;
-	dw 20;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 6;
-	dw 21;
-	dw 3;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 45;
-	dw 22;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 19;
-	dw 23;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 7;
-	dw 24;
-	dw 3;
-	dw 0;
-	dw 13;
-	dw 0;
-	dw 3;
-	dw 29;
-	dw 25;
-	dw 3;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 25;
-	dw 0;
-	dw 4;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 1;
-	dw 57;
-	dw 1;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 10;
-	dw 2;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 18;
-	dw 3;
-	dw 4;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 27;
-	dw 4;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 25;
-	dw 5;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 28;
-	dw 6;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 6;
-	dw 7;
-	dw 4;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 19;
-	dw 8;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 9;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 7;
-	dw 10;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 23;
-	dw 11;
-	dw 4;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 43;
-	dw 12;
-	dw 4;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 2;
-	dw 26;
-	dw 13;
-	dw 4;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 7;
-	dw 14;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 34;
-	dw 15;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 7;
-	dw 16;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 17;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 11;
-	dw 18;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 7;
-	dw 19;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 20;
-	dw 4;
-	dw 0;
-	dw 5;
-	dw 2;
-	dw 1;
-	dw 50;
-	dw 21;
-	dw 4;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 26;
-	dw 22;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 23;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 24;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 25;
-	dw 4;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 5;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 5;
-	dw 1;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 20;
-	dw 3;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 35;
-	dw 4;
-	dw 5;
-	dw 0;
-	dw 7;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 5;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 6;
-	dw 5;
-	dw 0;
-	dw 6;
-	dw 1;
-	dw 0;
-	dw 5;
-	dw 7;
-	dw 5;
-	dw 0;
-	dw 6;
-	dw 1;
-	dw 1;
-	dw 25;
-	dw 8;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 2;
-	dw 9;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 3;
-	dw 10;
-	dw 5;
-	dw 2;
-	dw 6;
-	dw 1;
-	dw 0;
-	dw 6;
-	dw 11;
-	dw 5;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 6;
-	dw 12;
-	dw 5;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 0;
-	dw 20;
-	dw 13;
-	dw 5;
-	dw 0;
-	dw 13;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 14;
-	dw 5;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 15;
-	dw 5;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 0;
-	dw 5;
-	dw 16;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 25;
-	dw 17;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 19;
-	dw 18;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 49;
-	dw 19;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 20;
-	dw 5;
-	dw 2;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 21;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 22;
-	dw 5;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 23;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 24;
-	dw 5;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 6;
-	dw 25;
-	dw 5;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 32;
-	dw 0;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 21;
-	dw 2;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 3;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 40;
-	dw 4;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 32;
-	dw 5;
-	dw 6;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 6;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 7;
-	dw 6;
-	dw 0;
-	dw 5;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 8;
-	dw 6;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 32;
-	dw 9;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 38;
-	dw 10;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 53;
-	dw 11;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 26;
-	dw 12;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 11;
-	dw 13;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 2;
-	dw 6;
-	dw 14;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 0;
-	dw 15;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 16;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 19;
-	dw 17;
-	dw 6;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 18;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 9;
-	dw 19;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 8;
-	dw 20;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 9;
-	dw 21;
-	dw 6;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 3;
-	dw 2;
-	dw 22;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 48;
-	dw 23;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 15;
-	dw 24;
-	dw 6;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 28;
-	dw 25;
-	dw 6;
-	dw 2;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 16;
-	dw 0;
-	dw 7;
-	dw 0;
-	dw 14;
-	dw 1;
-	dw 1;
-	dw 56;
-	dw 1;
-	dw 7;
-	dw 0;
-	dw 5;
-	dw 1;
-	dw 3;
-	dw 5;
-	dw 2;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 3;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 29;
-	dw 4;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 48;
-	dw 5;
-	dw 7;
-	dw 0;
-	dw 14;
-	dw 1;
-	dw 0;
-	dw 41;
-	dw 6;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 42;
-	dw 7;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 38;
-	dw 8;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 9;
-	dw 7;
-	dw 1;
-	dw 12;
-	dw 0;
-	dw 2;
-	dw 52;
-	dw 10;
-	dw 7;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 32;
-	dw 11;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 12;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 11;
-	dw 13;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 14;
-	dw 7;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 43;
-	dw 15;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 46;
-	dw 16;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 56;
-	dw 17;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 18;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 19;
-	dw 7;
-	dw 2;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 20;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 37;
-	dw 21;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 34;
-	dw 22;
-	dw 7;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 25;
-	dw 23;
-	dw 7;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 48;
-	dw 24;
-	dw 7;
-	dw 0;
-	dw 13;
-	dw 1;
-	dw 0;
-	dw 29;
-	dw 25;
-	dw 7;
-	dw 2;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 26;
-	dw 0;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 32;
-	dw 2;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 23;
-	dw 3;
-	dw 8;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 1;
-	dw 35;
-	dw 4;
-	dw 8;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 27;
-	dw 5;
-	dw 8;
-	dw 0;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 28;
-	dw 6;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 31;
-	dw 7;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 8;
-	dw 8;
-	dw 1;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 10;
-	dw 9;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 55;
-	dw 10;
-	dw 8;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 11;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 12;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 13;
-	dw 8;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 14;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 15;
-	dw 8;
-	dw 0;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 42;
-	dw 16;
-	dw 8;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 17;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 20;
-	dw 18;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 19;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 29;
-	dw 20;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 39;
-	dw 21;
-	dw 8;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 30;
-	dw 22;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 23;
-	dw 8;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 1;
-	dw 42;
-	dw 24;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 25;
-	dw 25;
-	dw 8;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 9;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 2;
-	dw 1;
-	dw 2;
-	dw 9;
-	dw 0;
-	dw 13;
-	dw 3;
-	dw 0;
-	dw 4;
-	dw 3;
-	dw 9;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 8;
-	dw 4;
-	dw 9;
-	dw 0;
-	dw 9;
-	dw 2;
-	dw 1;
-	dw 5;
-	dw 5;
-	dw 9;
-	dw 1;
-	dw 3;
-	dw 2;
-	dw 1;
-	dw 2;
-	dw 6;
-	dw 9;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 25;
-	dw 7;
-	dw 9;
-	dw 0;
-	dw 10;
-	dw 3;
-	dw 0;
-	dw 19;
-	dw 8;
-	dw 9;
-	dw 0;
-	dw 10;
-	dw 2;
-	dw 0;
-	dw 49;
-	dw 9;
-	dw 9;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 10;
-	dw 9;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 4;
-	dw 11;
-	dw 9;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 12;
-	dw 9;
-	dw 0;
-	dw 8;
-	dw 2;
-	dw 0;
-	dw 20;
-	dw 13;
-	dw 9;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 20;
-	dw 14;
-	dw 9;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 35;
-	dw 15;
-	dw 9;
-	dw 0;
-	dw 7;
-	dw 3;
-	dw 1;
-	dw 28;
-	dw 16;
-	dw 9;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 5;
-	dw 17;
-	dw 9;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 25;
-	dw 18;
-	dw 9;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 19;
-	dw 9;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 3;
-	dw 3;
-	dw 20;
-	dw 9;
-	dw 2;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 21;
-	dw 9;
-	dw 2;
-	dw 2;
-	dw 3;
-	dw 0;
-	dw 24;
-	dw 22;
-	dw 9;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 23;
-	dw 9;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 3;
-	dw 24;
-	dw 9;
-	dw 0;
-	dw 9;
-	dw 3;
-	dw 3;
-	dw 6;
-	dw 25;
-	dw 9;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 35;
-	dw 1;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 15;
-	dw 2;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 31;
-	dw 3;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 32;
-	dw 4;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 5;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 6;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 7;
-	dw 10;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 29;
-	dw 8;
-	dw 10;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 1;
-	dw 8;
-	dw 9;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 10;
-	dw 10;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 20;
-	dw 11;
-	dw 10;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 49;
-	dw 12;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 15;
-	dw 13;
-	dw 10;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 3;
-	dw 49;
-	dw 14;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 32;
-	dw 15;
-	dw 10;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 16;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 2;
-	dw 17;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 18;
-	dw 10;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 0;
-	dw 31;
-	dw 19;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 38;
-	dw 20;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 24;
-	dw 21;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 22;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 35;
-	dw 23;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 40;
-	dw 24;
-	dw 10;
-	dw 0;
-	dw 13;
-	dw 1;
-	dw 0;
-	dw 27;
-	dw 25;
-	dw 10;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 36;
-	dw 0;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 41;
-	dw 1;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 2;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 43;
-	dw 3;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 29;
-	dw 4;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 32;
-	dw 5;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 26;
-	dw 6;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 8;
-	dw 7;
-	dw 11;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 25;
-	dw 8;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 5;
-	dw 9;
-	dw 11;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 40;
-	dw 10;
-	dw 11;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 15;
-	dw 11;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 45;
-	dw 12;
-	dw 11;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 34;
-	dw 13;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 42;
-	dw 14;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 41;
-	dw 15;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 16;
-	dw 11;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 11;
-	dw 17;
-	dw 11;
-	dw 0;
-	dw 14;
-	dw 1;
-	dw 0;
-	dw 42;
-	dw 18;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 19;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 48;
-	dw 20;
-	dw 11;
-	dw 2;
-	dw 9;
-	dw 0;
-	dw 0;
-	dw 29;
-	dw 21;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 22;
-	dw 11;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 23;
-	dw 11;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 24;
-	dw 11;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 48;
-	dw 25;
-	dw 11;
-	dw 3;
-	dw 10;
-	dw 1;
-	dw 2;
-	dw 3;
-	dw 0;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 5;
-	dw 1;
-	dw 12;
-	dw 0;
-	dw 9;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 4;
-	dw 3;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 49;
-	dw 4;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 5;
-	dw 12;
-	dw 0;
-	dw 13;
-	dw 1;
-	dw 0;
-	dw 17;
-	dw 6;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 12;
-	dw 7;
-	dw 12;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 1;
-	dw 3;
-	dw 8;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 9;
-	dw 12;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 1;
-	dw 7;
-	dw 10;
-	dw 12;
-	dw 0;
-	dw 5;
-	dw 2;
-	dw 0;
-	dw 50;
-	dw 11;
-	dw 12;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 12;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 50;
-	dw 13;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 14;
-	dw 12;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 36;
-	dw 15;
-	dw 12;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 19;
-	dw 16;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 17;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 9;
-	dw 18;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 19;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 20;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 29;
-	dw 21;
-	dw 12;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 22;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 23;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 12;
-	dw 0;
-	dw 11;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 25;
-	dw 12;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 29;
-	dw 0;
-	dw 13;
-	dw 0;
-	dw 4;
-	dw 0;
-	dw 0;
-	dw 26;
-	dw 1;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 42;
-	dw 2;
-	dw 13;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 2;
-	dw 56;
-	dw 3;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 35;
-	dw 4;
-	dw 13;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 32;
-	dw 5;
-	dw 13;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 6;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 2;
-	dw 7;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 11;
-	dw 8;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 9;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 10;
-	dw 13;
-	dw 2;
-	dw 12;
-	dw 0;
-	dw 0;
-	dw 48;
-	dw 11;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 56;
-	dw 12;
-	dw 13;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 2;
-	dw 48;
-	dw 13;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 23;
-	dw 14;
-	dw 13;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 15;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 31;
-	dw 16;
-	dw 13;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 17;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 44;
-	dw 18;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 20;
-	dw 19;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 20;
-	dw 13;
-	dw 0;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 21;
-	dw 21;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 46;
-	dw 22;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 32;
-	dw 23;
-	dw 13;
-	dw 0;
-	dw 8;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 24;
-	dw 13;
-	dw 0;
-	dw 13;
-	dw 0;
-	dw 0;
-	dw 56;
-	dw 25;
-	dw 13;
-	dw 2;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 42;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 22;
-	dw 1;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 45;
-	dw 2;
-	dw 14;
-	dw 1;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 41;
-	dw 3;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 32;
-	dw 4;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 5;
-	dw 14;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 21;
-	dw 6;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 7;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 8;
-	dw 14;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 45;
-	dw 9;
-	dw 14;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 48;
-	dw 10;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 44;
-	dw 11;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 46;
-	dw 12;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 47;
-	dw 13;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 14;
-	dw 14;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 16;
-	dw 15;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 18;
-	dw 16;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 45;
-	dw 17;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 32;
-	dw 18;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 41;
-	dw 19;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 20;
-	dw 14;
-	dw 2;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 48;
-	dw 21;
-	dw 14;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 16;
-	dw 22;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 21;
-	dw 23;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 47;
-	dw 24;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 46;
-	dw 25;
-	dw 14;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 27;
-	dw 0;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 49;
-	dw 1;
-	dw 15;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 2;
-	dw 3;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 35;
-	dw 4;
-	dw 15;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 35;
-	dw 5;
-	dw 15;
-	dw 1;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 6;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 7;
-	dw 15;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 3;
-	dw 24;
-	dw 8;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 37;
-	dw 9;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 15;
-	dw 10;
-	dw 15;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 9;
-	dw 11;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 12;
-	dw 15;
-	dw 0;
-	dw 9;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 13;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 14;
-	dw 15;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 15;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 16;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 17;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 18;
-	dw 15;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 1;
-	dw 8;
-	dw 19;
-	dw 15;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 4;
-	dw 20;
-	dw 15;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 5;
-	dw 21;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 49;
-	dw 22;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 31;
-	dw 23;
-	dw 15;
-	dw 2;
-	dw 11;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 24;
-	dw 15;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 24;
-	dw 25;
-	dw 15;
-	dw 2;
-	dw 9;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 1;
-	dw 16;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 1;
-	dw 4;
-	dw 2;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 38;
-	dw 3;
-	dw 16;
-	dw 1;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 4;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 28;
-	dw 5;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 6;
-	dw 16;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 7;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 11;
-	dw 8;
-	dw 16;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 39;
-	dw 9;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 9;
-	dw 10;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 33;
-	dw 11;
-	dw 16;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 1;
-	dw 12;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 20;
-	dw 13;
-	dw 16;
-	dw 0;
-	dw 5;
-	dw 1;
-	dw 0;
-	dw 23;
-	dw 14;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 15;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 16;
-	dw 16;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 17;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 34;
-	dw 18;
-	dw 16;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 19;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 20;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 31;
-	dw 21;
-	dw 16;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 36;
-	dw 22;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 25;
-	dw 23;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 24;
-	dw 16;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 13;
-	dw 25;
-	dw 16;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 46;
-	dw 0;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 7;
-	dw 1;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 2;
-	dw 17;
-	dw 0;
-	dw 9;
-	dw 3;
-	dw 1;
-	dw 3;
-	dw 3;
-	dw 17;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 9;
-	dw 4;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 31;
-	dw 5;
-	dw 17;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 28;
-	dw 6;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 40;
-	dw 7;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 27;
-	dw 8;
-	dw 17;
-	dw 1;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 11;
-	dw 9;
-	dw 17;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 10;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 23;
-	dw 11;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 12;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 13;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 12;
-	dw 14;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 50;
-	dw 15;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 16;
-	dw 17;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 49;
-	dw 17;
-	dw 17;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 18;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 38;
-	dw 19;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 23;
-	dw 20;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 5;
-	dw 21;
-	dw 17;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 6;
-	dw 22;
-	dw 17;
-	dw 0;
-	dw 3;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 23;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 39;
-	dw 24;
-	dw 17;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 25;
-	dw 17;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 26;
-	dw 0;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 2;
-	dw 9;
-	dw 1;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 43;
-	dw 2;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 3;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 7;
-	dw 4;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 32;
-	dw 5;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 38;
-	dw 6;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 45;
-	dw 7;
-	dw 18;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 28;
-	dw 8;
-	dw 18;
-	dw 0;
-	dw 5;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 9;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 46;
-	dw 10;
-	dw 18;
-	dw 2;
-	dw 10;
-	dw 1;
-	dw 3;
-	dw 8;
-	dw 11;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 4;
-	dw 12;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 6;
-	dw 13;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 29;
-	dw 14;
-	dw 18;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 15;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 16;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 5;
-	dw 17;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 49;
-	dw 18;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 11;
-	dw 19;
-	dw 18;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 20;
-	dw 18;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 27;
-	dw 21;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 43;
-	dw 22;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 16;
-	dw 23;
-	dw 18;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 22;
-	dw 24;
-	dw 18;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 25;
-	dw 18;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 4;
-	dw 1;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 5;
-	dw 2;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 49;
-	dw 3;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 4;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 5;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 38;
-	dw 6;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 49;
-	dw 7;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 47;
-	dw 8;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 18;
-	dw 9;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 11;
-	dw 10;
-	dw 19;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 31;
-	dw 11;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 41;
-	dw 12;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 44;
-	dw 13;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 14;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 17;
-	dw 15;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 39;
-	dw 16;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 22;
-	dw 17;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 47;
-	dw 18;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 26;
-	dw 19;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 44;
-	dw 20;
-	dw 19;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 21;
-	dw 19;
-	dw 2;
-	dw 10;
-	dw 0;
-	dw 1;
-	dw 25;
-	dw 22;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 8;
-	dw 23;
-	dw 19;
-	dw 0;
-	dw 5;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 19;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 25;
-	dw 19;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 26;
-	dw 1;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 49;
-	dw 2;
-	dw 20;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 0;
-	dw 15;
-	dw 3;
-	dw 20;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 0;
-	dw 48;
-	dw 4;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 12;
-	dw 5;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 42;
-	dw 6;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 34;
-	dw 7;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 20;
-	dw 1;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 9;
-	dw 9;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 23;
-	dw 10;
-	dw 20;
-	dw 2;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 11;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 29;
-	dw 12;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 41;
-	dw 13;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 31;
-	dw 14;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 28;
-	dw 15;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 32;
-	dw 16;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 49;
-	dw 17;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 18;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 5;
-	dw 19;
-	dw 20;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 1;
-	dw 26;
-	dw 20;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 42;
-	dw 21;
-	dw 20;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 22;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 23;
-	dw 20;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 20;
-	dw 0;
-	dw 7;
-	dw 0;
-	dw 0;
-	dw 34;
-	dw 25;
-	dw 20;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 57;
-	dw 0;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 45;
-	dw 1;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 21;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 4;
-	dw 21;
-	dw 0;
-	dw 10;
-	dw 0;
-	dw 0;
-	dw 21;
-	dw 5;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 8;
-	dw 6;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 7;
-	dw 21;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 0;
-	dw 37;
-	dw 8;
-	dw 21;
-	dw 0;
-	dw 14;
-	dw 3;
-	dw 0;
-	dw 27;
-	dw 9;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 10;
-	dw 21;
-	dw 0;
-	dw 11;
-	dw 1;
-	dw 0;
-	dw 7;
-	dw 11;
-	dw 21;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 12;
-	dw 21;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 17;
-	dw 13;
-	dw 21;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 53;
-	dw 14;
-	dw 21;
-	dw 2;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 42;
-	dw 15;
-	dw 21;
-	dw 0;
-	dw 4;
-	dw 2;
-	dw 1;
-	dw 10;
-	dw 16;
-	dw 21;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 51;
-	dw 17;
-	dw 21;
-	dw 0;
-	dw 5;
-	dw 3;
-	dw 1;
-	dw 6;
-	dw 18;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 39;
-	dw 19;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 17;
-	dw 20;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 32;
-	dw 21;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 16;
-	dw 22;
-	dw 21;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 0;
-	dw 36;
-	dw 23;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 48;
-	dw 24;
-	dw 21;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 14;
-	dw 25;
-	dw 21;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 8;
-	dw 0;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 23;
-	dw 1;
-	dw 22;
-	dw 0;
-	dw 5;
-	dw 2;
-	dw 0;
-	dw 9;
-	dw 2;
-	dw 22;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 4;
-	dw 22;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 15;
-	dw 5;
-	dw 22;
-	dw 0;
-	dw 10;
-	dw 2;
-	dw 0;
-	dw 27;
-	dw 6;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 7;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 31;
-	dw 8;
-	dw 22;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 9;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 23;
-	dw 10;
-	dw 22;
-	dw 2;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 6;
-	dw 11;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 12;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 9;
-	dw 13;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 14;
-	dw 22;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 1;
-	dw 4;
-	dw 15;
-	dw 22;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 16;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 15;
-	dw 17;
-	dw 22;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 18;
-	dw 22;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 19;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 23;
-	dw 20;
-	dw 22;
-	dw 2;
-	dw 14;
-	dw 2;
-	dw 0;
-	dw 18;
-	dw 21;
-	dw 22;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 22;
-	dw 22;
-	dw 0;
-	dw 5;
-	dw 2;
-	dw 0;
-	dw 23;
-	dw 23;
-	dw 22;
-	dw 0;
-	dw 13;
-	dw 2;
-	dw 0;
-	dw 48;
-	dw 24;
-	dw 22;
-	dw 0;
-	dw 4;
-	dw 2;
-	dw 0;
-	dw 30;
-	dw 25;
-	dw 22;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 26;
-	dw 0;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 29;
-	dw 1;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 9;
-	dw 2;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 28;
-	dw 3;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 4;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 35;
-	dw 5;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 42;
-	dw 6;
-	dw 23;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 9;
-	dw 7;
-	dw 23;
-	dw 0;
-	dw 7;
-	dw 1;
-	dw 0;
-	dw 34;
-	dw 8;
-	dw 23;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 41;
-	dw 9;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 40;
-	dw 10;
-	dw 23;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 35;
-	dw 11;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 34;
-	dw 12;
-	dw 23;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 13;
-	dw 23;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 0;
-	dw 26;
-	dw 14;
-	dw 23;
-	dw 0;
-	dw 5;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 15;
-	dw 23;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 33;
-	dw 16;
-	dw 23;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 2;
-	dw 25;
-	dw 17;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 21;
-	dw 18;
-	dw 23;
-	dw 0;
-	dw 12;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 19;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 22;
-	dw 20;
-	dw 23;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 30;
-	dw 21;
-	dw 23;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 45;
-	dw 22;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 2;
-	dw 23;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 47;
-	dw 24;
-	dw 23;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 30;
-	dw 25;
-	dw 23;
-	dw 2;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 23;
-	dw 1;
-	dw 24;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 8;
-	dw 2;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 49;
-	dw 3;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 14;
-	dw 4;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 28;
-	dw 5;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 24;
-	dw 6;
-	dw 24;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 57;
-	dw 7;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 46;
-	dw 8;
-	dw 24;
-	dw 0;
-	dw 10;
-	dw 2;
-	dw 3;
-	dw 54;
-	dw 9;
-	dw 24;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 41;
-	dw 10;
-	dw 24;
-	dw 2;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 11;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 51;
-	dw 12;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 13;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 14;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 2;
-	dw 15;
-	dw 24;
-	dw 0;
-	dw 5;
-	dw 1;
-	dw 0;
-	dw 52;
-	dw 16;
-	dw 24;
-	dw 0;
-	dw 5;
-	dw 2;
-	dw 0;
-	dw 45;
-	dw 17;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 43;
-	dw 18;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 19;
-	dw 24;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 20;
-	dw 24;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 3;
-	dw 21;
-	dw 24;
-	dw 2;
-	dw 1;
-	dw 2;
-	dw 1;
-	dw 2;
-	dw 22;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 4;
-	dw 23;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 31;
-	dw 24;
-	dw 24;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 3;
-	dw 25;
-	dw 24;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 25;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 25;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 25;
-	dw 0;
-	dw 11;
-	dw 1;
-	dw 0;
-	dw 19;
-	dw 3;
-	dw 25;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 0;
-	dw 44;
-	dw 4;
-	dw 25;
-	dw 0;
-	dw 13;
-	dw 1;
-	dw 1;
-	dw 38;
-	dw 5;
-	dw 25;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 3;
-	dw 28;
-	dw 6;
-	dw 25;
-	dw 0;
-	dw 11;
-	dw 1;
-	dw 0;
-	dw 20;
-	dw 7;
-	dw 25;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 12;
-	dw 8;
-	dw 25;
-	dw 1;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 9;
-	dw 25;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 51;
-	dw 10;
-	dw 25;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 14;
-	dw 11;
-	dw 25;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 2;
-	dw 26;
-	dw 12;
-	dw 25;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 0;
-	dw 51;
-	dw 13;
-	dw 25;
-	dw 0;
-	dw 5;
-	dw 1;
-	dw 3;
-	dw 18;
-	dw 14;
-	dw 25;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 15;
-	dw 25;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 41;
-	dw 16;
-	dw 25;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 4;
-	dw 17;
-	dw 25;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 12;
-	dw 18;
-	dw 25;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 42;
-	dw 19;
-	dw 25;
-	dw 0;
-	dw 5;
-	dw 1;
-	dw 0;
-	dw 25;
-	dw 20;
-	dw 25;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 29;
-	dw 21;
-	dw 25;
-	dw 2;
-	dw 9;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 22;
-	dw 25;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 32;
-	dw 23;
-	dw 25;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 52;
-	dw 24;
-	dw 25;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 0;
-	dw 51;
-	dw 25;
-	dw 25;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 18;
-	dw 0;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 50;
-	dw 1;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 48;
-	dw 2;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 43;
-	dw 3;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 36;
-	dw 4;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 50;
-	dw 5;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 6;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 33;
-	dw 7;
-	dw 26;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 2;
-	dw 19;
-	dw 8;
-	dw 26;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 1;
-	dw 8;
-	dw 9;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 38;
-	dw 10;
-	dw 26;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 42;
-	dw 11;
-	dw 26;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 6;
-	dw 12;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 6;
-	dw 13;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 46;
-	dw 14;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 47;
-	dw 15;
-	dw 26;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 2;
-	dw 12;
-	dw 16;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 28;
-	dw 17;
-	dw 26;
-	dw 0;
-	dw 8;
-	dw 1;
-	dw 0;
-	dw 26;
-	dw 18;
-	dw 26;
-	dw 0;
-	dw 13;
-	dw 1;
-	dw 0;
-	dw 32;
-	dw 19;
-	dw 26;
-	dw 2;
-	dw 5;
-	dw 3;
-	dw 1;
-	dw 7;
-	dw 20;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 39;
-	dw 21;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 31;
-	dw 22;
-	dw 26;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 26;
-	dw 23;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 26;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 56;
-	dw 25;
-	dw 26;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 27;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 1;
-	dw 2;
-	dw 1;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 11;
-	dw 4;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 5;
-	dw 27;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 6;
-	dw 27;
-	dw 0;
-	dw 2;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 7;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 8;
-	dw 27;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 2;
-	dw 9;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 10;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 11;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 3;
-	dw 12;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 15;
-	dw 13;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 53;
-	dw 14;
-	dw 27;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 15;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 50;
-	dw 16;
-	dw 27;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 12;
-	dw 17;
-	dw 27;
-	dw 0;
-	dw 14;
-	dw 3;
-	dw 0;
-	dw 35;
-	dw 18;
-	dw 27;
-	dw 0;
-	dw 7;
-	dw 3;
-	dw 3;
-	dw 37;
-	dw 19;
-	dw 27;
-	dw 0;
-	dw 4;
-	dw 3;
-	dw 0;
-	dw 30;
-	dw 20;
-	dw 27;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 0;
-	dw 37;
-	dw 21;
-	dw 27;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 22;
-	dw 27;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 23;
-	dw 27;
-	dw 0;
-	dw 10;
-	dw 3;
-	dw 0;
-	dw 30;
-	dw 24;
-	dw 27;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 0;
-	dw 51;
-	dw 25;
-	dw 27;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 23;
-	dw 1;
-	dw 28;
-	dw 0;
-	dw 5;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 2;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 28;
-	dw 3;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 4;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 40;
-	dw 5;
-	dw 28;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 25;
-	dw 6;
-	dw 28;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 7;
-	dw 28;
-	dw 0;
-	dw 13;
-	dw 1;
-	dw 0;
-	dw 40;
-	dw 8;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 4;
-	dw 9;
-	dw 28;
-	dw 0;
-	dw 6;
-	dw 2;
-	dw 0;
-	dw 23;
-	dw 10;
-	dw 28;
-	dw 2;
-	dw 14;
-	dw 1;
-	dw 0;
-	dw 48;
-	dw 11;
-	dw 28;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 12;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 13;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 14;
-	dw 28;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 1;
-	dw 38;
-	dw 15;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 0;
-	dw 16;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 20;
-	dw 17;
-	dw 28;
-	dw 0;
-	dw 14;
-	dw 1;
-	dw 0;
-	dw 39;
-	dw 18;
-	dw 28;
-	dw 0;
-	dw 14;
-	dw 1;
-	dw 0;
-	dw 51;
-	dw 19;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 23;
-	dw 20;
-	dw 28;
-	dw 2;
-	dw 10;
-	dw 1;
-	dw 0;
-	dw 9;
-	dw 21;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 13;
-	dw 22;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 26;
-	dw 23;
-	dw 28;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 29;
-	dw 24;
-	dw 28;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 53;
-	dw 25;
-	dw 28;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 2;
-	dw 0;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 6;
-	dw 1;
-	dw 29;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 29;
-	dw 0;
-	dw 6;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 4;
-	dw 29;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 5;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 15;
-	dw 6;
-	dw 29;
-	dw 0;
-	dw 2;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 7;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 45;
-	dw 8;
-	dw 29;
-	dw 1;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 9;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 10;
-	dw 29;
-	dw 2;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 11;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 6;
-	dw 12;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 49;
-	dw 13;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 9;
-	dw 14;
-	dw 29;
-	dw 2;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 14;
-	dw 15;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 2;
-	dw 16;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 53;
-	dw 17;
-	dw 29;
-	dw 0;
-	dw 5;
-	dw 3;
-	dw 0;
-	dw 3;
-	dw 18;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 1;
-	dw 57;
-	dw 19;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 20;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 7;
-	dw 21;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 23;
-	dw 22;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 0;
-	dw 23;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 50;
-	dw 24;
-	dw 29;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 0;
-	dw 15;
-	dw 25;
-	dw 29;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 25;
-	dw 1;
-	dw 30;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 1;
-	dw 2;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 57;
-	dw 3;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 4;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 32;
-	dw 5;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 1;
-	dw 7;
-	dw 6;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 2;
-	dw 7;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 20;
-	dw 8;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 3;
-	dw 46;
-	dw 9;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 52;
-	dw 10;
-	dw 30;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 6;
-	dw 11;
-	dw 30;
-	dw 0;
-	dw 4;
-	dw 1;
-	dw 0;
-	dw 30;
-	dw 12;
-	dw 30;
-	dw 0;
-	dw 12;
-	dw 1;
-	dw 0;
-	dw 6;
-	dw 13;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 32;
-	dw 14;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 2;
-	dw 0;
-	dw 27;
-	dw 15;
-	dw 30;
-	dw 0;
-	dw 14;
-	dw 0;
-	dw 2;
-	dw 37;
-	dw 16;
-	dw 30;
-	dw 0;
-	dw 12;
-	dw 1;
-	dw 0;
-	dw 42;
-	dw 17;
-	dw 30;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 1;
-	dw 2;
-	dw 18;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 19;
-	dw 30;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 39;
-	dw 20;
-	dw 30;
-	dw 0;
-	dw 10;
-	dw 1;
-	dw 1;
-	dw 21;
-	dw 21;
-	dw 30;
-	dw 2;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 28;
-	dw 22;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 15;
-	dw 23;
-	dw 30;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 0;
-	dw 39;
-	dw 24;
-	dw 30;
-	dw 0;
-	dw 9;
-	dw 1;
-	dw 0;
-	dw 18;
-	dw 25;
-	dw 30;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 18;
-	dw 0;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 1;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 4;
-	dw 2;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 3;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 4;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 8;
-	dw 5;
-	dw 31;
-	dw 1;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 31;
-	dw 6;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 7;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 38;
-	dw 8;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 49;
-	dw 9;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 50;
-	dw 10;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 35;
-	dw 11;
-	dw 31;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 47;
-	dw 12;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 39;
-	dw 13;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 36;
-	dw 14;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 5;
-	dw 15;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 12;
-	dw 16;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 50;
-	dw 17;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 21;
-	dw 18;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 24;
-	dw 19;
-	dw 31;
-	dw 2;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 25;
-	dw 20;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 52;
-	dw 21;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 3;
-	dw 17;
-	dw 22;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 1;
-	dw 31;
-	dw 23;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 33;
-	dw 24;
-	dw 31;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 0;
-	dw 38;
-	dw 25;
-	dw 31;
+	// team 0
+	dw 2; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 1; // hair
+	dw 0; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 8; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 27; // hair
+	dw 1; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 9; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 27; // hair
+	dw 2; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 3; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 5; // hair
+	dw 4; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 8; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 5; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 3; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 44; // hair
+	dw 6; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 7; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 8; // beard
+	dw 3; // body
+	dw 2; // boot
+	dw 1; // hair
+	dw 8; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 9; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 8; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 37; // hair
+	dw 10; // number
+	dw 0; // team
+	// team 0
+	dw 2; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 11; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 13; // hair
+	dw 12; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 13; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 13; // hair
+	dw 14; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 15; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 16; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 40; // hair
+	dw 17; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 18; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 53; // hair
+	dw 19; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 20; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 21; // number
+	dw 0; // team
+	// team 0
+	dw 2; // accessory
+	dw 14; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 44; // hair
+	dw 22; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 23; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 13; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 44; // hair
+	dw 24; // number
+	dw 0; // team
+	// team 0
+	dw 0; // accessory
+	dw 4; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 0; // hair
+	dw 25; // number
+	dw 0; // team
+	// team 1
+	dw 2; // accessory
+	dw 9; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 0; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 1; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 2; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 3; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 4; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 5; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 7; // hair
+	dw 6; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 7; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 8; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 49; // hair
+	dw 9; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 10; // number
+	dw 1; // team
+	// team 1
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 11; // number
+	dw 1; // team
+	// team 1
+	dw 1; // accessory
+	dw 3; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 0; // hair
+	dw 12; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 43; // hair
+	dw 13; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 14; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 15; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 12; // hair
+	dw 16; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 7; // hair
+	dw 17; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 18; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 19; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 20; // number
+	dw 1; // team
+	// team 1
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 15; // hair
+	dw 21; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 22; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 3; // boot
+	dw 2; // hair
+	dw 23; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 24; // number
+	dw 1; // team
+	// team 1
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 25; // number
+	dw 1; // team
+	// team 2
+	dw 2; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 0; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 1; // number
+	dw 2; // team
+	// team 2
+	dw 1; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 2; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 3; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 5; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 4; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 5; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 6; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 7; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 9; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 8; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 14; // hair
+	dw 9; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 10; // number
+	dw 2; // team
+	// team 2
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 11; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 12; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 13; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 2; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 14; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 5; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 15; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 2; // hair
+	dw 16; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 17; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 18; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 19; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 20; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 21; // number
+	dw 2; // team
+	// team 2
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 22; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 1; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 6; // hair
+	dw 23; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 24; // number
+	dw 2; // team
+	// team 2
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 25; // number
+	dw 2; // team
+	// team 3
+	dw 2; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 0; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 1; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 2; // number
+	dw 3; // team
+	// team 3
+	dw 1; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 51; // hair
+	dw 3; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 4; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 5; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 6; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 15; // hair
+	dw 7; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 14; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 8; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 9; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 10; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 14; // hair
+	dw 11; // number
+	dw 3; // team
+	// team 3
+	dw 2; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 42; // hair
+	dw 12; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 4; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 13; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 13; // hair
+	dw 14; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 15; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 7; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 16; // hair
+	dw 16; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 41; // hair
+	dw 17; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 14; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 42; // hair
+	dw 18; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 19; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 20; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 21; // number
+	dw 3; // team
+	// team 3
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 22; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 19; // hair
+	dw 23; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 6; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 7; // hair
+	dw 24; // number
+	dw 3; // team
+	// team 3
+	dw 0; // accessory
+	dw 13; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 25; // number
+	dw 3; // team
+	// team 4
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 0; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 1; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 57; // hair
+	dw 1; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 10; // hair
+	dw 2; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 18; // hair
+	dw 3; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 27; // hair
+	dw 4; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 25; // hair
+	dw 5; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 6; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 7; // number
+	dw 4; // team
+	// team 4
+	dw 1; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 19; // hair
+	dw 8; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 9; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 10; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 11; // number
+	dw 4; // team
+	// team 4
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 43; // hair
+	dw 12; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 13; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 14; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 7; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 34; // hair
+	dw 15; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 9; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 16; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 17; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 18; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 19; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 20; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 21; // number
+	dw 4; // team
+	// team 4
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 22; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 23; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 24; // number
+	dw 4; // team
+	// team 4
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 25; // number
+	dw 4; // team
+	// team 5
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 3; // hair
+	dw 0; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 1; // number
+	dw 5; // team
+	// team 5
+	dw 1; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 2; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 6; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 20; // hair
+	dw 3; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 35; // hair
+	dw 4; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 7; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 28; // hair
+	dw 5; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 6; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 5; // hair
+	dw 7; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 6; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 8; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 9; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 10; // number
+	dw 5; // team
+	// team 5
+	dw 2; // accessory
+	dw 6; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 11; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 12; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 20; // hair
+	dw 13; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 14; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 15; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 16; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 6; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 17; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 19; // hair
+	dw 18; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 49; // hair
+	dw 19; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 20; // number
+	dw 5; // team
+	// team 5
+	dw 2; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 21; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 22; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 23; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 24; // number
+	dw 5; // team
+	// team 5
+	dw 0; // accessory
+	dw 9; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 25; // number
+	dw 5; // team
+	// team 6
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 0; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 1; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 21; // hair
+	dw 2; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 50; // hair
+	dw 3; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 40; // hair
+	dw 4; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 5; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 1; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 1; // hair
+	dw 6; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 7; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 8; // number
+	dw 6; // team
+	// team 6
+	dw 1; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 9; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 38; // hair
+	dw 10; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 53; // hair
+	dw 11; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 12; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 13; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 6; // hair
+	dw 14; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 15; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 16; // number
+	dw 6; // team
+	// team 6
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 19; // hair
+	dw 17; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 18; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 9; // hair
+	dw 19; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 20; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 21; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 2; // hair
+	dw 22; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 23; // number
+	dw 6; // team
+	// team 6
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 3; // boot
+	dw 15; // hair
+	dw 24; // number
+	dw 6; // team
+	// team 6
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 25; // number
+	dw 6; // team
+	// team 7
+	dw 2; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 3; // boot
+	dw 16; // hair
+	dw 0; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 14; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 56; // hair
+	dw 1; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 2; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 3; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 4; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 5; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 14; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 41; // hair
+	dw 6; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 7; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 38; // hair
+	dw 8; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 6; // hair
+	dw 9; // number
+	dw 7; // team
+	// team 7
+	dw 1; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 52; // hair
+	dw 10; // number
+	dw 7; // team
+	// team 7
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 11; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 12; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 13; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 14; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 43; // hair
+	dw 15; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 46; // hair
+	dw 16; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 56; // hair
+	dw 17; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 18; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 19; // number
+	dw 7; // team
+	// team 7
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 3; // boot
+	dw 36; // hair
+	dw 20; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 37; // hair
+	dw 21; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 34; // hair
+	dw 22; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 25; // hair
+	dw 23; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 24; // number
+	dw 7; // team
+	// team 7
+	dw 0; // accessory
+	dw 13; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 29; // hair
+	dw 25; // number
+	dw 7; // team
+	// team 8
+	dw 2; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 26; // hair
+	dw 0; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 1; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 2; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 23; // hair
+	dw 3; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 35; // hair
+	dw 4; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 27; // hair
+	dw 5; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 6; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 31; // hair
+	dw 7; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 8; // number
+	dw 8; // team
+	// team 8
+	dw 1; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 10; // hair
+	dw 9; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 55; // hair
+	dw 10; // number
+	dw 8; // team
+	// team 8
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 11; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 12; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 3; // hair
+	dw 13; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 14; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 8; // hair
+	dw 15; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 7; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 16; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 17; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 1; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 20; // hair
+	dw 18; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 19; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 20; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 39; // hair
+	dw 21; // number
+	dw 8; // team
+	// team 8
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 30; // hair
+	dw 22; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 23; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 24; // number
+	dw 8; // team
+	// team 8
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 25; // number
+	dw 8; // team
+	// team 9
+	dw 2; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 0; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 1; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 2; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 2; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 13; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 3; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 4; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 9; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 5; // number
+	dw 9; // team
+	// team 9
+	dw 1; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 6; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 25; // hair
+	dw 7; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 10; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 19; // hair
+	dw 8; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 49; // hair
+	dw 9; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 1; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 10; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 4; // hair
+	dw 11; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 12; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 20; // hair
+	dw 13; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 20; // hair
+	dw 14; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 35; // hair
+	dw 15; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 7; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 16; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 17; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 2; // boot
+	dw 25; // hair
+	dw 18; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 2; // hair
+	dw 19; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 20; // number
+	dw 9; // team
+	// team 9
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 6; // hair
+	dw 21; // number
+	dw 9; // team
+	// team 9
+	dw 2; // accessory
+	dw 2; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 22; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 23; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 1; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 24; // number
+	dw 9; // team
+	// team 9
+	dw 0; // accessory
+	dw 9; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 25; // number
+	dw 9; // team
+	// team 10
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 0; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 35; // hair
+	dw 1; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 15; // hair
+	dw 2; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 3; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 4; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 5; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 6; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 24; // hair
+	dw 7; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 8; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 9; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 28; // hair
+	dw 10; // number
+	dw 10; // team
+	// team 10
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 20; // hair
+	dw 11; // number
+	dw 10; // team
+	// team 10
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 12; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 15; // hair
+	dw 13; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 8; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 14; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 32; // hair
+	dw 15; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 16; // number
+	dw 10; // team
+	// team 10
+	dw 1; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 2; // hair
+	dw 17; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 18; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 31; // hair
+	dw 19; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 38; // hair
+	dw 20; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 24; // hair
+	dw 21; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 22; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 35; // hair
+	dw 23; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 6; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 40; // hair
+	dw 24; // number
+	dw 10; // team
+	// team 10
+	dw 0; // accessory
+	dw 13; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 27; // hair
+	dw 25; // number
+	dw 10; // team
+	// team 11
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 0; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 41; // hair
+	dw 1; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 2; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 43; // hair
+	dw 3; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 4; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 5; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 26; // hair
+	dw 6; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 1; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 7; // number
+	dw 11; // team
+	// team 11
+	dw 1; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 8; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 9; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 40; // hair
+	dw 10; // number
+	dw 11; // team
+	// team 11
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 15; // hair
+	dw 11; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 12; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 14; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 34; // hair
+	dw 13; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 42; // hair
+	dw 14; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 41; // hair
+	dw 15; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 28; // hair
+	dw 16; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 17; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 14; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 18; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 19; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 48; // hair
+	dw 20; // number
+	dw 11; // team
+	// team 11
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 21; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 22; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 1; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 2; // hair
+	dw 23; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 24; // number
+	dw 11; // team
+	// team 11
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 25; // number
+	dw 11; // team
+	// team 12
+	dw 3; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 3; // hair
+	dw 0; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 1; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 9; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 2; // hair
+	dw 2; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 4; // hair
+	dw 3; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 4; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 5; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 17; // hair
+	dw 6; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 12; // hair
+	dw 7; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 8; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 9; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 1; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 10; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 11; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 3; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 12; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 13; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 14; // number
+	dw 12; // team
+	// team 12
+	dw 2; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 15; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 19; // hair
+	dw 16; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 17; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 18; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 19; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 20; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 21; // number
+	dw 12; // team
+	// team 12
+	dw 2; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 22; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 23; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 3; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 24; // number
+	dw 12; // team
+	// team 12
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 25; // number
+	dw 12; // team
+	// team 13
+	dw 3; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 29; // hair
+	dw 0; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 4; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 1; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 2; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 14; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 56; // hair
+	dw 3; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 35; // hair
+	dw 4; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 5; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 1; // hair
+	dw 6; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 2; // hair
+	dw 7; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 8; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 9; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 10; // number
+	dw 13; // team
+	// team 13
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 11; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 56; // hair
+	dw 12; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 48; // hair
+	dw 13; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 14; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 15; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 16; // number
+	dw 13; // team
+	// team 13
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 36; // hair
+	dw 17; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 44; // hair
+	dw 18; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 20; // hair
+	dw 19; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 20; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 13; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 21; // hair
+	dw 21; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 14; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 46; // hair
+	dw 22; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 32; // hair
+	dw 23; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 8; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 24; // number
+	dw 13; // team
+	// team 13
+	dw 0; // accessory
+	dw 13; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 56; // hair
+	dw 25; // number
+	dw 13; // team
+	// team 14
+	dw 2; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 0; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 22; // hair
+	dw 1; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 45; // hair
+	dw 2; // number
+	dw 14; // team
+	// team 14
+	dw 1; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 41; // hair
+	dw 3; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 4; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 5; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 21; // hair
+	dw 6; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 7; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 10; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 8; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 9; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 14; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 10; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 44; // hair
+	dw 11; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 46; // hair
+	dw 12; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 13; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 14; // number
+	dw 14; // team
+	// team 14
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 16; // hair
+	dw 15; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 18; // hair
+	dw 16; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 17; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 3; // boot
+	dw 32; // hair
+	dw 18; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 41; // hair
+	dw 19; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 20; // number
+	dw 14; // team
+	// team 14
+	dw 2; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 21; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 16; // hair
+	dw 22; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 3; // boot
+	dw 21; // hair
+	dw 23; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 24; // number
+	dw 14; // team
+	// team 14
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 46; // hair
+	dw 25; // number
+	dw 14; // team
+	// team 15
+	dw 2; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 27; // hair
+	dw 0; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 1; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 2; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 3; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 35; // hair
+	dw 4; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 35; // hair
+	dw 5; // number
+	dw 15; // team
+	// team 15
+	dw 1; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 6; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 7; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 8; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 37; // hair
+	dw 9; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 15; // hair
+	dw 10; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 9; // hair
+	dw 11; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 12; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 9; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 2; // hair
+	dw 13; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 14; // number
+	dw 15; // team
+	// team 15
+	dw 2; // accessory
+	dw 9; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 15; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 3; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 2; // hair
+	dw 16; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 1; // hair
+	dw 17; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 18; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 8; // hair
+	dw 19; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 20; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 21; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 8; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 22; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 23; // number
+	dw 15; // team
+	// team 15
+	dw 2; // accessory
+	dw 11; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 24; // number
+	dw 15; // team
+	// team 15
+	dw 0; // accessory
+	dw 3; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 24; // hair
+	dw 25; // number
+	dw 15; // team
+	// team 16
+	dw 2; // accessory
+	dw 9; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 0; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 24; // hair
+	dw 1; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 4; // hair
+	dw 2; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 38; // hair
+	dw 3; // number
+	dw 16; // team
+	// team 16
+	dw 1; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 4; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 28; // hair
+	dw 5; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 6; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 7; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 8; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 39; // hair
+	dw 9; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 10; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 33; // hair
+	dw 11; // number
+	dw 16; // team
+	// team 16
+	dw 2; // accessory
+	dw 9; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 12; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 6; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 20; // hair
+	dw 13; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 14; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 1; // hair
+	dw 15; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 16; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 3; // hair
+	dw 17; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 34; // hair
+	dw 18; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 8; // hair
+	dw 19; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 20; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 21; // number
+	dw 16; // team
+	// team 16
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 22; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 25; // hair
+	dw 23; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 24; // number
+	dw 16; // team
+	// team 16
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 13; // hair
+	dw 25; // number
+	dw 16; // team
+	// team 17
+	dw 2; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 46; // hair
+	dw 0; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 1; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 2; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 9; // beard
+	dw 3; // body
+	dw 2; // boot
+	dw 3; // hair
+	dw 3; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 4; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 5; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 6; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 40; // hair
+	dw 7; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 27; // hair
+	dw 8; // number
+	dw 17; // team
+	// team 17
+	dw 1; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 9; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 10; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 11; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 6; // hair
+	dw 12; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 3; // hair
+	dw 13; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 12; // hair
+	dw 14; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 15; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 16; // number
+	dw 17; // team
+	// team 17
+	dw 2; // accessory
+	dw 8; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 49; // hair
+	dw 17; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 3; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 18; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 38; // hair
+	dw 19; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 20; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 21; // number
+	dw 17; // team
+	// team 17
+	dw 2; // accessory
+	dw 8; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 6; // hair
+	dw 22; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 3; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 23; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 39; // hair
+	dw 24; // number
+	dw 17; // team
+	// team 17
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 25; // number
+	dw 17; // team
+	// team 18
+	dw 3; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 0; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 1; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 43; // hair
+	dw 2; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 3; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 4; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 5; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 38; // hair
+	dw 6; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 7; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 8; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 9; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 46; // hair
+	dw 10; // number
+	dw 18; // team
+	// team 18
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 11; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 12; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 13; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 29; // hair
+	dw 14; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 9; // hair
+	dw 15; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 16; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 17; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 18; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 19; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 3; // hair
+	dw 20; // number
+	dw 18; // team
+	// team 18
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 27; // hair
+	dw 21; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 43; // hair
+	dw 22; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 16; // hair
+	dw 23; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 22; // hair
+	dw 24; // number
+	dw 18; // team
+	// team 18
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 7; // hair
+	dw 25; // number
+	dw 18; // team
+	// team 19
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 0; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 1; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 2; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 3; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 4; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 5; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 38; // hair
+	dw 6; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 49; // hair
+	dw 7; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 8; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 18; // hair
+	dw 9; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 10; // number
+	dw 19; // team
+	// team 19
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 11; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 41; // hair
+	dw 12; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 44; // hair
+	dw 13; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 14; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 17; // hair
+	dw 15; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 39; // hair
+	dw 16; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 22; // hair
+	dw 17; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 18; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 19; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 44; // hair
+	dw 20; // number
+	dw 19; // team
+	// team 19
+	dw 1; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 1; // hair
+	dw 21; // number
+	dw 19; // team
+	// team 19
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 22; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 23; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 5; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 24; // number
+	dw 19; // team
+	// team 19
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 25; // number
+	dw 19; // team
+	// team 20
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 1; // hair
+	dw 0; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 1; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 49; // hair
+	dw 2; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 3; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 14; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 48; // hair
+	dw 4; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 12; // hair
+	dw 5; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 6; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 34; // hair
+	dw 7; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 3; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 8; // number
+	dw 20; // team
+	// team 20
+	dw 1; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 9; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 10; // number
+	dw 20; // team
+	// team 20
+	dw 2; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 11; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 12; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 41; // hair
+	dw 13; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 14; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 15; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 16; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 17; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 9; // hair
+	dw 18; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 19; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 20; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 21; // number
+	dw 20; // team
+	// team 20
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 22; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 50; // hair
+	dw 23; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 24; // number
+	dw 20; // team
+	// team 20
+	dw 0; // accessory
+	dw 7; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 34; // hair
+	dw 25; // number
+	dw 20; // team
+	// team 21
+	dw 2; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 57; // hair
+	dw 0; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 1; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 2; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 3; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 4; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 21; // hair
+	dw 5; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 8; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 8; // hair
+	dw 6; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 7; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 9; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 27; // hair
+	dw 8; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 9; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 10; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 16; // hair
+	dw 11; // number
+	dw 21; // team
+	// team 21
+	dw 1; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 12; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 13; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 11; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 53; // hair
+	dw 14; // number
+	dw 21; // team
+	// team 21
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 8; // hair
+	dw 15; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 16; // number
+	dw 21; // team
+	// team 21
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 30; // hair
+	dw 17; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 5; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 18; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 14; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 15; // hair
+	dw 19; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 53; // hair
+	dw 20; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 12; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 21; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 22; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 15; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 23; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 4; // hair
+	dw 24; // number
+	dw 21; // team
+	// team 21
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 25; // number
+	dw 21; // team
+	// team 22
+	dw 2; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 0; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 23; // hair
+	dw 1; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 2; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 3; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 4; // number
+	dw 22; // team
+	// team 22
+	dw 1; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 15; // hair
+	dw 5; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 10; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 27; // hair
+	dw 6; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 7; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 8; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 9; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 10; // number
+	dw 22; // team
+	// team 22
+	dw 2; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 11; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 1; // hair
+	dw 12; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 9; // hair
+	dw 13; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 2; // boot
+	dw 2; // hair
+	dw 14; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 15; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 16; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 15; // hair
+	dw 17; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 18; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 19; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 20; // number
+	dw 22; // team
+	// team 22
+	dw 2; // accessory
+	dw 13; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 21; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 22; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 23; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 11; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 24; // number
+	dw 22; // team
+	// team 22
+	dw 0; // accessory
+	dw 7; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 25; // number
+	dw 22; // team
+	// team 23
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 0; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 1; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 2; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 3; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 4; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 35; // hair
+	dw 5; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 6; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 7; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 34; // hair
+	dw 8; // number
+	dw 23; // team
+	// team 23
+	dw 1; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 41; // hair
+	dw 9; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 40; // hair
+	dw 10; // number
+	dw 23; // team
+	// team 23
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 35; // hair
+	dw 11; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 34; // hair
+	dw 12; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 13; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 26; // hair
+	dw 14; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 4; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 11; // hair
+	dw 15; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 16; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 4; // hair
+	dw 17; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 21; // hair
+	dw 18; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 19; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 22; // hair
+	dw 20; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 17; // hair
+	dw 21; // number
+	dw 23; // team
+	// team 23
+	dw 2; // accessory
+	dw 13; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 17; // hair
+	dw 22; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 4; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 23; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 36; // hair
+	dw 24; // number
+	dw 23; // team
+	// team 23
+	dw 0; // accessory
+	dw 9; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 3; // hair
+	dw 25; // number
+	dw 23; // team
+	// team 24
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 0; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 6; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 1; // number
+	dw 24; // team
+	// team 24
+	dw 1; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 2; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 49; // hair
+	dw 3; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 14; // hair
+	dw 4; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 5; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 5; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 6; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 3; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 57; // hair
+	dw 7; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 46; // hair
+	dw 8; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 10; // beard
+	dw 2; // body
+	dw 3; // boot
+	dw 54; // hair
+	dw 9; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 41; // hair
+	dw 10; // number
+	dw 24; // team
+	// team 24
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 2; // hair
+	dw 11; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 15; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 12; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 13; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 13; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 14; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 2; // hair
+	dw 15; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 53; // hair
+	dw 16; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 17; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 1; // beard
+	dw 3; // body
+	dw 3; // boot
+	dw 43; // hair
+	dw 18; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 6; // hair
+	dw 19; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 20; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 21; // number
+	dw 24; // team
+	// team 24
+	dw 2; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 22; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 23; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 31; // hair
+	dw 24; // number
+	dw 24; // team
+	// team 24
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 3; // hair
+	dw 25; // number
+	dw 24; // team
+	// team 25
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 0; // hair
+	dw 0; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 2; // hair
+	dw 1; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 13; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 2; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 14; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 10; // hair
+	dw 3; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 4; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 13; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 17; // hair
+	dw 5; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 8; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 6; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 51; // hair
+	dw 7; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 15; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 48; // hair
+	dw 8; // number
+	dw 25; // team
+	// team 25
+	dw 1; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 4; // hair
+	dw 9; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 10; // number
+	dw 25; // team
+	// team 25
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 14; // hair
+	dw 11; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 0; // hair
+	dw 12; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 13; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 8; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 12; // hair
+	dw 14; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 11; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 15; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 27; // hair
+	dw 16; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 3; // boot
+	dw 4; // hair
+	dw 17; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 18; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 42; // hair
+	dw 19; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 40; // hair
+	dw 20; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 9; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 53; // hair
+	dw 21; // number
+	dw 25; // team
+	// team 25
+	dw 2; // accessory
+	dw 9; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 0; // hair
+	dw 22; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 23; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 22; // hair
+	dw 24; // number
+	dw 25; // team
+	// team 25
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 8; // hair
+	dw 25; // number
+	dw 25; // team
+	// team 26
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 2; // boot
+	dw 18; // hair
+	dw 0; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 1; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 14; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 2; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 43; // hair
+	dw 3; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 4; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 50; // hair
+	dw 5; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 6; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 33; // hair
+	dw 7; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 19; // hair
+	dw 8; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 9; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 38; // hair
+	dw 10; // number
+	dw 26; // team
+	// team 26
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 42; // hair
+	dw 11; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 12; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 13; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 46; // hair
+	dw 14; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 1; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 15; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 43; // hair
+	dw 16; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 17; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 33; // hair
+	dw 18; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 19; // number
+	dw 26; // team
+	// team 26
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 3; // boot
+	dw 7; // hair
+	dw 20; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 39; // hair
+	dw 21; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 22; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 26; // hair
+	dw 23; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 4; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 24; // number
+	dw 26; // team
+	// team 26
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 56; // hair
+	dw 25; // number
+	dw 26; // team
+	// team 27
+	dw 2; // accessory
+	dw 5; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 0; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 2; // boot
+	dw 2; // hair
+	dw 1; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 11; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 2; // hair
+	dw 2; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 3; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 11; // hair
+	dw 4; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 5; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 3; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 6; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 2; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 7; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 8; // number
+	dw 27; // team
+	// team 27
+	dw 1; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 9; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 10; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 11; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 11; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 12; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 15; // hair
+	dw 13; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 53; // hair
+	dw 14; // number
+	dw 27; // team
+	// team 27
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 15; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 16; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 12; // hair
+	dw 17; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 8; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 18; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 12; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 19; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 8; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 40; // hair
+	dw 20; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 3; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 38; // hair
+	dw 21; // number
+	dw 27; // team
+	// team 27
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 22; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 23; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 39; // hair
+	dw 24; // number
+	dw 27; // team
+	// team 27
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 12; // hair
+	dw 25; // number
+	dw 27; // team
+	// team 28
+	dw 2; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 0; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 1; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 5; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 2; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 3; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 4; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 40; // hair
+	dw 5; // number
+	dw 28; // team
+	// team 28
+	dw 1; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 6; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 7; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 7; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 37; // hair
+	dw 8; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 4; // hair
+	dw 9; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 3; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 51; // hair
+	dw 10; // number
+	dw 28; // team
+	// team 28
+	dw 2; // accessory
+	dw 14; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 48; // hair
+	dw 11; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 12; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 13; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 14; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 15; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 1; // boot
+	dw 0; // hair
+	dw 16; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 2; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 20; // hair
+	dw 17; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 46; // hair
+	dw 18; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 19; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 20; // number
+	dw 28; // team
+	// team 28
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 21; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 13; // hair
+	dw 22; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 12; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 23; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 21; // hair
+	dw 24; // number
+	dw 28; // team
+	// team 28
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 3; // boot
+	dw 27; // hair
+	dw 25; // number
+	dw 28; // team
+	// team 29
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 0; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 1; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 2; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 3; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 6; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 4; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 5; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 15; // hair
+	dw 6; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 2; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 7; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 45; // hair
+	dw 8; // number
+	dw 29; // team
+	// team 29
+	dw 1; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 0; // hair
+	dw 9; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 10; // number
+	dw 29; // team
+	// team 29
+	dw 2; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 11; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 12; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 13; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 9; // hair
+	dw 14; // number
+	dw 29; // team
+	// team 29
+	dw 2; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 14; // hair
+	dw 15; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 2; // boot
+	dw 2; // hair
+	dw 16; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 53; // hair
+	dw 17; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 18; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 57; // hair
+	dw 19; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 0; // hair
+	dw 20; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 7; // hair
+	dw 21; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 0; // boot
+	dw 23; // hair
+	dw 22; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 0; // hair
+	dw 23; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 3; // boot
+	dw 50; // hair
+	dw 24; // number
+	dw 29; // team
+	// team 29
+	dw 0; // accessory
+	dw 0; // beard
+	dw 3; // body
+	dw 1; // boot
+	dw 15; // hair
+	dw 25; // number
+	dw 29; // team
+	// team 30
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 2; // hair
+	dw 0; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 9; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 1; // number
+	dw 30; // team
+	// team 30
+	dw 1; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 2; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 57; // hair
+	dw 3; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 1; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 4; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 32; // hair
+	dw 5; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 7; // hair
+	dw 6; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 7; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 7; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 20; // hair
+	dw 8; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 46; // hair
+	dw 9; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 52; // hair
+	dw 10; // number
+	dw 30; // team
+	// team 30
+	dw 2; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 6; // hair
+	dw 11; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 12; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 22; // hair
+	dw 12; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 12; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 11; // hair
+	dw 13; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 10; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 32; // hair
+	dw 14; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 5; // beard
+	dw 2; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 15; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 1; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 16; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 34; // hair
+	dw 17; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 29; // hair
+	dw 18; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 28; // hair
+	dw 19; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 4; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 9; // hair
+	dw 20; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 10; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 21; // hair
+	dw 21; // number
+	dw 30; // team
+	// team 30
+	dw 2; // accessory
+	dw 1; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 22; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 15; // beard
+	dw 1; // body
+	dw 1; // boot
+	dw 34; // hair
+	dw 23; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 0; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 12; // hair
+	dw 24; // number
+	dw 30; // team
+	// team 30
+	dw 0; // accessory
+	dw 3; // beard
+	dw 1; // body
+	dw 0; // boot
+	dw 45; // hair
+	dw 25; // number
+	dw 30; // team
+	// team 31
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 18; // hair
+	dw 0; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 1; // hair
+	dw 1; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 2; // boot
+	dw 4; // hair
+	dw 2; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 3; // hair
+	dw 3; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 24; // hair
+	dw 4; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 8; // hair
+	dw 5; // number
+	dw 31; // team
+	// team 31
+	dw 1; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 3; // boot
+	dw 31; // hair
+	dw 6; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 7; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 38; // hair
+	dw 8; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 49; // hair
+	dw 9; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 50; // hair
+	dw 10; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 35; // hair
+	dw 11; // number
+	dw 31; // team
+	// team 31
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 47; // hair
+	dw 12; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 39; // hair
+	dw 13; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 36; // hair
+	dw 14; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 5; // hair
+	dw 15; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 12; // hair
+	dw 16; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 1; // boot
+	dw 50; // hair
+	dw 17; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 21; // hair
+	dw 18; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 24; // hair
+	dw 19; // number
+	dw 31; // team
+	// team 31
+	dw 2; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 25; // hair
+	dw 20; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 52; // hair
+	dw 21; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 17; // hair
+	dw 22; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 31; // hair
+	dw 23; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 33; // hair
+	dw 24; // number
+	dw 31; // team
+	// team 31
+	dw 0; // accessory
+	dw 0; // beard
+	dw 0; // body
+	dw 0; // boot
+	dw 38; // hair
+	dw 25; // number
+	dw 31; // team
 }
