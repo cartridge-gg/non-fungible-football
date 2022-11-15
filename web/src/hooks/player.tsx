@@ -7,7 +7,7 @@ import { bnToUint256 } from "starknet/utils/uint256";
 import { toFelt, hexToDecimalString } from "starknet/utils/number";
 import Storage from "utils/storage";
 
-const INTERVAL = 2500;
+const INTERVAL = 10000;
 
 export type Mints = {
   [address: string]: {

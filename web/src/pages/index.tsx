@@ -16,7 +16,7 @@ import { CONTRACT_ETH, CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
 
 export default function Home() {
   const router = useRouter();
-
+  const { account } = useStarknet();
   const calls = useMemo(() => {
     const ethApprove = {
       contractAddress: CONTRACT_ETH,
