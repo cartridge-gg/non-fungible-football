@@ -166,9 +166,9 @@
                 "type": "felt"
             }
         ],
-        "name": "constructor",
+        "name": "initialize",
         "outputs": [],
-        "type": "constructor"
+        "type": "function"
     },
     {
         "inputs": [
@@ -330,18 +330,6 @@
     },
     {
         "inputs": [],
-        "name": "price",
-        "outputs": [
-            {
-                "name": "price",
-                "type": "felt"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
         "name": "totalSupply",
         "outputs": [
             {
@@ -469,11 +457,17 @@
     {
         "inputs": [
             {
-                "name": "value",
+                "name": "to",
                 "type": "felt"
             }
         ],
-        "name": "purchase",
+        "name": "mint_to",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "reveal",
         "outputs": [],
         "type": "function"
     },

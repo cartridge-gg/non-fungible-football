@@ -42,9 +42,10 @@ func test_teams{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}
 
     local contract_address: felt;
     %{ 
-        ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+        ids.contract_address = deploy_contract("./src/tournament.cairo").contract_address
     %}
 
+    ITournament.initialize(contract_address, 123);
     let (name, group) = ITournament.team(contract_address, 1);
     assert name = 'Qatar';
     assert group = 'A';
@@ -72,9 +73,11 @@ func test_matches{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
 
     local contract_address: felt;
     %{
-        ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+        ids.contract_address = deploy_contract("./src/tournament.cairo").contract_address
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
     %}
+
+    ITournament.initialize(contract_address, 123);
 
     let (team_a, team_b) = ITournament.match(contract_address, 1);
     assert team_a = 1;
@@ -139,7 +142,7 @@ func test_matches{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     assert match_ids2[6] = 55;
     assert match_ids2[7] = 56;
     let (matches_len2, matches2) = ITournament.matches(contract_address, 8, match_ids2);
-    
+
     assert matches2[0] = 2;
     assert matches2[1] = 3;
     assert matches2[2] = 7;
@@ -168,10 +171,11 @@ func test_results{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
 
     local contract_address: felt;
     %{ 
-        ids.contract_address = deploy_contract("./src/tournament.cairo", [123]).contract_address
+        ids.contract_address = deploy_contract("./src/tournament.cairo").contract_address
         stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
     %}
 
+    ITournament.initialize(contract_address, 123);
     ITournament.update(contract_address, 1, 1, 2);
 
     let (team1_a, team1_b) = ITournament.result(contract_address, 1);
@@ -196,6 +200,36 @@ func test_results{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin
     assert matches[3] = 1;
 
     %{ stop_prank_callable() %}
+
+    return ();
+}
+
+@external
+func test_upgrade{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+    alloc_locals;
+
+    local initial_implementation: felt;
+    local fake_implementation: felt;
+    local contract_address: felt;
+    %{
+        from starkware.starknet.compiler.compile import get_selector_from_name
+        ids.initial_implementation = declare("./src/tournament.cairo").class_hash
+        ids.fake_implementation = declare("./src/player.cairo").class_hash
+        ids.contract_address = deploy_contract("./lib/cairo_contracts/src/openzeppelin/upgrades/presets/proxy.cairo", [ids.initial_implementation, get_selector_from_name('initialize'), 1, 123]).contract_address
+        stop_prank_callable = start_prank(123, target_contract_address=ids.contract_address)
+    %}
+
+    let (implementation) = ITournament.implementation(contract_address);
+    assert implementation = initial_implementation;
+
+    ITournament.upgrade(contract_address, fake_implementation);
+
+    let (next_implementation) = ITournament.implementation(contract_address);
+    assert next_implementation = fake_implementation;
+
+    %{ 
+        stop_prank_callable()
+    %}
 
     return ();
 }

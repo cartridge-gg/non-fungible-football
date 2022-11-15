@@ -48,7 +48,7 @@ def rgb_to_hex(rgb):
     return '#%02x%02x%02x' % rgb
 
 if __name__ == "__main__":
-    for part in ["body", "boots", "hair", "numbers", "teams"]:
+    for part in ["accessory", "beards", "body", "boots", "hair", "numbers", "teams"]:
 
         files = [os.path.join(part, f) for f in
                     os.listdir(part)]
