@@ -16,7 +16,7 @@ import { CONTRACT_ETH, CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
 
 export default function Home() {
   const router = useRouter();
-
+  const { account } = useStarknet();
   const calls = useMemo(() => {
     const ethApprove = {
       contractAddress: CONTRACT_ETH,
@@ -51,7 +51,13 @@ export default function Home() {
         <MotionGridItem area={"main"} ml={[0, 0, "50px"]}>
           <Details
             onMint={() => {
-              execute();
+              if (account) {
+                execute();
+              } else {
+                window.open(
+                  "https://cartridge.gg/signup/non-fungible-football",
+                );
+              }
             }}
           />
         </MotionGridItem>
