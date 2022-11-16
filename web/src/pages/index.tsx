@@ -2,21 +2,38 @@ import { useEffect, useMemo } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  useConnectors,
   useStarknet,
+  useContract,
+  useStarknetCall,
   useStarknetExecute,
-  useStarknetInvoke,
 } from "@starknet-react/core";
 import { GridItem, Button } from "@chakra-ui/react";
 import { Nav } from "../components/Nav";
 import { Grid } from "../components/Grid";
 import { MotionGridItem } from "components/MotionWrappers";
 import { Details } from "components/details/Details";
+import PlayerAbi from "abi/player_abi.json";
 import { CONTRACT_ETH, CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
+import { Abi } from "starknet";
+import { uint256ToBN } from "starknet/dist/utils/uint256";
 
 export default function Home() {
   const router = useRouter();
   const { account } = useStarknet();
+  const { contract } = useContract({
+    address: CONTRACT_PLAYER,
+    abi: PlayerAbi as Abi,
+  });
+
+  const {
+    data: callData,
+    loading: loadingSupply,
+    error: errorSupply,
+  } = useStarknetCall({
+    contract,
+    method: "totalSupply",
+  });
+
   const calls = useMemo(() => {
     const ethApprove = {
       contractAddress: CONTRACT_ETH,
@@ -31,13 +48,18 @@ export default function Home() {
     return [ethApprove, mint];
   }, []);
 
-  const { data, loading, error, execute } = useStarknetExecute({ calls });
+  const {
+    data: executeData,
+    loading,
+    error,
+    execute,
+  } = useStarknetExecute({ calls });
 
   useEffect(() => {
-    if (data) {
-      router.push(`/mint/${data}`);
+    if (executeData) {
+      router.push(`/mint/${executeData}`);
     }
-  }, [router, data]);
+  }, [router, executeData]);
 
   return (
     <>
@@ -45,9 +67,9 @@ export default function Home() {
         <title>Non-Fungible Football</title>
       </Head>
       <Grid>
-        <GridItem area={"nav"}>
+        {/* <GridItem area={"nav"}>
           <Nav w="full" h="full" />
-        </GridItem>
+        </GridItem> */}
         <MotionGridItem area={"main"} ml={[0, 0, "50px"]}>
           <Details
             onMint={() => {
@@ -59,6 +81,7 @@ export default function Home() {
                 );
               }
             }}
+            supply={callData && uint256ToBN(callData[0]).toString()}
           />
         </MotionGridItem>
       </Grid>
