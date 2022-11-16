@@ -3,10 +3,16 @@ import { Callout } from "./Callout";
 import BellIcon from "../../components/icons/Bell";
 import EthereumIcon from "../../components/icons/Ethereum";
 import TicketIcon from "../../components/icons/Ticket";
+import EatenAppleIcon from "../../components/icons/EatenApple";
 import RunnerIcon from "components/icons/Runner";
-import { useStarknet } from "@starknet-react/core";
-
-export const Details = ({ onMint }: { onMint: () => void }) => {
+import { BigNumberish } from "starknet/dist/utils/number";
+export const Details = ({
+  supply,
+  onMint,
+}: {
+  supply: BigNumberish;
+  onMint: () => void;
+}) => {
   return (
     <Flex
       h="full"
@@ -16,8 +22,7 @@ export const Details = ({ onMint }: { onMint: () => void }) => {
       direction={["column", "column", "row"]}
     >
       <Box
-        minWidth={["250px", "300px", "300px"]}
-        minHeight={["250px", "300px", "300px"]}
+        boxSize={["250px", "300px", "400px"]}
         borderRadius="12px"
         background="url(/mint_random.gif) center"
         backgroundSize="contain"
@@ -30,10 +35,21 @@ export const Details = ({ onMint }: { onMint: () => void }) => {
           title="Mint Price"
           description="FREE"
         />
+        <Callout
+          icon={<TicketIcon />}
+          title="Restrictions"
+          description="One per account"
+        />
+        <Callout
+          icon={<EatenAppleIcon boxSize="18px" />}
+          title="Supply"
+          description="846 Players"
+          //description={`${supply} of 846 Minted`}
+        />
         <Box pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
           <Button variant="mint" onClick={onMint} w="inherit" disabled>
             <RunnerIcon />
-            Mint
+            Mint Player
           </Button>
         </Box>
       </VStack>

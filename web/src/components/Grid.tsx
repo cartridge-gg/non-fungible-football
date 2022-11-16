@@ -2,14 +2,12 @@ import { Grid as ChakraGrid } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 export const Grid = ({ children }: { children: ReactNode }) => {
-  const desktopArea = `"nav main"
-                        "nav main"`;
+  const desktopArea = `"main"`;
   const desktopRow = "1fr";
-  const desktopCol = "minmax(100px, 300px) 1fr";
+  const desktopCol = " 1fr";
 
-  const mobileArea = `"nav"
-                      "main"`;
-  const mobileRow = "100px 1fr";
+  const mobileArea = `"main"`;
+  const mobileRow = "1fr";
   const mobileCol = "1fr";
 
   return (
