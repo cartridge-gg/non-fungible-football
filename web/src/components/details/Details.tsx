@@ -43,7 +43,7 @@ export const Details = ({
         <Callout
           icon={<EatenAppleIcon boxSize="18px" />}
           title="Supply"
-          description="846 Players"
+          description="832 Players"
           //description={`${supply} of 846 Minted`}
         />
         <Box pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
