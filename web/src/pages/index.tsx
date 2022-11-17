@@ -7,10 +7,10 @@ import {
   useStarknetCall,
   useStarknetExecute,
 } from "@starknet-react/core";
-import { GridItem, Button } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { Nav } from "../components/Nav";
 import { Grid } from "../components/Grid";
-import { MotionGridItem } from "components/MotionWrappers";
+import { MotionFlex, MotionGridItem } from "components/MotionWrappers";
 import { Details } from "components/details/Details";
 import PlayerAbi from "abi/player_abi.json";
 import { CONTRACT_ETH, CONTRACT_PLAYER, PLAYER_PRICE } from "utils/constants";
@@ -66,21 +66,21 @@ export default function Home() {
       <Head>
         <title>Non-Fungible Football</title>
       </Head>
-      <Grid>
-        {/* <GridItem area={"nav"}>
-          <Nav w="full" h="full" />
-        </GridItem> */}
-        <MotionGridItem area={"main"} ml={[0, 0, "50px"]}>
-          <Details
-            onMint={() => {
-              window.open(
-                "https://cartridge.gg/signup/non-fungible-football?redirect_uri=https://nff.gg/mint",
-              );
-            }}
-            supply={callData && uint256ToBN(callData[0]).toString()}
-          />
-        </MotionGridItem>
-      </Grid>
+      <MotionFlex
+        position="fixed"
+        boxSize="full"
+        align="center"
+        justify="center"
+      >
+        <Details
+          onMint={() => {
+            window.open(
+              "https://cartridge.gg/signup/non-fungible-football?redirect_uri=https://nff.gg/mint",
+            );
+          }}
+          supply={callData && uint256ToBN(callData[0]).toString()}
+        />
+      </MotionFlex>
     </>
   );
 }
