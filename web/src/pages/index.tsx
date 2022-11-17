@@ -73,13 +73,9 @@ export default function Home() {
         <MotionGridItem area={"main"} ml={[0, 0, "50px"]}>
           <Details
             onMint={() => {
-              if (account) {
-                execute();
-              } else {
-                window.open(
-                  "https://cartridge.gg/signup/non-fungible-football",
-                );
-              }
+              window.open(
+                "https://cartridge.gg/signup/non-fungible-football?redirect_uri=https://nff.gg/mint",
+              );
             }}
             supply={callData && uint256ToBN(callData[0]).toString()}
           />
