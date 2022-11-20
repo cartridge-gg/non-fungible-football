@@ -1,36 +1,32 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import NextLink from "next/link";
+import Confetti from "react-confetti";
 import Head from "next/head";
 import {
   Box,
   Flex,
   Text,
   Link,
-  Button,
   Circle,
   HStack,
   VStack,
 } from "@chakra-ui/react";
 import Runner from "components/icons/Runner";
-import Logo from "components/brand/Logo";
 import { usePlayer } from "hooks/player";
 import { motion } from "framer-motion";
-import Confetti from "react-dom-confetti";
 
 export default function Mint() {
   const router = useRouter();
   const { hash } = router.query as { hash: string };
   const { waitForMint } = usePlayer();
-  const [svg, setSvg] = useState<string>();
   const [error, setError] = useState<Error>();
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [minted, setMinted] = useState<boolean>(false);
 
   useEffect(() => {
     if (hash) {
-      setLoading(true);
       waitForMint(hash)
-        .then((svg) => setSvg(svg))
+        .then(() => setMinted(true))
         .catch((e) => setError(e))
         .finally(() => setLoading(false));
     }
@@ -52,15 +48,25 @@ export default function Mint() {
         align="center"
       >
         <VStack spacing="50px">
+          <VStack
+            spacing="5px"
+            opacity={minted ? 1 : 0}
+            transition="opacity 0.1s ease"
+          >
+            <Text fontSize="17px" fontWeight="bold">
+              {"You've claimed your NFF starterpack"}
+            </Text>
+            <Text fontSize="13px" color="whiteAlpha.400">
+              Reveal Coming Soon
+            </Text>
+          </VStack>
           <Box
             height="300px"
             width="300px"
             borderRadius="10px"
-            background={`url('${svg ? svg.replace(/#/g, "%23") : "/mint_random.gif"
-              }') no-repeat center/100%`}
+            background={`url('/mint_random.gif') no-repeat center/100%`}
             boxShadow="0px 0px 20px rgba(0,0,0,0.2)"
           />
-          <Confetti active={!loading && !error} />
           <HStack spacing="20px">
             <Circle size="48px" bg="blue.200">
               <Runner />
@@ -84,13 +90,22 @@ export default function Mint() {
               </Link>
             </VStack>
           </HStack>
-          <NextLink href="/tourney">
-            <Button variant="mint">
-              <Logo width="24px" height="24px" fill="mint.500" /> Tournament
-            </Button>
-          </NextLink>
         </VStack>
       </Flex>
+      {minted && (
+        <Confetti
+          width={window.innerWidth}
+          height={window.innerHeight}
+          run={minted}
+          colors={[
+            "#FFBD00",
+            "rgba(255, 191, 0, 0.85)",
+            "rgba(255, 191, 0, 0.4)",
+            "#FFF",
+          ]}
+          opacity={0.4}
+        />
+      )}
     </>
   );
 }
