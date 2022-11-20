@@ -1,7 +1,6 @@
 import { shortString } from "starknet";
 import { computeHashOnElements } from "starknet/dist/utils/hash";
-import { BigNumberish } from "starknet/dist/utils/number";
-import { toHex } from "starknet/utils/number";
+import { BigNumberish, toHex } from "starknet/dist/utils/number";
 
 export function formatAddress(addr: BigNumberish) {
   if (typeof addr === "number") {

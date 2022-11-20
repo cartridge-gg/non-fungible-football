@@ -3,8 +3,7 @@ import { useStarknet } from "@starknet-react/core";
 import { defaultProvider, InvokeTransactionReceiptResponse } from "starknet";
 import { CONTRACT_PLAYER } from "utils/constants";
 import dataUriToBuffer from "data-uri-to-buffer";
-import { bnToUint256 } from "starknet/utils/uint256";
-import { toFelt, hexToDecimalString } from "starknet/utils/number";
+import { toFelt } from "starknet/dist/utils/number";
 import Storage from "utils/storage";
 
 const INTERVAL = 10000;

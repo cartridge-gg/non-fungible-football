@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier ./src --write"
+    "format": "prettier ./src --write",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@cartridge/connector": "^0.1.75",
     "@chakra-ui/react": "^2.3.4",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@next/bundle-analyzer": "^13.0.4",
     "@starknet-react/core": "^0.13.4",
     "data-uri-to-buffer": "^4.0.0",
     "framer-motion": "^7.5.1",
