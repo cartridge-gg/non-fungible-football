@@ -54,7 +54,7 @@ export const Details = ({
           </VStack>
         </Stack>
         <Box pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
-          <Button variant="mint" onClick={onMint} w="inherit" disabled>
+          <Button variant="mint" onClick={onMint} w="inherit">
             <RunnerIcon />
             Mint Player
           </Button>
