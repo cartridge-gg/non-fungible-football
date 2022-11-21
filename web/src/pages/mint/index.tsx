@@ -27,7 +27,14 @@ export default function Mint() {
     if (hash) {
       waitForMint(hash)
         .then(() => setMinted(true))
-        .catch((e) => setError(e))
+        .catch((e) => {
+          if (e.message !== "NOT_RECEIVED") {
+            return setError(e)
+          } else {
+            return waitForMint(hash)
+              .then(() => setMinted(true))
+          }
+        })
         .finally(() => setLoading(false));
     }
   }, [hash, waitForMint]);

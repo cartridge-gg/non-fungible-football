@@ -32,7 +32,7 @@ export const Details = ({
       <VStack spacing="24px" align="flex-start">
         <Stack direction={["row", "row", "column"]} spacing={spacing}>
           <VStack spacing={spacing} align="flex-start">
-            <Callout icon={<BellIcon />} title="Mint Time" description="TBD" />
+            <Callout icon={<BellIcon />} title="Mint Time" description="LIVE" />
             <Callout
               icon={<EthereumIcon />}
               title="Mint Price"
