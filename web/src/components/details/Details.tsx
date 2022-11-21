@@ -1,19 +1,44 @@
+import { useState, useEffect } from "react";
 import { Box, Flex, Stack, VStack, Button } from "@chakra-ui/react";
+import { Provider } from "starknet";
+import { BigNumberish } from "starknet/dist/utils/number";
+import { uint256ToBN } from "starknet/dist/utils/uint256";
+import { CONTRACT_PLAYER } from "utils/constants";
+
 import { Callout } from "./Callout";
 import BellIcon from "../../components/icons/Bell";
 import EthereumIcon from "../../components/icons/Ethereum";
 import TicketIcon from "../../components/icons/Ticket";
 import EatenAppleIcon from "../../components/icons/EatenApple";
 import RunnerIcon from "components/icons/Runner";
-import { BigNumberish } from "starknet/dist/utils/number";
-export const Details = ({
-  supply,
-  onMint,
-}: {
-  supply: BigNumberish;
-  onMint: () => void;
-}) => {
+
+export const Details = () => {
+  const [totalSupply, setTotalSupply] = useState<BigNumberish>();
+  const provider = new Provider({
+    sequencer: {
+      network: "mainnet-alpha",
+    },
+  });
+
+  useEffect(() => {
+    provider
+      .callContract({
+        contractAddress: CONTRACT_PLAYER,
+        entrypoint: "totalSupply",
+      })
+      .then((res) => {
+        setTotalSupply(
+          uint256ToBN({
+            high: res.result[1],
+            low: res.result[0],
+          }),
+        );
+      })
+      .catch((e) => console.error(e));
+  }, []);
+
   const spacing = ["12px", "12px", "24px"];
+
   return (
     <Flex
       h="full"
@@ -48,13 +73,22 @@ export const Details = ({
             <Callout
               icon={<EatenAppleIcon boxSize="18px" />}
               title="Supply"
-              description="832 Players"
-              //description={`${supply} of 846 Minted`}
+              description={
+                totalSupply ? `${totalSupply} of 856 Minted` : "Loading..."
+              }
             />
           </VStack>
         </Stack>
         <Box pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
-          <Button variant="mint" onClick={onMint} w="inherit">
+          <Button
+            variant="mint"
+            onClick={() => {
+              window.open(
+                "https://cartridge.gg/signup/non-fungible-football?redirect_uri=https://nff.gg/mint",
+              );
+            }}
+            w="inherit"
+          >
             <RunnerIcon />
             Mint Player
           </Button>
