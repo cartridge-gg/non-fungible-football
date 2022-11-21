@@ -1,18 +1,25 @@
 import { useState, useCallback, useEffect } from "react";
 import { useStarknet } from "@starknet-react/core";
-import { defaultProvider, InvokeTransactionReceiptResponse } from "starknet";
+import { Provider, InvokeTransactionReceiptResponse } from "starknet";
 import { CONTRACT_PLAYER } from "utils/constants";
 import dataUriToBuffer from "data-uri-to-buffer";
 import { toFelt } from "starknet/dist/utils/number";
 import Storage from "utils/storage";
 
 const INTERVAL = 10000;
+const RETRIES = 3;
 
 export type Mints = {
   [address: string]: {
     tokenIds: number[];
   };
 };
+
+const provider = new Provider({
+  sequencer: {
+    network: "mainnet-alpha",
+  },
+});
 
 export const usePlayer = () => {
   const { account } = useStarknet();
@@ -32,7 +39,7 @@ export const usePlayer = () => {
 
   const fetchPlayer = async (account: string) => {
     setLoading(true);
-    let response = await defaultProvider.callContract({
+    let response = await provider.callContract({
       contractAddress: CONTRACT_PLAYER,
       entrypoint: "balanceOf",
       calldata: [toFelt(account)],
@@ -52,7 +59,7 @@ export const usePlayer = () => {
 
     let ids = Array<number>();
     for (let i = 0; i < balance; i++) {
-      response = await defaultProvider.callContract({
+      response = await provider.callContract({
         contractAddress: CONTRACT_PLAYER,
         entrypoint: "tokenOfOwnerByIndex",
         calldata: [toFelt(account), toFelt(i), toFelt(0)],
@@ -69,8 +76,8 @@ export const usePlayer = () => {
   };
 
   const waitForMint = useCallback(async (hash: string) => {
-    await defaultProvider.waitForTransaction(hash, INTERVAL);
-    const receipt = (await defaultProvider.getTransactionReceipt(
+    await waitForTx(hash, RETRIES);
+    const receipt = (await provider.getTransactionReceipt(
       hash,
     )) as InvokeTransactionReceiptResponse;
 
@@ -78,7 +85,7 @@ export const usePlayer = () => {
     const tokenIdLow = receipt.events[1].data[2];
     const tokenIdHigh = receipt.events[1].data[3];
 
-    const uri = await defaultProvider.callContract({
+    const uri = await provider.callContract({
       contractAddress: CONTRACT_PLAYER,
       entrypoint: "tokenURI",
       calldata: [toFelt(tokenIdLow), toFelt(tokenIdHigh)],
@@ -96,6 +103,19 @@ export const usePlayer = () => {
 
     return json.image;
   }, []);
+
+  const waitForTx = async (hash: string, retries: number) => {
+    try {
+      await provider.waitForTransaction(hash, INTERVAL);
+    } catch (e) {
+      if (retries > 0 && e.message === "NOT_RECEIVED") {
+        console.info("retrying waitForTx");
+        await waitForTx(hash, retries - 1);
+      } else {
+        console.error(e);
+      }
+    }
+  };
 
   return {
     tokenIds: tokenIds,

@@ -12,13 +12,14 @@ import TicketIcon from "../../components/icons/Ticket";
 import EatenAppleIcon from "../../components/icons/EatenApple";
 import RunnerIcon from "components/icons/Runner";
 
+const provider = new Provider({
+  sequencer: {
+    network: "mainnet-alpha",
+  },
+});
+
 export const Details = () => {
   const [totalSupply, setTotalSupply] = useState<BigNumberish>();
-  const provider = new Provider({
-    sequencer: {
-      network: "mainnet-alpha",
-    },
-  });
 
   useEffect(() => {
     provider

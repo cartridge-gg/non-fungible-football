@@ -21,20 +21,13 @@ export default function Mint() {
   const { waitForMint } = usePlayer();
   const [error, setError] = useState<Error>();
   const [loading, setLoading] = useState<boolean>(true);
-  const [minted, setMinted] = useState<boolean>(false);
+  const [svg, setSvg] = useState<string>();
 
   useEffect(() => {
     if (hash) {
       waitForMint(hash)
-        .then(() => setMinted(true))
-        .catch((e) => {
-          if (e.message !== "NOT_RECEIVED") {
-            return setError(e)
-          } else {
-            return waitForMint(hash)
-              .then(() => setMinted(true))
-          }
-        })
+        .then((svg) => setSvg(svg))
+        .catch((e) => setError(e))
         .finally(() => setLoading(false));
     }
   }, [hash, waitForMint]);
@@ -57,7 +50,7 @@ export default function Mint() {
         <VStack spacing="50px">
           <VStack
             spacing="5px"
-            opacity={minted ? 1 : 0}
+            opacity={svg ? 1 : 0}
             transition="opacity 0.1s ease"
           >
             <Text fontSize="17px" fontWeight="bold">
@@ -71,7 +64,9 @@ export default function Mint() {
             height="300px"
             width="300px"
             borderRadius="10px"
-            background={`url('/mint_random.gif') no-repeat center/100%`}
+            background={`url('${
+              svg ? svg.replace(/#/g, "%23") : "/mint_random.gif"
+            }') no-repeat center/100%`}
             boxShadow="0px 0px 20px rgba(0,0,0,0.2)"
           />
           <HStack spacing="20px">
@@ -81,7 +76,7 @@ export default function Mint() {
             <VStack align="flex-start" spacing="0">
               {!error ? (
                 <Text textStyle="boldUpper">
-                  {loading ? "PENDING..." : "SUCCESS"}
+                  {svg ? "SUCCESS" : "PENDING..."}
                 </Text>
               ) : (
                 <Text>ERROR: {error.message}</Text>
@@ -99,11 +94,11 @@ export default function Mint() {
           </HStack>
         </VStack>
       </Flex>
-      {minted && (
+      {svg && (
         <Confetti
           width={window.innerWidth}
           height={window.innerHeight}
-          run={minted}
+          run={!!svg}
           colors={[
             "#FFBD00",
             "rgba(255, 191, 0, 0.85)",
