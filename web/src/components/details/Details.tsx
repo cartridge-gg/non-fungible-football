@@ -96,33 +96,6 @@ export const Details = () => {
               />
             </VStack>
           </Stack>
-          <HStack pt={[0, 0, "30px"]} w={["full", "full", "auto"]}>
-            <Button
-              variant="mint"
-              onClick={() => {
-                window.open(
-                  "https://cartridge.gg/signup/non-fungible-football?redirect_uri=https://nff.gg/mint",
-                );
-              }}
-              w="inherit"
-            >
-              <RunnerIcon />
-              Mint Player
-            </Button>
-            <Circle
-              as="button"
-              size="45px"
-              border="2px solid"
-              borderColor="blue.100"
-              fontSize="24px"
-              _hover={{
-                bgColor: "blue.100",
-              }}
-              onClick={onOpen}
-            >
-              ?
-            </Circle>
-          </HStack>
         </VStack>
       </Flex>
       <Howto isOpen={isOpen} onClose={onClose} />
