@@ -75,7 +75,7 @@ export const Details = () => {
               icon={<EatenAppleIcon boxSize="18px" />}
               title="Supply"
               description={
-                totalSupply ? `${totalSupply} of 856 Minted` : "Loading..."
+                totalSupply ? `${totalSupply} of 832 Minted` : "Loading..."
               }
             />
           </VStack>
