@@ -73,7 +73,7 @@ export const Details = () => {
               <Callout
                 icon={<BellIcon />}
                 title="Mint Time"
-                description="LIVE"
+                description="SOLD OUT"
               />
               <Callout
                 icon={<EthereumIcon />}
@@ -91,7 +91,7 @@ export const Details = () => {
                 icon={<EatenAppleIcon boxSize="18px" />}
                 title="Supply"
                 description={
-                  totalSupply ? `${totalSupply} of 832 Minted` : "Loading..."
+                  totalSupply ? `832 of 832 Minted` : "Loading..."
                 }
               />
             </VStack>
