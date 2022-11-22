@@ -10,10 +10,12 @@ import {
   Circle,
   HStack,
   VStack,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Runner from "components/icons/Runner";
 import { usePlayer } from "hooks/player";
 import { motion } from "framer-motion";
+import { Howto } from "components/modals/Howto";
 
 export default function Mint() {
   const router = useRouter();
@@ -22,6 +24,7 @@ export default function Mint() {
   const [error, setError] = useState<Error>();
   const [loading, setLoading] = useState<boolean>(true);
   const [svg, setSvg] = useState<string>();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     if (hash) {
@@ -47,7 +50,7 @@ export default function Mint() {
         justify="center"
         align="center"
       >
-        <VStack spacing="50px">
+        <VStack spacing="30px">
           <VStack
             spacing="5px"
             opacity={svg ? 1 : 0}
@@ -92,6 +95,19 @@ export default function Mint() {
               </Link>
             </VStack>
           </HStack>
+          <Circle
+            as="button"
+            size="45px"
+            border="2px solid"
+            borderColor="blue.100"
+            fontSize="24px"
+            _hover={{
+              bgColor: "blue.100",
+            }}
+            onClick={onOpen}
+          >
+            ?
+          </Circle>
         </VStack>
       </Flex>
       {svg && (
@@ -108,6 +124,7 @@ export default function Mint() {
           opacity={0.4}
         />
       )}
+      <Howto isOpen={isOpen} onClose={onClose} />
     </>
   );
 }
