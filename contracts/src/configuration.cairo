@@ -4,7 +4,7 @@
 from starkware.cairo.common.registers import get_label_location
 
 
-func lookup_config(index: felt) -> (
+func lookup_config(team_index: felt, player_index: felt) -> (
     accessory: felt,
     beard: felt,
     body: felt,
@@ -15,7 +15,8 @@ func lookup_config(index: felt) -> (
 ) {
     alloc_locals;
     let (addr) = get_label_location(data_start);
-    let offset = index * 7;
+	let team = [addr + team_index * 7 + 6];
+	let offset = team * 26 * 7 + player_index * 7;
 
     let accessory = [addr + offset];
     let beard = [addr + offset + 1];
@@ -23,7 +24,6 @@ func lookup_config(index: felt) -> (
     let boot = [addr + offset + 3];
     let hair = [addr + offset + 4];
     let number = [addr + offset + 5];
-    let team = [addr + offset + 6];
 
     return (accessory=accessory, beard=beard, body=body, boot=boot, hair=hair, number=number, team=team);
 

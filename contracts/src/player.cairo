@@ -179,10 +179,11 @@ func tokenURI{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
         return (tokenURI_len=placeholder_len, tokenURI=placeholder);
     }
 
-    let (_, rem) = unsigned_div_rem(seed * tokenId.low, MAX);
+    let (_, team_rem) = unsigned_div_rem(seed * tokenId.low, MAX);
+    let (_, player_rem) = unsigned_div_rem(seed + tokenId.low, 26);
 
-    let (_, background_idx) = unsigned_div_rem(rem, 2);
-    let (accessory_idx, beard_idx, body_idx, boot_idx, hair_idx, number_idx, team_idx) = lookup_config(rem);
+    let (_, background_idx) = unsigned_div_rem(player_rem, 2);
+    let (accessory_idx, beard_idx, body_idx, boot_idx, hair_idx, number_idx, team_idx) = lookup_config(team_rem, player_rem);
 
     let (beard_len, beard) = lookup_beards(beard_idx);
     let (body_len, body) = lookup_body(body_idx);
