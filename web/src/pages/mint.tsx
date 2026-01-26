@@ -89,9 +89,9 @@ export default function Mint() {
                 color="mint.500"
                 textDecor="underline"
                 isExternal
-                href={`https://starkscan.co/tx/${hash}`}
+                href={`https://voyager.online/tx/${hash}`}
               >
-                View on Starkscan
+                View on Voyager
               </Link>
             </VStack>
           </HStack>
